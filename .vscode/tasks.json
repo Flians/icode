@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compile",
+            "command": "D:/MinGW/bin/g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                // "${fileDirname}\\*_*.cpp",
+                "-o",
+                "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-Wall",
+                "-static-libgcc",
+                "-std=c++11",
+                "-Wno-format",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=UTF-8"
+            ],
+            "options": {
+                "cwd": "D:/MinGW/bin"
+            }
+        }
+    ]
+}
