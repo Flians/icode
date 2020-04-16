@@ -29,4 +29,4 @@ class L1 : public icode {
 };
 ```
 
-The main file is icode.cpp, where you can execute your solution.<br/>
+The main file is [icode.cpp](https://github.com/Flians/icode/icode.cpp), where you can execute your solution.<br/>
