@@ -4,6 +4,11 @@
 #include "../leetcode/3_Longest_Substring_Without_Repeating_Characters.h"
 #include "../leetcode/4_Median_Of_Two_Sorted_Arrays.h"
 
+#include "../leetcode/200_Number_of_Islands.h"
+
+#include "../leetcode/678_Valid_Parenthesis_String.h"
+#include "../leetcode/679_24_Game.h"
+
 class Factory
 {
 public:
@@ -23,7 +28,18 @@ public:
         case 4:
             return new L4;
             break;
+        case 200:
+            return new L200;
+            break;
+        case 678:
+            return new L678;
+            break;
+        case 679:
+            return new L679;
+            break;
         default:
+            cout << "This question is not existed!" << endl;
+            exit(-1);
             break;
         }
     }
