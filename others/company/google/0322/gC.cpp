@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-//二分答案
+// 二分答案
 
 int maxV;
 int T, N, K;
