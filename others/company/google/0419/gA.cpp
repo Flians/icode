@@ -3,9 +3,8 @@
 #include <cmath>
 #include <algorithm>
 using namespace std;
-// greedy
-int maxV;
-int T, N, K;
+
+int T, N;
 
 int main()
 {
@@ -13,25 +12,18 @@ int main()
     cin >> T;
     while (T--)
     {
-        cin >> N >> K;
-        int tp = 0;
-        vector<string> sessions(N);
-        for (i = 1; i < N; ++i)
+        cin >> N;
+        vector<int> H(N);
+        for (i = 0; i < N; ++i)
         {
-            cin >> sessions[i];
+            cin >> H[i];
         }
-        sort(sessions.begin(), sessions.end());
-        maxV = 0, i = 0;
-        while (i < N) {
-            j=1;
-            int k=0;
-            bool flag = 0; 
-            while (k < sessions[i].length() && j<K) {
-                
-            }
+        int numP=0;
+        for (i = 1; i < N-1; ++i) {
+            if (H[i]>H[i-1] && H[i]>H[i+1])
+                ++numP;
         }
-
-        cout << "Case #" << (index++) << ": " << maxV << endl;
+        cout << "Case #" << (index++) << ": " << numP << endl;
     }
     return 0;
 }
