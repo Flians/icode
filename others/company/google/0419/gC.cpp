@@ -3,9 +3,62 @@
 #include <cmath>
 #include <algorithm>
 using namespace std;
-// greedy
-int maxV;
-int T, N, K;
+
+long long Bound = 1000000000;
+int T;
+
+long long change(long long x)
+{
+    if (x >= 0) {
+        x = x % Bound;
+    } else
+    {
+        x = Bound - (0 - x) % Bound;
+    }
+    return x;
+}
+
+void fun_(long long &x, long long &y, string sub)
+{
+    for (int i = 0; i < sub.length() - 1; ++i)
+    {
+        switch (sub[i])
+        {
+        case 'N':
+            --y;
+            break;
+        case 'S':
+            ++y;
+            break;
+        case 'E':
+            ++x;
+            break;
+        case 'W':
+            --x;
+            break;
+        default:
+            long long time_ = sub[i] - '0', x_ = 0, y_ = 0;
+            string sub_;
+            int temp = 1;
+            i += 2;
+            while (temp)
+            {
+                if (sub[i] == '(')
+                    ++temp;
+                if (sub[i] == ')')
+                    --temp;
+                sub_ += sub[i++];
+            }
+            --i;
+            fun_(x_, y_, sub_);
+            x += change(change(x_) * time_);
+            y += change(change(y_) * time_);
+            break;
+        }
+        x = change(x);
+        y = change(y);
+    }
+}
 
 int main()
 {
@@ -13,25 +66,11 @@ int main()
     cin >> T;
     while (T--)
     {
-        cin >> N >> K;
-        int tp = 0;
-        vector<string> sessions(N);
-        for (i = 1; i < N; ++i)
-        {
-            cin >> sessions[i];
-        }
-        sort(sessions.begin(), sessions.end());
-        maxV = 0, i = 0;
-        while (i < N) {
-            j=1;
-            int k=0;
-            bool flag = 0; 
-            while (k < sessions[i].length() && j<K) {
-                
-            }
-        }
-
-        cout << "Case #" << (index++) << ": " << maxV << endl;
+        long long x = 0, y = 0;
+        string move;
+        cin >> move;
+        fun_(x, y, move + ')');
+        cout << "Case #" << (index++) << ": " << change(x)+1 << " " << change(y)+1 << endl;
     }
     return 0;
 }
