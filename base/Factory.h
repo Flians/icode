@@ -9,6 +9,8 @@
 #include "../leetcode/678_Valid_Parenthesis_String.h"
 #include "../leetcode/679_24_Game.h"
 
+#include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
+
 class Factory
 {
 public:
@@ -36,6 +38,9 @@ public:
             break;
         case 679:
             return new L679;
+            break;
+        case 1008:
+            return new L1008;
             break;
         default:
             cout << "This question is not existed!" << endl;
