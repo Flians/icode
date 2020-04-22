@@ -5,8 +5,11 @@
 #include "../leetcode/4_Median_Of_Two_Sorted_Arrays.h"
 #include "../leetcode/5_Longest_Palindromic_Substring.h"
 
+#include "../leetcode/160_Intersection_of_Two_Linked_Lists.h"
+
 #include "../leetcode/200_Number_of_Islands.h"
 
+#include "../leetcode/328_Odd_Even_Linked_List.h"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.h"
 
 #include "../leetcode/678_Valid_Parenthesis_String.h"
@@ -36,8 +39,14 @@ public:
         case 5:
             return new L5;
             break;
+        case 160:
+            return new L160;
+            break;
         case 200:
             return new L200;
+            break;
+        case 328:
+            return new L328;
             break;
         case 334:
             return new L334;

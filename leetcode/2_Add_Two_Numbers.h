@@ -36,6 +36,35 @@ public:
         return head->next;
     }
 
+    ListNode *addTwoNumbers_(ListNode *l1, ListNode *l2)
+    {
+        ListNode *res = new ListNode;
+        ListNode *head = res;
+        int temp = 0;
+        while (l1 || l2)
+        {
+            res->next = new ListNode;
+            res = res->next;
+            if (l1)
+            {
+                temp += l1->val;
+                l1 = l1->next;
+            }
+            if (l2)
+            {
+                temp += l2->val;
+                l2 = l2->next;
+            }
+            res->val = temp % 10;
+            temp /= 10;
+        }
+        if (temp > 0)
+        {
+            res->next = new ListNode(temp);
+        }
+        return head->next;
+    }
+
     void run()
     {
         // testcase: [5] [5]
