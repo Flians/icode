@@ -28,6 +28,13 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+class BinaryMatrix
+{
+public:
+    int get(int x, int y);
+    vector<int> dimensions();
+};
+
 class icode
 {
 private:
