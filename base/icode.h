@@ -16,7 +16,7 @@ struct ListNode
 {
     int val;
     ListNode *next;
-    ListNode(): val(0), next(NULL){}
+    ListNode() : val(0), next(NULL) {}
     ListNode(int x) : val(x), next(NULL) {}
 };
 
@@ -46,21 +46,10 @@ public:
     ~icode();
     virtual void run(){};
 
-    void print_res(vector<int> data)
-    {
-        for (auto i : data)
-        {
-            cout << i << " ";
-        }
-        cout << endl;
-    }
-    void print_res(vector<vector<int>> data)
-    {
-        for (auto ip : data)
-        {
-            this->print_res(ip);
-        }
-    }
+    template <typename T>
+    void print_res(vector<T> data);
+    template <typename T>
+    void print_res(vector<vector<T>> data);
 };
 
 icode::icode(/* args */)
@@ -69,6 +58,25 @@ icode::icode(/* args */)
 
 icode::~icode()
 {
+}
+
+template <typename T>
+void icode::print_res(vector<T> data)
+{
+    for (auto i : data)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
+template <typename T>
+void icode::print_res(vector<vector<T>> data)
+{
+    for (auto ip : data)
+    {
+        this->print_res(ip);
+    }
 }
 
 #endif

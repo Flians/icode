@@ -8,10 +8,8 @@
             "args": [
                 "-g",
                 "${file}",
-                // "${fileDirname}\\*_*.cpp",
                 "-o",
                 "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
-                // "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-Wall",
                 "-static-libgcc",
                 "-std=c++11",
@@ -21,6 +19,11 @@
             ],
             "options": {
                 "cwd": "D:/MinGW/bin"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         }
     ]

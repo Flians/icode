@@ -29,6 +29,6 @@ public:
     {
         int a[4] = {2,7,11,15};
         vector<int> ilist(a, a+4);
-        leetcode::print_res(twoSum(ilist, 9)); 
+        icode::print_res(twoSum(ilist, 9)); 
     }
 };
