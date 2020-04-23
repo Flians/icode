@@ -4,8 +4,10 @@
 #include "../leetcode/3_Longest_Substring_Without_Repeating_Characters.h"
 #include "../leetcode/4_Median_Of_Two_Sorted_Arrays.h"
 #include "../leetcode/5_Longest_Palindromic_Substring.h"
-
+#include "../leetcode/94_Binary_Tree_Inorder_Traversal.h"
+#include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.h"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.h"
+#include "../leetcode/163_Missing_Ranges.h"
 
 #include "../leetcode/200_Number_of_Islands.h"
 
@@ -39,8 +41,17 @@ public:
         case 5:
             return new L5;
             break;
+        case 94:
+            return new L94;
+            break;
+        case 103:
+            return new L103;
+            break;
         case 160:
             return new L160;
+            break;
+        case 163:
+            return new L163;
             break;
         case 200:
             return new L200;
