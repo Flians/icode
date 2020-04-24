@@ -6,17 +6,20 @@
 #include "../leetcode/5_Longest_Palindromic_Substring.h"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.h"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.h"
+#include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h"
+#include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.h"
 #include "../leetcode/163_Missing_Ranges.h"
 
 #include "../leetcode/200_Number_of_Islands.h"
+#include "../leetcode/201_Bitwise_AND_of_Numbers_Range.h"
 
 #include "../leetcode/328_Odd_Even_Linked_List.h"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.h"
 
 #include "../leetcode/678_Valid_Parenthesis_String.h"
 #include "../leetcode/679_24_Game.h"
-
+#include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.h"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
 
 class Factory
@@ -47,6 +50,12 @@ public:
         case 103:
             return new L103;
             break;
+        case 105:
+            return new L105;
+            break;
+        case 106:
+            return new L106;
+            break;
         case 160:
             return new L160;
             break;
@@ -55,6 +64,9 @@ public:
             break;
         case 200:
             return new L200;
+            break;
+        case 201:
+            return new L201;
             break;
         case 328:
             return new L328;
@@ -66,6 +78,9 @@ public:
             break;
         case 679:
             return new L679;
+            break;
+        case 889:
+            return new L889;
             break;
         case 1008:
             return new L1008;
