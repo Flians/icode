@@ -44,7 +44,7 @@ public:
         i = 0;
         while (i < len)
         {
-            if (res > 214748364 || res == 214748364 && num[i] >= '8')
+            if (res > 214748364 || (res == 214748364 && num[i] >= '8'))
             {
                 return pos == 1 ? INT_MAX : INT_MIN;
             }

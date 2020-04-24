@@ -4,12 +4,13 @@ class L3: public icode
 {
 public:
     int fun_BF(string s) {
-        if(s.length()==0)
+        int len = s.length();
+        if(len==0)
             return 0;
-        int begin=0, end=0, length=1,temp=0, max_temp=1;
-        for(;begin < s.length()-1; begin++)
+        int begin=0, end=0, length=1,temp=0;
+        for(;begin < len-1; begin++)
         {
-            for(end=begin+1; end<s.length(); end++)
+            for(end=begin+1; end<len; end++)
             {
                 for(temp=end-1; temp>=begin;temp--)
                 {
@@ -25,11 +26,12 @@ public:
     }
     
     int fun_SW(string s) {
-        if(s.length()==0)
+        int len = s.length();
+        if(len==0)
             return 0;
          map<char, int> sub;
         int i=0,j=0,res=0;
-        for (; j<s.length(); ++j) {
+        for (; j<len; ++j) {
             if (sub.count(s[j])) {
                 i = max(i, sub[s[j]]+1);
             }

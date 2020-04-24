@@ -22,9 +22,9 @@ public:
             else
                 rnums.push_back(*iter);
         }
-        if (lnums.size() == k - 1)
+        if ((int)lnums.size() == k - 1)
             return povit;
-        else if (lnums.size() < k - 1)
+        else if ((int)lnums.size() < k - 1)
             return findKthLargest(rnums, k - lnums.size() - 1);
         else
             return findKthLargest(lnums, k);

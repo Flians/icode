@@ -12,7 +12,7 @@ public:
     {
         int i = 0, j = 0, max = 0;
         int longE[a.size()];
-        for (; i < a.size(); i++)
+        for (; i < (int)a.size(); i++)
         {
             longE[i] = 1;
             for (j = 0; j < i; j++)
@@ -59,7 +59,7 @@ public:
         int i = 1, max = 1;
         int lenE[a.size() + 1];
         lenE[0] = a[0];
-        for (; i < a.size(); i++)
+        for (; i < (int)a.size(); i++)
         {
             int temp = lower_bound(lenE, lenE + max, a[i]);
             // #include <iostream>

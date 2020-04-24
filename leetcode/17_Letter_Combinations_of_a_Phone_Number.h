@@ -4,7 +4,7 @@ class L17 : public icode
 public:
     void lc(int index, string digits, string item, vector<string> &result)
     {
-        if (index < digits.length())
+        if (index < (int)digits.length())
         {
             int i = 0;
             int num = digits[index] - '0';

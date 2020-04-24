@@ -9,14 +9,15 @@ public:
             return "";
         string res = "";
         int i = 0, j = 0;
-        for (; i < strs[0].length(); i++)
+        int m = strs.size(), n = strs[0].length();
+        for (; i < n; i++)
         {
-            for (j = 1; j < strs.size(); j++)
+            for (j = 1; j < m; j++)
             {
                 if (strs[0][i] != strs[j][i])
                     break;
             }
-            if (j != strs.size())
+            if (j != m)
                 break;
             else
                 res += strs[0][i];
