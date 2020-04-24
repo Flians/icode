@@ -19,6 +19,7 @@
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.h"
+#include "../leetcode/146_LRU_Cache.h"
 #include "../leetcode/155_Min_Stack.h"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.h"
 #include "../leetcode/163_Missing_Ranges.h"
@@ -86,6 +87,8 @@ public:
             return new L106;
         case 116:
             return new L116;
+        case 146:
+            return new LRUCache;
         case 155:
             return new MinStack;
         case 160:
