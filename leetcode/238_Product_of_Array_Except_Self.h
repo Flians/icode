@@ -7,7 +7,7 @@ public:
     {
         int i = 0;
         vector<int> outs(nums.size(), 1);
-        for (i = 1; i < nums.size(); ++i)
+        for (i = 1; i < (int)nums.size(); ++i)
         {
             outs[i] = outs[i - 1] * nums[i - 1];
         }

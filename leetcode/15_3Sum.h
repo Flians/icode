@@ -53,7 +53,7 @@ public:
     {
         vector<vector<int>> res;
         std::sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < (int)nums.size(); i++)
         {
             int target = -nums[i];
             int front = i + 1;
@@ -91,7 +91,7 @@ public:
                 }
             }
             // Processing duplicates of Number 1
-            while (i + 1 < nums.size() && nums[i + 1] == nums[i])
+            while (i + 1 < (int)nums.size() && nums[i + 1] == nums[i])
                 i++;
         }
         return res;

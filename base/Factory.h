@@ -4,23 +4,40 @@
 #include "../leetcode/3_Longest_Substring_Without_Repeating_Characters.h"
 #include "../leetcode/4_Median_Of_Two_Sorted_Arrays.h"
 #include "../leetcode/5_Longest_Palindromic_Substring.h"
+#include "../leetcode/8_String_To_Integer.h"
+#include "../leetcode/10_Regular_Expression_Matching.h"
+#include "../leetcode/11_Container_With_Most_Water.h"
+#include "../leetcode/12_Integer_To_Roman.h"
+#include "../leetcode/13_Roman_To_Integer.h"
+#include "../leetcode/14_Longest_Common_Prefix.h"
+#include "../leetcode/15_3Sum.h"
+#include "../leetcode/17_Letter_Combinations_of_a_Phone_Number.h"
+#include "../leetcode/33_Search_in_Rotated_Sorted_Array.h"
+#include "../leetcode/64_Minimum_Path_Sum.h"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.h"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.h"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.h"
+#include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.h"
+#include "../leetcode/155_Min_Stack.h"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.h"
 #include "../leetcode/163_Missing_Ranges.h"
-
 #include "../leetcode/200_Number_of_Islands.h"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.h"
-
+#include "../leetcode/215_Kth_Largest_Element_in_an_Array.h"
+#include "../leetcode/221_Maximal_Square.h"
+#include "../leetcode/238_Product_of_Array_Except_Self.h"
+#include "../leetcode/300_Longest_Increasing_Subsequence.h"
 #include "../leetcode/328_Odd_Even_Linked_List.h"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.h"
-
+#include "../leetcode/560_Subarray_Sum_Equals_K.h"
 #include "../leetcode/678_Valid_Parenthesis_String.h"
 #include "../leetcode/679_24_Game.h"
+#include "../leetcode/704_Binary_Search.h"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.h"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
+#include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.h"
+#include "../leetcode/1046_Last_Stone_Weight.h"
 
 class Factory
 {
@@ -31,60 +48,82 @@ public:
         {
         case 1:
             return new L1;
-            break;
         case 2:
             return new L2;
-            break;
         case 3:
             return new L3;
-            break;
         case 4:
             return new L4;
-            break;
         case 5:
             return new L5;
-            break;
+        case 8:
+            return new L8;
+        case 10:
+            return new L10;
+        case 11:
+            return new L11;
+        case 12:
+            return new L12;
+        case 13:
+            return new L13;
+        case 14:
+            return new L14;
+        case 15:
+            return new L15;
+        case 17:
+            return new L17;
+        case 33:
+            return new L33;
+        case 64:
+            return new L64;
         case 94:
             return new L94;
-            break;
         case 103:
             return new L103;
-            break;
         case 105:
             return new L105;
-            break;
         case 106:
             return new L106;
-            break;
+        case 116:
+            return new L116;
+        case 155:
+            return new MinStack;
         case 160:
             return new L160;
-            break;
         case 163:
             return new L163;
-            break;
         case 200:
             return new L200;
-            break;
         case 201:
             return new L201;
-            break;
+        case 215:
+            return new L215;
+        case 221:
+            return new L221;
+        case 238:
+            return new L238;
+        case 300:
+            return new L300;
         case 328:
             return new L328;
-            break;
         case 334:
             return new L334;
+        case 560:
+            return new L560;
         case 678:
             return new L678;
-            break;
         case 679:
             return new L679;
-            break;
+        case 704:
+            return new L704;
         case 889:
             return new L889;
-            break;
         case 1008:
             return new L1008;
-            break;
+        case 1028:
+            return new L1028;
+        case 1046:
+            return new L1046;
         default:
             cout << "This question is not existed!" << endl;
             exit(-1);

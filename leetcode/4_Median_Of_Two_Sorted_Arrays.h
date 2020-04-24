@@ -4,14 +4,15 @@ class L4 : public icode
 public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
     {
-        int len = nums1.size() + nums2.size();
+        int l1 = nums1.size(), l2 = nums2.size();
+        int len = l1 + l2;
         int i = 0, j = 0, num1 = 0, num2 = 0;
         while (i + j <= len / 2)
         {
             num2 = num1;
-            if (i >= nums1.size())
+            if (i >= l1)
                 num1 = nums2[j++];
-            else if (j >= nums2.size())
+            else if (j >= l2)
                 num1 = nums1[i++];
             else
             {

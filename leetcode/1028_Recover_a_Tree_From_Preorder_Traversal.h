@@ -1,10 +1,10 @@
 #include "../base/icode.h"
 
-class Solution {
+class L1028 : public icode {
 public:
     int str_to_int(string S, int &index) {
         int res=0;
-        while(index < S.length() && S[index]!='-') {
+        while(index < (int)S.length() && S[index]!='-') {
             res *= 10;
             res += S[index++]-'0';
         }
@@ -18,9 +18,9 @@ public:
         stack<TreeNode *> record;
         TreeNode *root = new TreeNode(str_to_int(S, index));
         record.push(root);
-        while (record.size() && index < S.length()) {
+        while (record.size() && index < (int)S.length()) {
             int temp = 0;
-            while (index < S.length() && S[index] == '-') {
+            while (index < (int)S.length() && S[index] == '-') {
                 ++temp;
                 ++index;
             }

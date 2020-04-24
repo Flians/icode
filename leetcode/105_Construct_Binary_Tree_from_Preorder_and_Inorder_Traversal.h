@@ -3,7 +3,7 @@
 class L105: public icode {
 public:
     TreeNode* build(int iroot, vector<int>& preorder, int ileft, int iright, vector<int>& inorder) {
-        if (iroot >= preorder.size() || ileft > iright)
+        if (iroot >= (int)preorder.size() || ileft > iright)
             return NULL;
         TreeNode *root = new TreeNode(preorder[iroot]);
         int tc=ileft;
