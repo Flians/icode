@@ -27,6 +27,7 @@
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.h"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.h"
 #include "../leetcode/221_Maximal_Square.h"
+#include "../leetcode/230_Kth_Smallest_Element_in_a_BST.h"
 #include "../leetcode/238_Product_of_Array_Except_Self.h"
 #include "../leetcode/300_Longest_Increasing_Subsequence.h"
 #include "../leetcode/328_Odd_Even_Linked_List.h"
@@ -103,6 +104,8 @@ public:
             return new L215;
         case 221:
             return new L221;
+        case 230:
+            return new L230;
         case 238:
             return new L238;
         case 300:
