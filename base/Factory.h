@@ -13,6 +13,7 @@
 #include "../leetcode/15_3Sum.h"
 #include "../leetcode/17_Letter_Combinations_of_a_Phone_Number.h"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.h"
+#include "../leetcode/55_Jump_Game.h"
 #include "../leetcode/64_Minimum_Path_Sum.h"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.h"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.h"
@@ -76,6 +77,8 @@ public:
             return new L17;
         case 33:
             return new L33;
+        case 55:
+            return new L55;
         case 64:
             return new L64;
         case 94:
