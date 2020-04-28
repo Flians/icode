@@ -41,6 +41,7 @@
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.h"
 #include "../leetcode/1046_Last_Stone_Weight.h"
+#include "../leetcode/1143_Longest_Common_Subsequence.h"
 
 class Factory
 {
@@ -133,6 +134,8 @@ public:
             return new L1028;
         case 1046:
             return new L1046;
+        case 1143:
+            return new L1143;
         default:
             cout << "This question is not existed!" << endl;
             exit(-1);
