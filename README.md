@@ -41,8 +41,27 @@ Then run script.py to change the file name.
 python .\rename.py
 ```
 
-Finally, run script.py to create Factory.h
+Finally, run script.py to create Factory.h.
 
 ``` bash
 python .\rename.py make
+```
+
+When you wanna run a question, run icode.cpp and input the id of this question.
+When you input the id <=0, the program ends.
+
+``` bash
+./build/icode.exe
+78
+
+1
+2
+1 2
+3
+1 3
+2 3
+1 2 3
+
+-1
+This question is not existed!
 ```
