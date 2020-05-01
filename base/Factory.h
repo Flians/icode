@@ -4,6 +4,8 @@
 #include "../leetcode/3_Longest_Substring_Without_Repeating_Characters.h"
 #include "../leetcode/4_Median_Of_Two_Sorted_Arrays.h"
 #include "../leetcode/5_Longest_Palindromic_Substring.h"
+#include "../leetcode/6_ZigZag_Conversion.h"
+#include "../leetcode/7_Reverse_Integer.h"
 #include "../leetcode/8_String_To_Integer.h"
 #include "../leetcode/10_Regular_Expression_Matching.h"
 #include "../leetcode/11_Container_With_Most_Water.h"
@@ -64,6 +66,10 @@ public:
 			return new L4;
 		case 5:
 			return new L5;
+		case 6:
+			return new L6;
+		case 7:
+			return new L7;
 		case 8:
 			return new L8;
 		case 10:
