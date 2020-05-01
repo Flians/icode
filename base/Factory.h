@@ -18,6 +18,7 @@
 #include "../leetcode/55_Jump_Game.h"
 #include "../leetcode/64_Minimum_Path_Sum.h"
 #include "../leetcode/78_Subsets.h"
+#include "../leetcode/79_Word_Search.h"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.h"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.h"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.h"
@@ -91,6 +92,8 @@ public:
 			return new L64;
 		case 78:
 			return new L78;
+		case 79:
+			return new L79;
 		case 94:
 			return new L94;
 		case 103:
