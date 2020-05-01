@@ -30,3 +30,19 @@ class L1 : public icode {
 ```
 
 The main file is [icode.cpp](https://github.com/Flians/icode/icode.cpp), where you can execute your solution.<br/>
+
+## Factory mode
+
+In the leetcode directory, create a file and name it as the problem name, such as '1. Two Sum'. <br/>
+
+Then run script.py to change the file name.
+
+``` bash
+python .\rename.py
+```
+
+Finally, run script.py to create Factory.h
+
+``` bash
+python .\rename.py make
+```
