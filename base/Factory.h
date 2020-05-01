@@ -7,14 +7,21 @@
 #include "../leetcode/6_ZigZag_Conversion.h"
 #include "../leetcode/7_Reverse_Integer.h"
 #include "../leetcode/8_String_To_Integer.h"
+#include "../leetcode/9_Palindrome_Number.h"
 #include "../leetcode/10_Regular_Expression_Matching.h"
 #include "../leetcode/11_Container_With_Most_Water.h"
 #include "../leetcode/12_Integer_To_Roman.h"
 #include "../leetcode/13_Roman_To_Integer.h"
 #include "../leetcode/14_Longest_Common_Prefix.h"
 #include "../leetcode/15_3Sum.h"
+#include "../leetcode/16_3Sum_Closest.h"
 #include "../leetcode/17_Letter_Combinations_of_a_Phone_Number.h"
+#include "../leetcode/18_4Sum.h"
+#include "../leetcode/19_Remove_Nth_Node_From_End_of_List.h"
+#include "../leetcode/20_Valid_Parentheses.h"
+#include "../leetcode/21_Merge_Two_Sorted_Lists.h"
 #include "../leetcode/22_Generate_Parentheses.h"
+#include "../leetcode/23_Merge_k_Sorted_Lists.h"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.h"
 #include "../leetcode/46_Permutations.h"
 #include "../leetcode/55_Jump_Game.h"
@@ -72,6 +79,8 @@ public:
 			return new L7;
 		case 8:
 			return new L8;
+		case 9:
+			return new L9;
 		case 10:
 			return new L10;
 		case 11:
@@ -84,10 +93,22 @@ public:
 			return new L14;
 		case 15:
 			return new L15;
+		case 16:
+			return new L16;
 		case 17:
 			return new L17;
+		case 18:
+			return new L18;
+		case 19:
+			return new L19;
+		case 20:
+			return new L20;
+		case 21:
+			return new L21;
 		case 22:
 			return new L22;
+		case 23:
+			return new L23;
 		case 33:
 			return new L33;
 		case 46:
