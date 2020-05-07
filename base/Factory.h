@@ -38,19 +38,25 @@
 #include "../leetcode/155_Min_Stack.h"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.h"
 #include "../leetcode/163_Missing_Ranges.h"
+#include "../leetcode/169_Majority_Element.h"
 #include "../leetcode/200_Number_of_Islands.h"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.h"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.h"
 #include "../leetcode/221_Maximal_Square.h"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.h"
 #include "../leetcode/238_Product_of_Array_Except_Self.h"
+#include "../leetcode/278_First_Bad_Version.h"
 #include "../leetcode/300_Longest_Increasing_Subsequence.h"
 #include "../leetcode/328_Odd_Even_Linked_List.h"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.h"
+#include "../leetcode/383_Ransom_Note.h"
+#include "../leetcode/387_First_Unique_Character_in_a_String.h"
+#include "../leetcode/476_Number_Complement.h"
 #include "../leetcode/560_Subarray_Sum_Equals_K.h"
 #include "../leetcode/678_Valid_Parenthesis_String.h"
 #include "../leetcode/679_24_Game.h"
 #include "../leetcode/704_Binary_Search.h"
+#include "../leetcode/771_Jewels_and_Stones.h"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.h"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.h"
@@ -141,6 +147,8 @@ public:
 			return new L160;
 		case 163:
 			return new L163;
+		case 169:
+			return new L169;
 		case 200:
 			return new L200;
 		case 201:
@@ -153,12 +161,20 @@ public:
 			return new L230;
 		case 238:
 			return new L238;
+		case 278:
+			return new L278;
 		case 300:
 			return new L300;
 		case 328:
 			return new L328;
 		case 334:
 			return new L334;
+		case 383:
+			return new L383;
+		case 387:
+			return new L387;
+		case 476:
+			return new L476;
 		case 560:
 			return new L560;
 		case 678:
@@ -167,6 +183,8 @@ public:
 			return new L679;
 		case 704:
 			return new L704;
+		case 771:
+			return new L771;
 		case 889:
 			return new L889;
 		case 1008:
