@@ -7,11 +7,11 @@ public:
     {
         map<char, int> record;
         int i = 0;
-        for (; i < s.length(); ++i)
+        for (; i < (int)s.length(); ++i)
         {
             record[s[i]] = record.count(s[i]) + 1;
         }
-        for (i = 0; i < s.length(); ++i)
+        for (i = 0; i < (int)s.length(); ++i)
         {
             if (record[s[i]] == 1)
                 return i;
@@ -19,7 +19,8 @@ public:
         return -1;
     }
 
-    void run() {
+    void run()
+    {
         cout << firstUniqChar("leetcode") << endl;
     }
 };

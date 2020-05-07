@@ -6,7 +6,7 @@ public:
     {
         map<char, int> record;
         int i = 0;
-        for (; i < magazine.length(); ++i)
+        for (; i < (int)magazine.length(); ++i)
         {
             if (record.count(magazine[i]))
             {
@@ -17,7 +17,7 @@ public:
                 record[magazine[i]] = 1;
             }
         }
-        for (i = 0; i < ransomNote.length(); ++i)
+        for (i = 0; i < (int)ransomNote.length(); ++i)
         {
             if (record.count(ransomNote[i]) && record[ransomNote[i]] > 0)
             {

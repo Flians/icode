@@ -1,8 +1,12 @@
 #include "../base/icode.h"
-// Forward declaration of isBadVersion API.
-bool isBadVersion(int version);
 
-class L278
+int N=5, T=0;
+// Forward declaration of isBadVersion API.
+bool isBadVersion(int version) {
+    return version > T;
+}
+
+class L278 : public icode
 {
 public:
     int firstBadVersion(int n)
@@ -21,6 +25,8 @@ public:
 
     void run()
     {
-        cout << firstBadVersion(5) << endl;
+        srand((unsigned)time(NULL));
+        T = rand()%N;
+        cout << firstBadVersion(N) << endl;
     }
 };
