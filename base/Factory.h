@@ -58,6 +58,7 @@
 #include "../leetcode/704_Binary_Search.h"
 #include "../leetcode/771_Jewels_and_Stones.h"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.h"
+#include "../leetcode/993_Cousins_in_Binary_Tree.h"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.h"
 #include "../leetcode/1046_Last_Stone_Weight.h"
@@ -187,6 +188,8 @@ public:
 			return new L771;
 		case 889:
 			return new L889;
+		case 993:
+			return new L993;
 		case 1008:
 			return new L1008;
 		case 1028:
