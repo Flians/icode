@@ -63,6 +63,7 @@
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.h"
 #include "../leetcode/1046_Last_Stone_Weight.h"
 #include "../leetcode/1143_Longest_Common_Subsequence.h"
+#include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.h"
 class Factory
 {
 public:
@@ -198,6 +199,8 @@ public:
 			return new L1046;
 		case 1143:
 			return new L1143;
+		case 1232:
+			return new L1232;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
