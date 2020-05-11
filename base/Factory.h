@@ -49,6 +49,7 @@
 #include "../leetcode/300_Longest_Increasing_Subsequence.h"
 #include "../leetcode/328_Odd_Even_Linked_List.h"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.h"
+#include "../leetcode/367_Valid_Perfect_Square.h"
 #include "../leetcode/383_Ransom_Note.h"
 #include "../leetcode/387_First_Unique_Character_in_a_String.h"
 #include "../leetcode/476_Number_Complement.h"
@@ -59,6 +60,7 @@
 #include "../leetcode/771_Jewels_and_Stones.h"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.h"
 #include "../leetcode/993_Cousins_in_Binary_Tree.h"
+#include "../leetcode/997_Find_the_Town_Judge.h"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.h"
 #include "../leetcode/1046_Last_Stone_Weight.h"
@@ -171,6 +173,8 @@ public:
 			return new L328;
 		case 334:
 			return new L334;
+		case 367:
+			return new L367;
 		case 383:
 			return new L383;
 		case 387:
@@ -191,6 +195,8 @@ public:
 			return new L889;
 		case 993:
 			return new L993;
+		case 997:
+			return new L997;
 		case 1008:
 			return new L1008;
 		case 1028:
