@@ -57,6 +57,7 @@
 #include "../leetcode/678_Valid_Parenthesis_String.h"
 #include "../leetcode/679_24_Game.h"
 #include "../leetcode/704_Binary_Search.h"
+#include "../leetcode/733_Flood_Fill.h"
 #include "../leetcode/771_Jewels_and_Stones.h"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.h"
 #include "../leetcode/993_Cousins_in_Binary_Tree.h"
@@ -189,6 +190,8 @@ public:
 			return new L679;
 		case 704:
 			return new L704;
+		case 733:
+			return new L733;
 		case 771:
 			return new L771;
 		case 889:
