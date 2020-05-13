@@ -53,6 +53,7 @@
 #include "../leetcode/383_Ransom_Note.h"
 #include "../leetcode/387_First_Unique_Character_in_a_String.h"
 #include "../leetcode/476_Number_Complement.h"
+#include "../leetcode/540_Single_Element_in_a_Sorted_Array.h"
 #include "../leetcode/560_Subarray_Sum_Equals_K.h"
 #include "../leetcode/678_Valid_Parenthesis_String.h"
 #include "../leetcode/679_24_Game.h"
@@ -182,6 +183,8 @@ public:
 			return new L387;
 		case 476:
 			return new L476;
+		case 540:
+			return new L540;
 		case 560:
 			return new L560;
 		case 678:
