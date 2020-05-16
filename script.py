@@ -3,7 +3,7 @@ import re
 import sys
 
 root_path = './leetcode'
-factory_path = './base/Factory.h'
+factory_path = './base/Factory.hpp'
 
 
 def makeFactory(root_path, factory_path):
@@ -11,7 +11,7 @@ def makeFactory(root_path, factory_path):
     files = [x for x in files if x[0].isdigit()]
     files.sort(key=lambda x: int(x.split('_')[0]))
     with open(factory_path, 'w', encoding='utf8') as fp:
-        fp.write('#include "icode.h"\n')
+        fp.write('#include "icode.hpp"\n')
         for file in files:
             fp.write('#include "../leetcode/'+file+'"\n')
         fp.write(
@@ -33,7 +33,7 @@ def rename(root_path):
         if name.find(' ') != -1:
             flag = True
             name = '_'.join(list(filter(None, re.split('[ .]', name))))
-        name = name+'.h'
+        name = name+'.hpp'
         return name, flag
 
     files = os.listdir(root_path)
@@ -42,8 +42,8 @@ def rename(root_path):
         flag = False
         if file.endswith('.cpp'):
             pass
-        elif file.endswith('.h'):
-            file, flag = replace_name(file[0:-2])
+        elif file.endswith('.hpp'):
+            file, flag = replace_name(file[0:-4])
         else:
             file, flag = replace_name(file)
         NewName = os.path.join(root_path, file)
@@ -52,7 +52,7 @@ def rename(root_path):
             with open(NewName, 'r+', encoding='utf8') as f:
                 content = f.read()        
                 f.seek(0, 0)
-                f.write('#include "../base/icode.h"\n'+content)
+                f.write('#include "../base/icode.hpp"\n'+content)
 
 
 if __name__ == "__main__":

@@ -4,22 +4,22 @@ There are some codes (including C/C++, Java, Python, ...) for algorithm, such as
 
 ## For the naming rules under the leetcode folder
 
-The .h file is name with the name of the question, whose spaces are replaced by '_'.<br/>
+The .hpp file is name with the name of the question, whose spaces are replaced by '_'.<br/>
 Moreover, And your username is added to the end of the file name<br/>
 
 such as:
 ```
 For the question "1. Two Sum"
-The .h file is: "1_Two_Sum_username.h"
+The .hpp file is: "1_Two_Sum_username.hpp"
 ```
 
-The .h file adds "#include "../base/icode.h" " in the first line.<br/>
-The clase name in .h file is named to 'L' + the id of the question, and inherits the class "icode".<br/>
+The .hpp file adds "#include "../base/icode.hpp" " in the first line.<br/>
+The clase name in .hpp file is named to 'L' + the id of the question, and inherits the class "icode".<br/>
 The run method is overrided in the class.<br/>
 
 such as:
 ```
-#include "../base/icode.h"
+#include "../base/icode.hpp"
 
 class L1 : public icode {
     ...
@@ -29,7 +29,7 @@ class L1 : public icode {
 };
 ```
 
-The main file is [icode.cpp](https://github.com/Flians/icode/icode.cpp), where you can execute your solution.<br/>
+The main file is [main.cpp](https://github.com/Flians/icode/main.cpp), where you can execute your solution.<br/>
 
 ## Factory mode
 
@@ -41,17 +41,17 @@ Then run script.py to change the file name.
 python .\rename.py
 ```
 
-Finally, run script.py to create Factory.h.
+Finally, run script.py to create Factory.hpp.
 
 ``` bash
-python .\rename.py make
+python .\script.py make
 ```
 
 When you wanna run a question, run icode.cpp and input the id of this question.
 When you input the id <=0, the program ends.
 
 ``` bash
-./build/icode.exe
+./build/main.exe
 78
 
 1
