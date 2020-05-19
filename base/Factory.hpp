@@ -41,6 +41,7 @@
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
+#include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
@@ -160,6 +161,8 @@ public:
 			return new L200;
 		case 201:
 			return new L201;
+		case 208:
+			return new Trie;
 		case 215:
 			return new L215;
 		case 221:
