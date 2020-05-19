@@ -23,6 +23,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'LRUCache'
             elif id == '155':
                 cn = 'MinStack'
+            elif id == '208':
+                cn = 'Trie'
             fp.write('\t\tcase ' + id + ':\n\t\t\treturn new ' + cn + ';\n')
         fp.write('\t\tdefault:\n\t\t\tcout << "This question is not existed!" << endl;\n\t\t\texit(-1);\n\t\t\tbreak;\n\t\t}\n\t}\n};')
 
