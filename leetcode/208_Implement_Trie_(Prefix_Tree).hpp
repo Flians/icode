@@ -80,11 +80,13 @@ public:
         */
         Trie *obj = new Trie();
         obj->insert("apple");
-        bool param_2 = obj->search("apple");
-        bool param_3 = obj->search("app");
-        bool param_4 = obj->startsWith("app");
+        cout << "insert 'apple'" << endl;
+        cout << "search 'apple' " << obj->search("apple") << endl;
+        cout << "search 'app' " << obj->search("app") << endl;
+        cout << "startsWith 'app' " << obj->startsWith("app") << endl;
         obj->insert("app");
-        bool param_6 = obj->search("app");
+        cout << "insert 'app'" << endl;
+        cout << "search 'app' " << obj->search("app") << endl;
     }
 };
 
