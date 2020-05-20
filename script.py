@@ -25,6 +25,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'MinStack'
             elif id == '208':
                 cn = 'Trie'
+            elif id == '901':
+                cn = 'StockSpanner'
             fp.write('\t\tcase ' + id + ':\n\t\t\treturn new ' + cn + ';\n')
         fp.write('\t\tdefault:\n\t\t\tcout << "This question is not existed!" << endl;\n\t\t\texit(-1);\n\t\t\tbreak;\n\t\t}\n\t}\n};')
 
