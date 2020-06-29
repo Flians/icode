@@ -44,6 +44,7 @@
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
+#include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
@@ -169,6 +170,8 @@ public:
 			return new L215;
 		case 221:
 			return new L221;
+		case 223:
+			return new L223;
 		case 230:
 			return new L230;
 		case 238:
