@@ -1,9 +1,9 @@
 #include "../base/icode.hpp"
 
-class L812 : public icode 
+class L812 : public icode
 {
 public:
-    double largestTriangleArea(vector<vector<int>> &points)
+    double largestTriangleArea(vector<vector<int> > &points)
     {
         int n = points.size();
         double res_max = 0.0;
@@ -27,7 +27,7 @@ public:
     }
     void run()
     {
-        vector<vector<int>> points = {{0,0},{0,1},{1,0},{0,2},{2,0}};
+        vector<vector<int> > points = {{0, 0}, {0, 1}, {1, 0}, {0, 2}, {2, 0}};
         cout << largestTriangleArea(points) << endl;
     }
 };

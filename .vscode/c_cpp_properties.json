@@ -29,6 +29,7 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "includePath": [
+                "${workspaceFolder}/**",
                 "/Library/Developer/CommandLineTools/usr/include/c++/v1/**"
             ],
             "intelliSenseMode": "clang-x64"
