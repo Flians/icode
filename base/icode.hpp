@@ -64,7 +64,7 @@ public:
     template <typename T>
     void print_res(vector<T> data);
     template <typename T>
-    void print_res(vector<vector<T>> data);
+    void print_res(vector<vector<T> > data);
 };
 
 template <typename T>
@@ -78,7 +78,7 @@ void icode::print_res(vector<T> data)
 }
 
 template <typename T>
-void icode::print_res(vector<vector<T>> data)
+void icode::print_res(vector<vector<T> > data)
 {
     for (auto ip : data)
     {

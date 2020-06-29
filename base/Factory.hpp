@@ -62,6 +62,7 @@
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
@@ -204,6 +205,8 @@ public:
 			return new L733;
 		case 771:
 			return new L771;
+		case 812:
+			return new L812;
 		case 889:
 			return new L889;
 		case 901:
