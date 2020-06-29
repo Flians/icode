@@ -18,7 +18,7 @@
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64",
             "configurationProvider": "vector-of-bool.cmake-tools"
-        }
+        },
         {
             "name": "Mac",
             "defines": [],
