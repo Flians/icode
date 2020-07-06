@@ -25,6 +25,8 @@
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/46_Permutations.hpp"
 #include "../leetcode/55_Jump_Game.hpp"
+#include "../leetcode/56_merge_intervals.hpp"
+#include "../leetcode/57_insert_interval.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
@@ -132,6 +134,10 @@ public:
 			return new L46;
 		case 55:
 			return new L55;
+		case 56:
+			return new L56;
+		case 57:
+			return new L57;
 		case 64:
 			return new L64;
 		case 78:

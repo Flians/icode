@@ -32,11 +32,11 @@ def makeFactory(root_path, factory_path):
 
 
 def rename(root_path):
-    def replace_name(name):
+    def replace_name(name, autoVS=False):
         flag = False
-        if name.find(' ') != -1:
+        if name.find(' ') != -1 or autoVS:
             flag = True
-            name = '_'.join(list(filter(None, re.split('[ .]', name))))
+            name = '_'.join(list(filter(None, re.split('[ .-]', name))))
         name = name+'.hpp'
         return name, flag
 
@@ -44,19 +44,38 @@ def rename(root_path):
     for i, file in enumerate(files):
         OldName = os.path.join(root_path, file)
         flag = False
+        idNumber = -1
         if file.endswith('.cpp'):
+            matchObj = re.match(r'^\d+\.[\w-]+\.cpp$', file)
+            if matchObj:
+                file, flag = replace_name(file[0:-4], True)
             pass
         elif file.endswith('.hpp'):
             file, flag = replace_name(file[0:-4])
+            idNumber = re.split('[._]', file)[0]
         else:
             file, flag = replace_name(file)
+        temp = re.split('[._]', file)[0].strip()
+        if temp.isdigit():
+            idNumber = int(temp)
         NewName = os.path.join(root_path, file)
         os.rename(OldName, NewName)
         if flag:
             with open(NewName, 'r+', encoding='utf8') as f:
-                content = f.read()        
+                content = f.readlines()
                 f.seek(0, 0)
-                f.write('#include "../base/icode.hpp"\n'+content)
+                if idNumber != -1:
+                    for i in range(len(content)):
+                        matchObj = re.match(r'^class Solution$', content[i].strip())
+                        if matchObj:
+                            content[i] = 'class L' + str(idNumber) + ' : public icode\n'
+                        else:
+                            matchObj = re.match(r'^public:$', content[i].strip())
+                            if matchObj:
+                                content[i] = content[i] + '\tvoid run() {}\n\n'
+                                break
+                content.insert(0, '#include "../base/icode.hpp"\n')
+                f.writelines(content)
 
 
 if __name__ == "__main__":
