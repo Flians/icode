@@ -64,14 +64,19 @@ def rename(root_path):
             with open(NewName, 'r+', encoding='utf8') as f:
                 content = f.readlines()
                 f.seek(0, 0)
+                flag = 0
                 if idNumber != -1:
                     for i in range(len(content)):
-                        matchObj = re.match(r'^class Solution$', content[i].strip())
-                        if matchObj:
+                        matchObj = re.match(r'^class Solution( {)?$', content[i].strip())
+                        if matchObj and flag == 0:
+                            flag = 1
                             content[i] = 'class L' + str(idNumber) + ' : public icode\n'
+                            if matchObj.group(1):
+                                content[i] += '{\n'
                         else:
                             matchObj = re.match(r'^public:$', content[i].strip())
-                            if matchObj:
+                            if matchObj and flag == 1:
+                                flag = 2
                                 content[i] = content[i] + '\tvoid run() {}\n\n'
                                 break
                 content.insert(0, '#include "../base/icode.hpp"\n')

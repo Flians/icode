@@ -24,6 +24,7 @@
 #include "../leetcode/23_Merge_k_Sorted_Lists.hpp"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/46_Permutations.hpp"
+#include "../leetcode/54_spiral_matrix.hpp"
 #include "../leetcode/55_Jump_Game.hpp"
 #include "../leetcode/56_merge_intervals.hpp"
 #include "../leetcode/57_insert_interval.hpp"
@@ -132,6 +133,8 @@ public:
 			return new L33;
 		case 46:
 			return new L46;
+		case 54:
+			return new L54;
 		case 55:
 			return new L55;
 		case 56:
