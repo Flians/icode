@@ -28,6 +28,7 @@
 #include "../leetcode/55_Jump_Game.hpp"
 #include "../leetcode/56_merge_intervals.hpp"
 #include "../leetcode/57_insert_interval.hpp"
+#include "../leetcode/58_length_of_last_word.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
@@ -141,6 +142,8 @@ public:
 			return new L56;
 		case 57:
 			return new L57;
+		case 58:
+			return new L58;
 		case 64:
 			return new L64;
 		case 78:
