@@ -3,7 +3,8 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [{
+    "configurations": [
+        {
             "name": "Python: current file",
             "type": "python",
             "request": "launch",
@@ -11,7 +12,28 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Debug",
+            "name": "(lldb) launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "args": [
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "compile_mac"
+        },
+        {
+            "name": "(gdb) launch",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
@@ -28,7 +50,7 @@
                 "text": "-enable-pretty-printing",
                 "ignoreFailures": true
             }],
-            "preLaunchTask": "Compile"
+            "preLaunchTask": "compile_win"
         }
     ]
 }

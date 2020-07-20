@@ -24,7 +24,10 @@
 #include "../leetcode/23_Merge_k_Sorted_Lists.hpp"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/46_Permutations.hpp"
+#include "../leetcode/54_spiral_matrix.hpp"
 #include "../leetcode/55_Jump_Game.hpp"
+#include "../leetcode/56_merge_intervals.hpp"
+#include "../leetcode/57_insert_interval.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
@@ -44,6 +47,7 @@
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
+#include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
@@ -62,6 +66,7 @@
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
@@ -128,8 +133,14 @@ public:
 			return new L33;
 		case 46:
 			return new L46;
+		case 54:
+			return new L54;
 		case 55:
 			return new L55;
+		case 56:
+			return new L56;
+		case 57:
+			return new L57;
 		case 64:
 			return new L64;
 		case 78:
@@ -168,6 +179,8 @@ public:
 			return new L215;
 		case 221:
 			return new L221;
+		case 223:
+			return new L223;
 		case 230:
 			return new L230;
 		case 238:
@@ -204,6 +217,8 @@ public:
 			return new L733;
 		case 771:
 			return new L771;
+		case 812:
+			return new L812;
 		case 889:
 			return new L889;
 		case 901:
