@@ -25,6 +25,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'MinStack'
             elif id == '208':
                 cn = 'Trie'
+            elif id == '705':
+                cn = 'MyHashSet'
             elif id == '901':
                 cn = 'StockSpanner'
             fp.write('\t\tcase ' + id + ':\n\t\t\treturn new ' + cn + ';\n')

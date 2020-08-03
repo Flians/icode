@@ -72,6 +72,7 @@
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
+#include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
@@ -232,6 +233,8 @@ public:
 			return new L889;
 		case 901:
 			return new StockSpanner;
+		case 918:
+			return new L918;
 		case 993:
 			return new L993;
 		case 997:
