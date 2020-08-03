@@ -60,6 +60,7 @@
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
+#include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
@@ -206,6 +207,8 @@ public:
 			return new L402;
 		case 476:
 			return new L476;
+		case 520:
+			return new L520;
 		case 540:
 			return new L540;
 		case 560:
