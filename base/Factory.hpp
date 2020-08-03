@@ -64,6 +64,7 @@
 #include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
+#include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
@@ -81,6 +82,7 @@
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
+#include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 class Factory
 {
 public:
@@ -218,6 +220,8 @@ public:
 			return new L540;
 		case 560:
 			return new L560;
+		case 567:
+			return new L567;
 		case 678:
 			return new L678;
 		case 679:
@@ -252,6 +256,8 @@ public:
 			return new L1143;
 		case 1232:
 			return new L1232;
+		case 1277:
+			return new L1277;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
