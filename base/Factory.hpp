@@ -66,6 +66,7 @@
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
+#include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
@@ -219,6 +220,8 @@ public:
 			return new L679;
 		case 704:
 			return new L704;
+		case 705:
+			return new MyHashSet;
 		case 733:
 			return new L733;
 		case 771:
