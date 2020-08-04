@@ -38,6 +38,7 @@
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
+#include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
@@ -169,6 +170,8 @@ public:
 			return new L116;
 		case 124:
 			return new L124;
+		case 125:
+			return new L125;
 		case 146:
 			return new LRUCache;
 		case 155:

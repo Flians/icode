@@ -10,7 +10,7 @@ public:
 
     string frequencySort(string s) {
         vector<int> record(128, 0);
-        for (int i = 0; i < s.length(); ++i) {
+        for (std::__cxx11::basic_string<char>::size_type i = 0; i < s.length(); ++i) {
             ++record[s[i]];
         }
         sort(s.begin(), s.end(),
