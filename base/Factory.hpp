@@ -51,11 +51,13 @@
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
+#include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
+#include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
@@ -196,6 +198,8 @@ public:
 			return new L223;
 		case 230:
 			return new L230;
+		case 231:
+			return new L231;
 		case 238:
 			return new L238;
 		case 278:
@@ -206,6 +210,8 @@ public:
 			return new L328;
 		case 334:
 			return new L334;
+		case 342:
+			return new L342;
 		case 367:
 			return new L367;
 		case 383:
