@@ -49,9 +49,11 @@
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
+#include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
+#include "../leetcode/226_Invert_Binary_Tree.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
@@ -201,12 +203,16 @@ public:
 			return new L207;
 		case 208:
 			return new Trie;
+		case 211:
+			return new WordDictionary;
 		case 215:
 			return new L215;
 		case 221:
 			return new L221;
 		case 223:
 			return new L223;
+		case 226:
+			return new L226;
 		case 230:
 			return new L230;
 		case 231:
