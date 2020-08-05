@@ -30,6 +30,7 @@
 #include "../leetcode/57_insert_interval.hpp"
 #include "../leetcode/58_length_of_last_word.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
+#include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
@@ -82,6 +83,7 @@
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
@@ -161,6 +163,8 @@ public:
 			return new L58;
 		case 64:
 			return new L64;
+		case 72:
+			return new L72;
 		case 78:
 			return new L78;
 		case 79:
@@ -265,6 +269,8 @@ public:
 			return new StockSpanner;
 		case 918:
 			return new L918;
+		case 973:
+			return new L973;
 		case 986:
 			return new L986;
 		case 993:
