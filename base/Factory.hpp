@@ -46,6 +46,7 @@
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
+#include "../leetcode/207_Course_Schedule.hpp"
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
@@ -57,6 +58,7 @@
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
+#include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
@@ -191,6 +193,8 @@ public:
 			return new L200;
 		case 201:
 			return new L201;
+		case 207:
+			return new L207;
 		case 208:
 			return new Trie;
 		case 215:
@@ -213,6 +217,8 @@ public:
 			return new L328;
 		case 334:
 			return new L334;
+		case 338:
+			return new L338;
 		case 342:
 			return new L342;
 		case 367:
