@@ -76,6 +76,7 @@
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
+#include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
@@ -84,6 +85,7 @@
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
+#include "../leetcode/1035_Uncrossed_Lines.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
@@ -249,6 +251,8 @@ public:
 			return new L771;
 		case 812:
 			return new L812;
+		case 886:
+			return new L886;
 		case 889:
 			return new L889;
 		case 901:
@@ -265,6 +269,8 @@ public:
 			return new L1008;
 		case 1028:
 			return new L1028;
+		case 1035:
+			return new L1035;
 		case 1046:
 			return new L1046;
 		case 1143:
