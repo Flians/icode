@@ -30,6 +30,7 @@
 #include "../leetcode/57_insert_interval.hpp"
 #include "../leetcode/58_length_of_last_word.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
+#include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
@@ -38,6 +39,7 @@
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
+#include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
@@ -45,38 +47,55 @@
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
+#include "../leetcode/207_Course_Schedule.hpp"
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
+#include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
+#include "../leetcode/226_Invert_Binary_Tree.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
+#include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
+#include "../leetcode/338_Counting_Bits.hpp"
+#include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
+#include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
+#include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
+#include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
+#include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
+#include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
+#include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
+#include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
+#include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
+#include "../leetcode/1035_Uncrossed_Lines.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
+#include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 class Factory
 {
 public:
@@ -146,6 +165,8 @@ public:
 			return new L58;
 		case 64:
 			return new L64;
+		case 72:
+			return new L72;
 		case 78:
 			return new L78;
 		case 79:
@@ -162,6 +183,8 @@ public:
 			return new L116;
 		case 124:
 			return new L124;
+		case 125:
+			return new L125;
 		case 146:
 			return new LRUCache;
 		case 155:
@@ -176,16 +199,24 @@ public:
 			return new L200;
 		case 201:
 			return new L201;
+		case 207:
+			return new L207;
 		case 208:
 			return new Trie;
+		case 211:
+			return new WordDictionary;
 		case 215:
 			return new L215;
 		case 221:
 			return new L221;
 		case 223:
 			return new L223;
+		case 226:
+			return new L226;
 		case 230:
 			return new L230;
+		case 231:
+			return new L231;
 		case 238:
 			return new L238;
 		case 278:
@@ -196,6 +227,10 @@ public:
 			return new L328;
 		case 334:
 			return new L334;
+		case 338:
+			return new L338;
+		case 342:
+			return new L342;
 		case 367:
 			return new L367;
 		case 383:
@@ -204,28 +239,46 @@ public:
 			return new L387;
 		case 402:
 			return new L402;
+		case 438:
+			return new L438;
+		case 451:
+			return new L451;
 		case 476:
 			return new L476;
+		case 520:
+			return new L520;
 		case 540:
 			return new L540;
 		case 560:
 			return new L560;
+		case 567:
+			return new L567;
 		case 678:
 			return new L678;
 		case 679:
 			return new L679;
 		case 704:
 			return new L704;
+		case 705:
+			return new MyHashSet;
 		case 733:
 			return new L733;
 		case 771:
 			return new L771;
 		case 812:
 			return new L812;
+		case 886:
+			return new L886;
 		case 889:
 			return new L889;
 		case 901:
 			return new StockSpanner;
+		case 918:
+			return new L918;
+		case 973:
+			return new L973;
+		case 986:
+			return new L986;
 		case 993:
 			return new L993;
 		case 997:
@@ -234,12 +287,16 @@ public:
 			return new L1008;
 		case 1028:
 			return new L1028;
+		case 1035:
+			return new L1035;
 		case 1046:
 			return new L1046;
 		case 1143:
 			return new L1143;
 		case 1232:
 			return new L1232;
+		case 1277:
+			return new L1277;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);

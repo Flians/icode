@@ -3,6 +3,28 @@
     "tasks": [
         {
             "type": "shell",
+            "label": "compile_linux",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}",
+                "-Wall",
+                "-std=c++11",
+                "-Wno-format",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=UTF-8",
+                "-pthread"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
             "label": "compile_mac",
             "command": "/usr/bin/clang",
             "args": [
