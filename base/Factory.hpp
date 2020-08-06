@@ -72,6 +72,7 @@
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
+#include "../leetcode/528_Random_Pick_with_Weight.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
@@ -92,6 +93,7 @@
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
+#include "../leetcode/1029_Two_City_Scheduling.hpp"
 #include "../leetcode/1035_Uncrossed_Lines.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
@@ -250,6 +252,8 @@ public:
 			return new L476;
 		case 520:
 			return new L520;
+		case 528:
+			return new Random_pick;
 		case 540:
 			return new L540;
 		case 560:
@@ -290,6 +294,8 @@ public:
 			return new L1008;
 		case 1028:
 			return new L1028;
+		case 1029:
+			return new L1029;
 		case 1035:
 			return new L1035;
 		case 1046:
