@@ -27,7 +27,7 @@
         {
             "type": "shell",
             "label": "compile_win",
-            "command": "D:/MinGW/bin/g++.exe",
+            "command": "g++.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -41,7 +41,6 @@
                 "-fexec-charset=UTF-8"
             ],
             "options": {
-                "cwd": "D:/MinGW/bin"
             },
             "problemMatcher": [],
             "group": {
