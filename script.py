@@ -27,6 +27,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'Trie'
             elif id == '211':
                 cn = 'WordDictionary'
+            elif id == '528':
+                cn = 'Random_pick'
             elif id == '705':
                 cn = 'MyHashSet'
             elif id == '901':
