@@ -68,6 +68,7 @@
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
+#include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
@@ -241,6 +242,8 @@ public:
 			return new L402;
 		case 438:
 			return new L438;
+		case 442:
+			return new L442;
 		case 451:
 			return new L451;
 		case 476:
