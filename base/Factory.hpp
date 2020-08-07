@@ -32,6 +32,7 @@
 #include "../leetcode/58_length_of_last_word.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
+#include "../leetcode/75_Sort_Colors.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
@@ -176,6 +177,8 @@ public:
 			return new L64;
 		case 72:
 			return new L72;
+		case 75:
+			return new L75;
 		case 78:
 			return new L78;
 		case 79:
