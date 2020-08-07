@@ -23,6 +23,7 @@
 #include "../leetcode/22_Generate_Parentheses.hpp"
 #include "../leetcode/23_Merge_k_Sorted_Lists.hpp"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
+#include "../leetcode/35_Search_Insert_Position.hpp"
 #include "../leetcode/46_Permutations.hpp"
 #include "../leetcode/54_spiral_matrix.hpp"
 #include "../leetcode/55_Jump_Game.hpp"
@@ -66,6 +67,7 @@
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
+#include "../leetcode/392_Is_Subsequence.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
@@ -156,6 +158,8 @@ public:
 			return new L23;
 		case 33:
 			return new L33;
+		case 35:
+			return new L35;
 		case 46:
 			return new L46;
 		case 54:
@@ -242,6 +246,8 @@ public:
 			return new L383;
 		case 387:
 			return new L387;
+		case 392:
+			return new L392;
 		case 402:
 			return new L402;
 		case 406:
