@@ -70,7 +70,8 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "stack": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "cmake.buildDirectory": "${workspaceRoot}/build",

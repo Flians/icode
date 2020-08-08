@@ -93,6 +93,7 @@
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
+#include "../leetcode/987_Vertical_Order_Traversal_of_a_Binary_Tree.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
@@ -298,6 +299,8 @@ public:
 			return new L973;
 		case 986:
 			return new L986;
+		case 987:
+			return new L987;
 		case 993:
 			return new L993;
 		case 997:
