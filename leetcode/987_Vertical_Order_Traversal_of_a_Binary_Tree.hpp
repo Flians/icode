@@ -1,4 +1,3 @@
-#include "../base/icode.hpp"
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -10,29 +9,30 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class L987 : public icode
-{
+class Solution {
 public:
-	void run() {}
-
-    void verticalTraversal(TreeNode* root, int &index, vector<vector<int> > &res) {
+    /*
+    void verticalTraversal(TreeNode* root, int &index, vector<vector<int>> &res) {
         if (!root)
             return;
+        cout << index << endl;
         if (index == 0) {
             vector<int> item;
             item.emplace_back(root->val);
             res.insert(res.begin(), item);
             verticalTraversal(root->left, index, res);
             verticalTraversal(root->right, ++index, res);
-        } if (index >= res.size()) {
+        } else if (index >= res.size()) {
             vector<int> item;
             item.emplace_back(root->val);
             res.emplace_back(item);
             verticalTraversal(root->left, --index, res);
+            ++index;
             verticalTraversal(root->right, ++index, res);
         } else {
             res[index].emplace_back(root->val);
             verticalTraversal(root->left, --index, res);
+            ++index;
             verticalTraversal(root->right, ++index, res);
         }
     }
@@ -42,5 +42,41 @@ public:
         vector<vector<int> > res;
         verticalTraversal(root, index, res);
         return res;
+    }
+    */
+    map<int,vector<pair<int,int>>> m;
+    
+    vector<vector<int>> ans;
+    
+    static bool cmp(pair<int,int>& a,pair<int,int>& b){
+        if(a.second==b.second){
+            return a.first<b.first;
+        }
+        return a.second<b.second;
+    }
+    
+    void rec(TreeNode* cur,int hd,int height){
+        m[hd].push_back({(cur->val),height});
+        
+        if(cur->left!=nullptr){
+            rec(cur->left,hd-1,height+1);
+        }
+        
+        if(cur->right!=nullptr){
+            rec(cur->right,hd+1,height+1);
+        }
+    }
+    
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        rec(root,0,0);
+        for(auto it:m){
+            sort(it.second.begin(),it.second.end(),cmp);
+            vector<int> tans;
+            for (auto it1:it.second){
+                tans.push_back(it1.first);
+            }
+            ans.push_back(tans);
+        }
+        return ans;
     }
 };
