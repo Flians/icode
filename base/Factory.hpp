@@ -58,6 +58,7 @@
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
+#include "../leetcode/270_Closest_Binary_Search_Tree_Value.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
@@ -70,6 +71,7 @@
 #include "../leetcode/392_Is_Subsequence.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
+#include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
@@ -95,6 +97,7 @@
 #include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/987_Vertical_Order_Traversal_of_a_Binary_Tree.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
+#include "../leetcode/994_Rotting_Oranges.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
@@ -229,6 +232,8 @@ public:
 			return new L231;
 		case 238:
 			return new L238;
+		case 270:
+			return new L270;
 		case 278:
 			return new L278;
 		case 300:
@@ -253,6 +258,8 @@ public:
 			return new L402;
 		case 406:
 			return new L406;
+		case 437:
+			return new L437;
 		case 438:
 			return new L438;
 		case 442:
@@ -303,6 +310,8 @@ public:
 			return new L987;
 		case 993:
 			return new L993;
+		case 994:
+			return new L994;
 		case 997:
 			return new L997;
 		case 1008:
