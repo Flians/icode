@@ -68,6 +68,7 @@
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
+#include "../leetcode/380_Insert_Delete_GetRandom_O(1).hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/392_Is_Subsequence.hpp"
@@ -254,6 +255,8 @@ public:
 			return new L342;
 		case 367:
 			return new L367;
+		case 380:
+			return new RandomizedSet;
 		case 383:
 			return new L383;
 		case 387:
