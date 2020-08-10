@@ -47,6 +47,7 @@
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
 #include "../leetcode/163_Missing_Ranges.hpp"
 #include "../leetcode/169_Majority_Element.hpp"
+#include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
@@ -211,6 +212,8 @@ public:
 			return new L163;
 		case 169:
 			return new L169;
+		case 171:
+			return new L171;
 		case 200:
 			return new L200;
 		case 201:
