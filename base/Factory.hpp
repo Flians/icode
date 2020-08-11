@@ -61,6 +61,7 @@
 #include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/270_Closest_Binary_Search_Tree_Value.hpp"
+#include "../leetcode/274_H_Index.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
@@ -241,6 +242,8 @@ public:
 			return new L238;
 		case 270:
 			return new L270;
+		case 274:
+			return new L274;
 		case 278:
 			return new L278;
 		case 300:
