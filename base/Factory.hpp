@@ -69,6 +69,7 @@
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
+#include "../leetcode/368_Largest_Divisible_Subset.hpp"
 #include "../leetcode/380_Insert_Delete_GetRandom_O(1).hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
@@ -92,6 +93,7 @@
 #include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
@@ -258,6 +260,8 @@ public:
 			return new L342;
 		case 367:
 			return new L367;
+		case 368:
+			return new L368;
 		case 380:
 			return new RandomizedSet;
 		case 383:
@@ -304,6 +308,8 @@ public:
 			return new L733;
 		case 771:
 			return new L771;
+		case 787:
+			return new L787;
 		case 812:
 			return new L812;
 		case 886:
