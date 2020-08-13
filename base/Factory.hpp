@@ -43,6 +43,7 @@
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
+#include "../leetcode/130_Surrounded_Regions.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
@@ -63,6 +64,7 @@
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/270_Closest_Binary_Search_Tree_Value.hpp"
 #include "../leetcode/274_H_Index.hpp"
+#include "../leetcode/275_H_Index_II.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
@@ -211,6 +213,8 @@ public:
 			return new L124;
 		case 125:
 			return new L125;
+		case 130:
+			return new L130;
 		case 146:
 			return new LRUCache;
 		case 155:
@@ -251,6 +255,8 @@ public:
 			return new L270;
 		case 274:
 			return new L274;
+		case 275:
+			return new L275;
 		case 278:
 			return new L278;
 		case 300:
