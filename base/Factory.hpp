@@ -40,6 +40,7 @@
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
+#include "../leetcode/119_Pascal's_Triangle_II.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
@@ -80,6 +81,7 @@
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
+#include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
@@ -89,6 +91,7 @@
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
+#include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
@@ -202,6 +205,8 @@ public:
 			return new L106;
 		case 116:
 			return new L116;
+		case 119:
+			return new L119;
 		case 124:
 			return new L124;
 		case 125:
@@ -282,6 +287,8 @@ public:
 			return new L442;
 		case 451:
 			return new L451;
+		case 468:
+			return new L468;
 		case 476:
 			return new L476;
 		case 518:
@@ -300,6 +307,8 @@ public:
 			return new L678;
 		case 679:
 			return new L679;
+		case 700:
+			return new L700;
 		case 704:
 			return new L704;
 		case 705:
