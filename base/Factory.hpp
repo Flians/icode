@@ -114,10 +114,12 @@
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
 #include "../leetcode/1029_Two_City_Scheduling.hpp"
 #include "../leetcode/1035_Uncrossed_Lines.hpp"
+#include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
+#include "../leetcode/1286_Iterator_for_Combination.hpp"
 class Factory
 {
 public:
@@ -355,6 +357,8 @@ public:
 			return new L1029;
 		case 1035:
 			return new L1035;
+		case 1044:
+			return new L1044;
 		case 1046:
 			return new L1046;
 		case 1143:
@@ -363,6 +367,8 @@ public:
 			return new L1232;
 		case 1277:
 			return new L1277;
+		case 1286:
+			return new CombinationIterator;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
