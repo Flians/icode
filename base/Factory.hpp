@@ -41,6 +41,7 @@
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
+#include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
@@ -211,6 +212,8 @@ public:
 			return new L116;
 		case 119:
 			return new L119;
+		case 123:
+			return new L123;
 		case 124:
 			return new L124;
 		case 125:
