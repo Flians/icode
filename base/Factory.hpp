@@ -80,6 +80,8 @@
 #include "../leetcode/392_Is_Subsequence.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
+#include "../leetcode/409_Longest_Palindrome.hpp"
+#include "../leetcode/435_Non_overlapping_Intervals.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
@@ -290,6 +292,10 @@ public:
 			return new L402;
 		case 406:
 			return new L406;
+		case 409:
+			return new L409;
+		case 435:
+			return new L435;
 		case 437:
 			return new L437;
 		case 438:
