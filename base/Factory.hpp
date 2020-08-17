@@ -30,6 +30,7 @@
 #include "../leetcode/56_merge_intervals.hpp"
 #include "../leetcode/57_insert_interval.hpp"
 #include "../leetcode/58_length_of_last_word.hpp"
+#include "../leetcode/60_Permutation_Sequence.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/75_Sort_Colors.hpp"
@@ -193,6 +194,8 @@ public:
 			return new L57;
 		case 58:
 			return new L58;
+		case 60:
+			return new L60;
 		case 64:
 			return new L64;
 		case 72:
