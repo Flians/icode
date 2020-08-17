@@ -20,6 +20,7 @@ public:
 class B :public A
 {
 public:
+    int cc = 2;
     B() :A() {
         printf("1");
     }
@@ -37,9 +38,13 @@ public:
 
 int main()
 {
-    B b;
-    B m(b);
-    B n = b;
-    B q(std::move(b));
+    B b; // a1
+    printf("\n");
+    B m(b); // b2
+    printf("\n");
+    B n = b; // b2
+    printf("\n");
+    B q(std::move(b)); // b3
+    printf("\n%d\n", b.cc);
     return 0;
 }
