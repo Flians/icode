@@ -108,6 +108,7 @@
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/987_Vertical_Order_Traversal_of_a_Binary_Tree.hpp"
@@ -350,6 +351,8 @@ public:
 			return new StockSpanner;
 		case 918:
 			return new L918;
+		case 967:
+			return new L967;
 		case 973:
 			return new L973;
 		case 986:
