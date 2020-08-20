@@ -104,6 +104,7 @@
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
+#include "../leetcode/824_Goat_Latin.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
@@ -343,6 +344,8 @@ public:
 			return new L787;
 		case 812:
 			return new L812;
+		case 824:
+			return new L824;
 		case 886:
 			return new L886;
 		case 889:
