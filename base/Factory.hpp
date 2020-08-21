@@ -46,6 +46,7 @@
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
+#include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
@@ -228,6 +229,8 @@ public:
 			return new L125;
 		case 130:
 			return new L130;
+		case 143:
+			return new L143;
 		case 146:
 			return new LRUCache;
 		case 155:
