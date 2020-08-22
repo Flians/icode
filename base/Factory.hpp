@@ -111,6 +111,7 @@
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
+#include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
@@ -361,6 +362,8 @@ public:
 			return new L889;
 		case 901:
 			return new StockSpanner;
+		case 905:
+			return new L905;
 		case 918:
 			return new L918;
 		case 967:
