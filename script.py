@@ -29,6 +29,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'WordDictionary'
             elif id == '380':
                 cn = 'RandomizedSet'
+            elif id == '497':
+                cn = 'RandPoint'
             elif id == '528':
                 cn = 'Random_pick'
             elif id == '705':
