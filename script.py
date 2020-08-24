@@ -37,6 +37,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'MyHashSet'
             elif id == '901':
                 cn = 'StockSpanner'
+            elif id == '1032':
+                cn = 'StreamChecker'
             elif id == '1286':
                 cn = 'CombinationIterator'
             fp.write('\t\tcase ' + id + ':\n\t\t\treturn new ' + cn + ';\n')

@@ -123,6 +123,7 @@
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
 #include "../leetcode/1029_Two_City_Scheduling.hpp"
+#include "../leetcode/1032_Stream_of_Characters.hpp"
 #include "../leetcode/1035_Uncrossed_Lines.hpp"
 #include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
@@ -386,6 +387,8 @@ public:
 			return new L1028;
 		case 1029:
 			return new L1029;
+		case 1032:
+			return new StreamChecker;
 		case 1035:
 			return new L1035;
 		case 1044:
