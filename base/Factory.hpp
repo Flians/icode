@@ -82,6 +82,7 @@
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/392_Is_Subsequence.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
+#include "../leetcode/404_Sum_of_Left_Leaves.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
@@ -305,6 +306,8 @@ public:
 			return new L392;
 		case 402:
 			return new L402;
+		case 404:
+			return new L404;
 		case 406:
 			return new L406;
 		case 409:
