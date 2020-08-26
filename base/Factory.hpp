@@ -117,6 +117,7 @@
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
+#include "../leetcode/983_Minimum_Cost_For_Tickets.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/987_Vertical_Order_Traversal_of_a_Binary_Tree.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
@@ -377,6 +378,8 @@ public:
 			return new L967;
 		case 973:
 			return new L973;
+		case 983:
+			return new L983;
 		case 986:
 			return new L986;
 		case 987:
