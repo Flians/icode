@@ -86,6 +86,7 @@
 #include "../leetcode/404_Sum_of_Left_Leaves.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
+#include "../leetcode/412_Fizz_Buzz.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
@@ -316,6 +317,8 @@ public:
 			return new L406;
 		case 409:
 			return new L409;
+		case 412:
+			return new L412;
 		case 435:
 			return new L435;
 		case 437:
