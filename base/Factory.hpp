@@ -95,6 +95,7 @@
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
+#include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
@@ -337,6 +338,8 @@ public:
 			return new L451;
 		case 468:
 			return new L468;
+		case 470:
+			return new L470;
 		case 476:
 			return new L476;
 		case 497:
