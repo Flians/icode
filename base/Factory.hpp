@@ -62,6 +62,7 @@
 #include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
+#include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/226_Invert_Binary_Tree.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
@@ -270,6 +271,8 @@ public:
 			return new L215;
 		case 221:
 			return new L221;
+		case 222:
+			return new L222;
 		case 223:
 			return new L223;
 		case 226:
