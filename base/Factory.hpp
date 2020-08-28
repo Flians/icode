@@ -88,6 +88,7 @@
 #include "../leetcode/409_Longest_Palindrome.hpp"
 #include "../leetcode/412_Fizz_Buzz.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
+#include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
@@ -321,6 +322,8 @@ public:
 			return new L412;
 		case 435:
 			return new L435;
+		case 436:
+			return new L436;
 		case 437:
 			return new L437;
 		case 438:
