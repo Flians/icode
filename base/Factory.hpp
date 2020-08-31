@@ -119,7 +119,9 @@
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/952_Largest_Component_Size_by_Common_Factor.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
+#include "../leetcode/969_Pancake_Sorting.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
 #include "../leetcode/983_Minimum_Cost_For_Tickets.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
@@ -386,8 +388,12 @@ public:
 			return new L905;
 		case 918:
 			return new L918;
+		case 952:
+			return new L952;
 		case 967:
 			return new L967;
+		case 969:
+			return new L969;
 		case 973:
 			return new L973;
 		case 983:

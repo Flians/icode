@@ -5,7 +5,7 @@ public:
 	void run() {}
 
     int rand7() {
-        int num = rand() % 7 + 1; 
+        return rand() % 7 + 1; 
     }
 
     int rand10() {
