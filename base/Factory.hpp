@@ -93,6 +93,7 @@
 #include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
+#include "../leetcode/450_Delete_Node_in_a_BST.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
@@ -336,6 +337,8 @@ public:
 			return new L438;
 		case 442:
 			return new L442;
+		case 450:
+			return new L450;
 		case 451:
 			return new L451;
 		case 468:
