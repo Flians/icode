@@ -62,10 +62,130 @@ public:
     virtual void run() = 0;
 
     template <typename T>
+    ListNode *create_list(vector<T> nums);
+
+    template <typename T>
+    TreeNode *create_tree(vector<T> nums);
+
+    template <typename T>
+    Node *create_BPlusTree(vector<T> nums);
+
+    void print_res(ListNode* root);
+
+    void print_res(TreeNode* root);
+
+    template <typename T>
     void print_res(vector<T> data);
     template <typename T>
-    void print_res(vector<vector<T> > data);
+    void print_res(vector<vector<T>> data);
 };
+
+template <typename T>
+ListNode *icode::create_list(vector<T> nums)
+{
+    ListNode *root = NULL;
+    if (nums.empty()) {
+        return root;
+    }
+    root = new ListNode(nums[0]);
+    ListNode *tmp = root;
+    for (size_t i = 1; i < nums.size(); ++i) {
+        tmp->next = new ListNode(nums[i]);
+        tmp = tmp->next;
+    }
+    return root;
+}
+
+template <typename T>
+TreeNode *icode::create_tree(vector<T> nums)
+{
+    TreeNode *root = NULL;
+    if (nums.empty()) {
+        return root;
+    }
+    root = new TreeNode(nums[0]);
+    queue<TreeNode *> level;
+    level.push(root);
+    size_t i = 1;
+    while (!level.empty() && i < nums.size())
+    {
+        TreeNode *tmp = level.front();
+        if (nums[i] != INT_MIN) {
+            tmp->left = new TreeNode(nums[i]);
+            level.push(tmp->left);
+        }
+        i++;
+        if (i < nums.size() && nums[i] != INT_MIN) {
+            tmp->right = new TreeNode(nums[i]);
+            level.push(tmp->right);
+        }
+        i++;
+        level.pop();
+    }
+    return root;
+}
+
+template <typename T>
+Node *icode::create_BPlusTree(vector<T> nums)
+{
+    Node *root = NULL;
+    if (nums.empty()) {
+        return root;
+    }
+    root = new Node(nums[0]);
+    queue<Node *> level;
+    level.push(root);
+    size_t i = 1;
+    while (!level.empty() && i < nums.size())
+    {
+        int len = level.size();
+        Node *last = NULL;
+        while (len-- && i < nums.size()) {
+            Node *tmp = level.front();
+            if (!tmp->left) {
+                if (last) {
+                    last->next = tmp;
+                } else {
+                    last = tmp;
+                }
+                tmp->left = new Node(nums[i++]);
+                level.push(tmp->left);
+            } else {
+                tmp->right = new Node(nums[i++]);
+                tmp->left->next = tmp->right;
+                level.push(tmp->right);
+                level.pop();
+            }
+        }
+    }
+    return root;
+}
+
+void icode::print_res(ListNode* root) {
+    while (root) {
+        cout << root->val << " ";
+        root = root->next;
+    }
+    cout << endl;
+}
+
+void icode::print_res(TreeNode* root){
+    queue<TreeNode *> level;
+    level.push(root);
+    while (!level.empty())
+    {
+        TreeNode *tmp = level.front();
+        cout << tmp->val << " ";
+        if (tmp->left) {
+            level.push(tmp->left);
+        }
+        if (tmp->right) {
+            level.push(tmp->right);
+        }
+        level.pop();
+    }
+    cout << endl;
+}
 
 template <typename T>
 void icode::print_res(vector<T> data)
@@ -78,7 +198,7 @@ void icode::print_res(vector<T> data)
 }
 
 template <typename T>
-void icode::print_res(vector<vector<T> > data)
+void icode::print_res(vector<vector<T>> data)
 {
     for (auto ip : data)
     {

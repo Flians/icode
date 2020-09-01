@@ -13,6 +13,8 @@ def makeFactory(root_path, factory_path):
     with open(factory_path, 'w', encoding='utf8') as fp:
         fp.write('#include "icode.hpp"\n')
         for file in files:
+            if file == '1195_Fizz_Buzz_Multithreaded.hpp':
+                continue
             fp.write('#include "../leetcode/'+file+'"\n')
         fp.write(
             'class Factory\n{\npublic:\n\ticode *problem(int i)\n\t{\n\t\tswitch (i)\n\t\t{\n')
@@ -39,6 +41,9 @@ def makeFactory(root_path, factory_path):
                 cn = 'StockSpanner'
             elif id == '1032':
                 cn = 'StreamChecker'
+            elif id == '1195':
+                continue
+                # cn = 'FizzBuzz'
             elif id == '1286':
                 cn = 'CombinationIterator'
             fp.write('\t\tcase ' + id + ':\n\t\t\treturn new ' + cn + ';\n')

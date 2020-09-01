@@ -46,6 +46,7 @@
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
+#include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
@@ -61,6 +62,7 @@
 #include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
+#include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/226_Invert_Binary_Tree.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
@@ -85,12 +87,16 @@
 #include "../leetcode/404_Sum_of_Left_Leaves.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
+#include "../leetcode/412_Fizz_Buzz.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
+#include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
+#include "../leetcode/450_Delete_Node_in_a_BST.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
+#include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
@@ -114,8 +120,11 @@
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/952_Largest_Component_Size_by_Common_Factor.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
+#include "../leetcode/969_Pancake_Sorting.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
+#include "../leetcode/983_Minimum_Cost_For_Tickets.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/987_Vertical_Order_Traversal_of_a_Binary_Tree.hpp"
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
@@ -234,6 +243,8 @@ public:
 			return new L125;
 		case 130:
 			return new L130;
+		case 137:
+			return new L137;
 		case 143:
 			return new L143;
 		case 146:
@@ -264,6 +275,8 @@ public:
 			return new L215;
 		case 221:
 			return new L221;
+		case 222:
+			return new L222;
 		case 223:
 			return new L223;
 		case 226:
@@ -312,18 +325,26 @@ public:
 			return new L406;
 		case 409:
 			return new L409;
+		case 412:
+			return new L412;
 		case 435:
 			return new L435;
+		case 436:
+			return new L436;
 		case 437:
 			return new L437;
 		case 438:
 			return new L438;
 		case 442:
 			return new L442;
+		case 450:
+			return new L450;
 		case 451:
 			return new L451;
 		case 468:
 			return new L468;
+		case 470:
+			return new L470;
 		case 476:
 			return new L476;
 		case 497:
@@ -370,10 +391,16 @@ public:
 			return new L905;
 		case 918:
 			return new L918;
+		case 952:
+			return new L952;
 		case 967:
 			return new L967;
+		case 969:
+			return new L969;
 		case 973:
 			return new L973;
+		case 983:
+			return new L983;
 		case 986:
 			return new L986;
 		case 987:
