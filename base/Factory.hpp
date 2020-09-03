@@ -61,6 +61,7 @@
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
+#include "../leetcode/220_Contains_Duplicate_III.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
@@ -274,6 +275,8 @@ public:
 			return new WordDictionary;
 		case 215:
 			return new L215;
+		case 220:
+			return new L220;
 		case 221:
 			return new L221;
 		case 222:
