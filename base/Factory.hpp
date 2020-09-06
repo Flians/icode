@@ -145,6 +145,7 @@
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
+#include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 class Factory
 {
 public:
@@ -444,6 +445,8 @@ public:
 			return new L1277;
 		case 1286:
 			return new CombinationIterator;
+		case 1305:
+			return new L1305;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
