@@ -143,6 +143,7 @@
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1103_Distribute_Candies_to_People.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
+#include "../leetcode/1191_K_Concatenation_Maximum_Sum.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
@@ -442,6 +443,8 @@ public:
 			return new L1103;
 		case 1143:
 			return new L1143;
+		case 1191:
+			return new L1191;
 		case 1232:
 			return new L1232;
 		case 1277:
