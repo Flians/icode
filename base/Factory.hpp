@@ -113,6 +113,7 @@
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
+#include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
@@ -381,6 +382,8 @@ public:
 			return new MyHashSet;
 		case 733:
 			return new L733;
+		case 763:
+			return new L763;
 		case 771:
 			return new L771;
 		case 787:
