@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <malloc.h>
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+void fun (shared_ptr<int> p) {
+    *p=5;
+}
 
 void Func(char str[100])
 {
@@ -70,9 +78,26 @@ void Test5(void)
     void *pm = malloc(100);
     printf("%d\n", sizeof(pm));
 }
+class test
+{
+private:
+    int x;
+public:
+    void set(int x_){
+        this->x = x_;
+    }
+    int get(){
+        return x;
+    }
+};
+
+void fun(test *a) {
+    a[0].set(1);
+}
 
 int main()
 {
+    /*
     char a;
     printf("%c\n", a);
     char *str = &a;
@@ -85,5 +110,18 @@ int main()
     Test3();
     Test4();
     Test5();
+    */
+   /*
+   int a= 6;
+   for (int i =0; i < 100; i++) {
+       shared_ptr<int> p = make_shared<int>(a);
+       fun(p);
+       cout << *p;
+   }
+   */
+  test a[2];
+  a[0].set(2);
+  fun(a);
+  cout << a[0].get() << endl;
     return 0;
 }
