@@ -96,6 +96,7 @@
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/450_Delete_Node_in_a_BST.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
+#include "../leetcode/459_Repeated_Substring_Pattern.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
@@ -112,10 +113,12 @@
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
+#include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
+#include "../leetcode/835_Image_Overlap.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
@@ -141,9 +144,11 @@
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1103_Distribute_Candies_to_People.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
+#include "../leetcode/1191_K_Concatenation_Maximum_Sum.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
+#include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 class Factory
 {
 public:
@@ -345,6 +350,8 @@ public:
 			return new L450;
 		case 451:
 			return new L451;
+		case 459:
+			return new L459;
 		case 468:
 			return new L468;
 		case 470:
@@ -377,6 +384,8 @@ public:
 			return new MyHashSet;
 		case 733:
 			return new L733;
+		case 763:
+			return new L763;
 		case 771:
 			return new L771;
 		case 787:
@@ -385,6 +394,8 @@ public:
 			return new L812;
 		case 824:
 			return new L824;
+		case 835:
+			return new L835;
 		case 886:
 			return new L886;
 		case 889:
@@ -435,12 +446,16 @@ public:
 			return new L1103;
 		case 1143:
 			return new L1143;
+		case 1191:
+			return new L1191;
 		case 1232:
 			return new L1232;
 		case 1277:
 			return new L1277;
 		case 1286:
 			return new CombinationIterator;
+		case 1305:
+			return new L1305;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
