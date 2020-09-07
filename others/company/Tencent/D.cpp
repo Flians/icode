@@ -1,53 +1,27 @@
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 
-long long fun(int l, int r, vector<int> &nums, int minH, int maxH) {
-    long long time = 0;
-    int wid = r - l + 1;
-    if (wid <=0) {
-        return time;
-    }
-    if (wid > minH) {
-        time += minH;
-        int tminH = maxH;
-        int tmaxH = 0;
-        bool flag = true;
-        for (int i = l; i <= r; ++i) {
-            nums[i] -= minH;
-            if (nums[i] <= 0) {
-                flag = false;
-                time += fun(l, i-1, nums, tminH, tmaxH);
-            } else {
-                if (!flag) {
-                    l = i;
-                    flag = true;
-                    tminH = nums[i];
-                    tmaxH = nums[i];
-                } else {
-                    tminH = min(tminH, nums[i]);
-                    tmaxH = max(tmaxH, nums[i]);
-                }
-            }
+const int N = 5e3 + 7;
+int dp[N][N];
+int a[N];
+int main() {
+    memset(dp, 0x3f, sizeof dp);
+    dp[0][0] = 0;
+    int n; scanf("%d", &n);
+    for(int i = 1; i <= n; i++)scanf("%d", &a[i]);
+    for(int i = 0; i < n; i++)for(int j = 0; j <= n; j++) {
+        int high;
+        //竖着刷
+        high = min(j, a[i + 1]);
+        dp[i + 1][high] = min(dp[i + 1][high], dp[i][j] + 1);
+        //横着刷
+        if(a[i + 1] < n) {
+            if(j >= a[i + 1])dp[i + 1][a[i + 1]] = min(dp[i + 1][a[i + 1]], dp[i][j]);
+            else dp[i + 1][a[i + 1]] = min(dp[i + 1][a[i + 1]], dp[i][j] + a[i + 1] - j);
         }
-    } else {
-        time += wid;
     }
-    return time;
-}
-
-int main()
-{
-    int n;
-    cin >> n;
-    int minH = 1E9;
-    int maxH = 0;
-    vector<int> nums(n, 0);
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
-        minH = min(minH, nums[i]);
-        maxH = max(maxH, nums[i]);
-    }
-    cout << fun(0, n-1, nums, minH, maxH) << endl;
+    int ans = n;
+    for(int i = 0; i <= n; i++)ans = min(dp[n][i], ans);
+    printf("%d\n", ans);
     return 0;
 }
