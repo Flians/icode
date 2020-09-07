@@ -73,6 +73,7 @@
 #include "../leetcode/274_H_Index.hpp"
 #include "../leetcode/275_H_Index_II.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
+#include "../leetcode/290_Word_Pattern.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
@@ -304,6 +305,8 @@ public:
 			return new L275;
 		case 278:
 			return new L278;
+		case 290:
+			return new L290;
 		case 300:
 			return new L300;
 		case 328:
