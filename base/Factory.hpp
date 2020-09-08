@@ -68,6 +68,8 @@
 #include "../leetcode/226_Invert_Binary_Tree.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/231_Power_of_Two.hpp"
+#include "../leetcode/235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.hpp"
+#include "../leetcode/236_Lowest_Common_Ancestor_of_a_Binary_Tree.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
 #include "../leetcode/270_Closest_Binary_Search_Tree_Value.hpp"
 #include "../leetcode/274_H_Index.hpp"
@@ -295,6 +297,10 @@ public:
 			return new L230;
 		case 231:
 			return new L231;
+		case 235:
+			return new L235;
+		case 236:
+			return new L236;
 		case 238:
 			return new L238;
 		case 270:
