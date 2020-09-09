@@ -54,6 +54,7 @@
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
 #include "../leetcode/163_Missing_Ranges.hpp"
+#include "../leetcode/165_Compare_Version_Numbers.hpp"
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
 #include "../leetcode/174_Dungeon_Game.hpp"
@@ -275,6 +276,8 @@ public:
 			return new L160;
 		case 163:
 			return new L163;
+		case 165:
+			return new L165;
 		case 169:
 			return new L169;
 		case 171:
