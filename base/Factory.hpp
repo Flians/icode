@@ -77,10 +77,12 @@
 #include "../leetcode/274_H_Index.hpp"
 #include "../leetcode/275_H_Index_II.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
+#include "../leetcode/279_Perfect_Squares.hpp"
 #include "../leetcode/287_Find_the_Duplicate_Number.hpp"
 #include "../leetcode/290_Word_Pattern.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
+#include "../leetcode/332_Reconstruct_Itinerary.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
@@ -319,6 +321,8 @@ public:
 			return new L275;
 		case 278:
 			return new L278;
+		case 279:
+			return new L279;
 		case 287:
 			return new L287;
 		case 290:
@@ -327,6 +331,8 @@ public:
 			return new L300;
 		case 328:
 			return new L328;
+		case 332:
+			return new L332;
 		case 334:
 			return new L334;
 		case 338:
