@@ -37,6 +37,7 @@
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
+#include "../leetcode/96_Unique_Binary_Search_Trees.hpp"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.hpp"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
@@ -45,6 +46,7 @@
 #include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
+#include "../leetcode/129_Sum_Root_to_Leaf_Numbers.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
@@ -75,6 +77,7 @@
 #include "../leetcode/274_H_Index.hpp"
 #include "../leetcode/275_H_Index_II.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
+#include "../leetcode/287_Find_the_Duplicate_Number.hpp"
 #include "../leetcode/290_Word_Pattern.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
@@ -236,6 +239,8 @@ public:
 			return new L79;
 		case 94:
 			return new L94;
+		case 96:
+			return new L96;
 		case 103:
 			return new L103;
 		case 105:
@@ -252,6 +257,8 @@ public:
 			return new L124;
 		case 125:
 			return new L125;
+		case 129:
+			return new L129;
 		case 130:
 			return new L130;
 		case 137:
@@ -312,6 +319,8 @@ public:
 			return new L275;
 		case 278:
 			return new L278;
+		case 287:
+			return new L287;
 		case 290:
 			return new L290;
 		case 300:
