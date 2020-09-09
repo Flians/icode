@@ -128,6 +128,7 @@
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
+#include "../leetcode/836_Rectangle_Overlap.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
@@ -159,6 +160,7 @@
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
+#include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 class Factory
 {
 public:
@@ -424,6 +426,8 @@ public:
 			return new L824;
 		case 835:
 			return new L835;
+		case 836:
+			return new L836;
 		case 886:
 			return new L886;
 		case 889:
@@ -486,6 +490,8 @@ public:
 			return new CombinationIterator;
 		case 1305:
 			return new L1305;
+		case 1401:
+			return new L1401;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
