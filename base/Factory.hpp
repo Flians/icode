@@ -37,6 +37,7 @@
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
+#include "../leetcode/96_Unique_Binary_Search_Trees.hpp"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.hpp"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
@@ -45,6 +46,7 @@
 #include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
+#include "../leetcode/129_Sum_Root_to_Leaf_Numbers.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
@@ -52,6 +54,7 @@
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
 #include "../leetcode/163_Missing_Ranges.hpp"
+#include "../leetcode/165_Compare_Version_Numbers.hpp"
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
 #include "../leetcode/174_Dungeon_Game.hpp"
@@ -75,9 +78,12 @@
 #include "../leetcode/274_H_Index.hpp"
 #include "../leetcode/275_H_Index_II.hpp"
 #include "../leetcode/278_First_Bad_Version.hpp"
+#include "../leetcode/279_Perfect_Squares.hpp"
+#include "../leetcode/287_Find_the_Duplicate_Number.hpp"
 #include "../leetcode/290_Word_Pattern.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
+#include "../leetcode/332_Reconstruct_Itinerary.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
@@ -122,6 +128,7 @@
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
+#include "../leetcode/836_Rectangle_Overlap.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
@@ -139,6 +146,7 @@
 #include "../leetcode/994_Rotting_Oranges.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
+#include "../leetcode/1022_Sum_of_Root_To_Leaf_Binary_Numbers.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
 #include "../leetcode/1029_Two_City_Scheduling.hpp"
 #include "../leetcode/1032_Stream_of_Characters.hpp"
@@ -152,6 +160,7 @@
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
+#include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 class Factory
 {
 public:
@@ -235,6 +244,8 @@ public:
 			return new L79;
 		case 94:
 			return new L94;
+		case 96:
+			return new L96;
 		case 103:
 			return new L103;
 		case 105:
@@ -251,6 +262,8 @@ public:
 			return new L124;
 		case 125:
 			return new L125;
+		case 129:
+			return new L129;
 		case 130:
 			return new L130;
 		case 137:
@@ -265,6 +278,8 @@ public:
 			return new L160;
 		case 163:
 			return new L163;
+		case 165:
+			return new L165;
 		case 169:
 			return new L169;
 		case 171:
@@ -311,12 +326,18 @@ public:
 			return new L275;
 		case 278:
 			return new L278;
+		case 279:
+			return new L279;
+		case 287:
+			return new L287;
 		case 290:
 			return new L290;
 		case 300:
 			return new L300;
 		case 328:
 			return new L328;
+		case 332:
+			return new L332;
 		case 334:
 			return new L334;
 		case 338:
@@ -405,6 +426,8 @@ public:
 			return new L824;
 		case 835:
 			return new L835;
+		case 836:
+			return new L836;
 		case 886:
 			return new L886;
 		case 889:
@@ -439,6 +462,8 @@ public:
 			return new L997;
 		case 1008:
 			return new L1008;
+		case 1022:
+			return new L1022;
 		case 1028:
 			return new L1028;
 		case 1029:
@@ -465,6 +490,8 @@ public:
 			return new CombinationIterator;
 		case 1305:
 			return new L1305;
+		case 1401:
+			return new L1401;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
