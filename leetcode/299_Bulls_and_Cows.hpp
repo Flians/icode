@@ -2,7 +2,10 @@
 class L299 : public icode
 {
 public:
-	void run() {}
+	void run() {
+        cout << getHint("1807", "7810") << "1A3B" << endl;
+        cout << getHint("1123", "0111") << "1A1B" << endl;
+    }
 
     string getHint(string secret, string guess) {
         int A = 0, B = 0;
