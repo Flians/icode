@@ -81,6 +81,7 @@
 #include "../leetcode/279_Perfect_Squares.hpp"
 #include "../leetcode/287_Find_the_Duplicate_Number.hpp"
 #include "../leetcode/290_Word_Pattern.hpp"
+#include "../leetcode/299_Bulls_and_Cows.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/332_Reconstruct_Itinerary.hpp"
@@ -332,6 +333,8 @@ public:
 			return new L287;
 		case 290:
 			return new L290;
+		case 299:
+			return new L299;
 		case 300:
 			return new L300;
 		case 328:
