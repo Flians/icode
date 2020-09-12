@@ -23,25 +23,34 @@ public:
         }
         return res;
     }
-    
+
     int numIslands_BFS(vector<vector<char>>& grid) {
-        int i=0, j=0, m=grid.size(), n=grid[0].size(), res=0;
+        if (grid.empty()) {
+            return 0;
+        }
+        int res = 0, n = grid.size(), m = grid[0].size();
         queue<int> record;
-        for (i=0; i<m; ++i) {
-            for (j=0; j<n; ++j) {
+        for(int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
                 if (grid[i][j] == '1') {
-                    res++;
-                    record.push(i*n+j);
+                    ++res;
+                    record.push(i*m + j);
                     while (!record.empty()) {
-                        int x=record.front()/n, y=record.front()%n;
-                        if (x>=0 && x<m && y>=0 && y<n && grid[x][y] == '1') {
+                        int x = record.front()/m, y = record.front()%m;
+                        if (grid[x][y] == '1') {
                             grid[x][y] = '0';
-                            if (y<n-1)
-                                record.push(x*n+y+1);
-                            if (y>0)
-                                record.push(x*n+y-1);
-                            record.push((x+1)*n+y);
-                            record.push((x-1)*n+y);
+                            if (x < n - 1) {
+                                record.push((x+1)*m + y);
+                            }
+                            if (x > 0) {
+                                record.push((x-1)*m + y);
+                            }
+                            if (y < m - 1) {
+                                record.push(x*m + y + 1);
+                            }
+                            if (y > 0) {
+                                record.push(x*m + y - 1);
+                            }
                         }
                         record.pop();
                     }
