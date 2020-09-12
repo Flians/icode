@@ -62,6 +62,7 @@
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
+#include "../leetcode/210_Course_Schedule_II.hpp"
 #include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
 #include "../leetcode/220_Contains_Duplicate_III.hpp"
@@ -294,6 +295,8 @@ public:
 			return new L207;
 		case 208:
 			return new Trie;
+		case 210:
+			return new L210;
 		case 211:
 			return new WordDictionary;
 		case 215:
