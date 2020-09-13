@@ -51,6 +51,7 @@
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
+#include "../leetcode/152_Maximum_Product_Subarray.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
 #include "../leetcode/163_Missing_Ranges.hpp"
@@ -274,6 +275,8 @@ public:
 			return new L143;
 		case 146:
 			return new LRUCache;
+		case 152:
+			return new L152;
 		case 155:
 			return new MinStack;
 		case 160:
