@@ -68,6 +68,7 @@
 #include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
 #include "../leetcode/213_House_Robber_II.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
+#include "../leetcode/216_Combination_Sum_III.hpp"
 #include "../leetcode/220_Contains_Duplicate_III.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
@@ -312,6 +313,8 @@ public:
 			return new L213;
 		case 215:
 			return new L215;
+		case 216:
+			return new L216;
 		case 220:
 			return new L220;
 		case 221:
