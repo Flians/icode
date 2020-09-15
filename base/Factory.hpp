@@ -59,13 +59,16 @@
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
 #include "../leetcode/174_Dungeon_Game.hpp"
+#include "../leetcode/198_House_Robber.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/210_Course_Schedule_II.hpp"
 #include "../leetcode/211_Add_and_Search_Word_Data_structure_design.hpp"
+#include "../leetcode/213_House_Robber_II.hpp"
 #include "../leetcode/215_Kth_Largest_Element_in_an_Array.hpp"
+#include "../leetcode/216_Combination_Sum_III.hpp"
 #include "../leetcode/220_Contains_Duplicate_III.hpp"
 #include "../leetcode/221_Maximal_Square.hpp"
 #include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
@@ -88,6 +91,7 @@
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/332_Reconstruct_Itinerary.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
+#include "../leetcode/337_House_Robber_III.hpp"
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
@@ -291,6 +295,8 @@ public:
 			return new L171;
 		case 174:
 			return new L174;
+		case 198:
+			return new L198;
 		case 200:
 			return new L200;
 		case 201:
@@ -303,8 +309,12 @@ public:
 			return new L210;
 		case 211:
 			return new WordDictionary;
+		case 213:
+			return new L213;
 		case 215:
 			return new L215;
+		case 216:
+			return new L216;
 		case 220:
 			return new L220;
 		case 221:
@@ -349,6 +359,8 @@ public:
 			return new L332;
 		case 334:
 			return new L334;
+		case 337:
+			return new L337;
 		case 338:
 			return new L338;
 		case 342:

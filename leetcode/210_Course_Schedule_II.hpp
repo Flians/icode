@@ -5,8 +5,8 @@ public:
 	void run() {}
 
     int find_index(vector<int> &in_degree) {
-        int flag = 0;
-        for (int i = 0; i < in_degree.size(); ++i) {
+        size_t flag = 0;
+        for (size_t i = 0; i < in_degree.size(); ++i) {
             if (in_degree[i] == 0) {
                 return i;
             } else if (in_degree[i] == -1) {
