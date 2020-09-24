@@ -43,6 +43,7 @@
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
+#include "../leetcode/121_Best_Time_to_Buy_and_Sell_Stock.hpp"
 #include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
@@ -162,6 +163,7 @@
 #include "../leetcode/1029_Two_City_Scheduling.hpp"
 #include "../leetcode/1032_Stream_of_Characters.hpp"
 #include "../leetcode/1035_Uncrossed_Lines.hpp"
+#include "../leetcode/1041_Robot_Bounded_In_Circle.hpp"
 #include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
 #include "../leetcode/1094_Car_Pooling.hpp"
@@ -171,6 +173,7 @@
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
+#include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 class Factory
@@ -268,6 +271,8 @@ public:
 			return new L116;
 		case 119:
 			return new L119;
+		case 121:
+			return new L121;
 		case 123:
 			return new L123;
 		case 124:
@@ -506,6 +511,8 @@ public:
 			return new StreamChecker;
 		case 1035:
 			return new L1035;
+		case 1041:
+			return new L1041;
 		case 1044:
 			return new L1044;
 		case 1046:
@@ -524,6 +531,8 @@ public:
 			return new L1277;
 		case 1286:
 			return new CombinationIterator;
+		case 1291:
+			return new L1291;
 		case 1305:
 			return new L1305;
 		case 1401:
