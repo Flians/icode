@@ -101,6 +101,7 @@
 #include "../leetcode/380_Insert_Delete_GetRandom_O(1).hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
+#include "../leetcode/389_Find_the_Difference.hpp"
 #include "../leetcode/392_Is_Subsequence.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/404_Sum_of_Left_Leaves.hpp"
@@ -383,6 +384,8 @@ public:
 			return new L383;
 		case 387:
 			return new L387;
+		case 389:
+			return new L389;
 		case 392:
 			return new L392;
 		case 402:
