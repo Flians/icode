@@ -107,6 +107,7 @@
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
 #include "../leetcode/412_Fizz_Buzz.hpp"
+#include "../leetcode/421_Maximum_XOR_of_Two_Numbers_in_an_Array.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
 #include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
@@ -394,6 +395,8 @@ public:
 			return new L409;
 		case 412:
 			return new L412;
+		case 421:
+			return new L421;
 		case 435:
 			return new L435;
 		case 436:
