@@ -15,7 +15,19 @@ public:
         cout << lengthOfLastWord("Hello World") << endl;
     }
 
-    int lengthOfLastWord(string s)
+    int lengthOfLastWord(string s) {
+        int len = 0;
+        for (int i = s.length() - 1; i >= 0; --i) {
+            if (s[i] != ' ') {
+                ++len;
+            } else if (len) {
+                break;
+            }
+        }
+        return len;
+    }
+
+    int lengthOfLastWord_old(string s)
     {
         string str = "";
         for (int i = s.size() - 1; i >= 0; i--)

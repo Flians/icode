@@ -162,6 +162,7 @@
 #include "../leetcode/1035_Uncrossed_Lines.hpp"
 #include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
+#include "../leetcode/1094_Car_Pooling.hpp"
 #include "../leetcode/1103_Distribute_Candies_to_People.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1191_K_Concatenation_Maximum_Sum.hpp"
@@ -503,6 +504,8 @@ public:
 			return new L1044;
 		case 1046:
 			return new L1046;
+		case 1094:
+			return new L1094;
 		case 1103:
 			return new L1103;
 		case 1143:
