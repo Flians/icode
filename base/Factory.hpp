@@ -48,6 +48,7 @@
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/129_Sum_Root_to_Leaf_Numbers.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
+#include "../leetcode/134_Gas_Station.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
@@ -273,6 +274,8 @@ public:
 			return new L129;
 		case 130:
 			return new L130;
+		case 134:
+			return new L134;
 		case 137:
 			return new L137;
 		case 143:
