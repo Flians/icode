@@ -75,6 +75,7 @@
 #include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/226_Invert_Binary_Tree.hpp"
+#include "../leetcode/229_Majority_Element_II.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.hpp"
@@ -328,6 +329,8 @@ public:
 			return new L223;
 		case 226:
 			return new L226;
+		case 229:
+			return new L229;
 		case 230:
 			return new L230;
 		case 231:
