@@ -43,11 +43,13 @@
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
+#include "../leetcode/121_Best_Time_to_Buy_and_Sell_Stock.hpp"
 #include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/129_Sum_Root_to_Leaf_Numbers.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
+#include "../leetcode/134_Gas_Station.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
@@ -59,6 +61,7 @@
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
 #include "../leetcode/174_Dungeon_Game.hpp"
+#include "../leetcode/179_Largest_Number.hpp"
 #include "../leetcode/198_House_Robber.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
@@ -74,6 +77,7 @@
 #include "../leetcode/222_Count_Complete_Tree_Nodes.hpp"
 #include "../leetcode/223_Rectangle_Area.hpp"
 #include "../leetcode/226_Invert_Binary_Tree.hpp"
+#include "../leetcode/229_Majority_Element_II.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/231_Power_of_Two.hpp"
 #include "../leetcode/235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.hpp"
@@ -99,12 +103,14 @@
 #include "../leetcode/380_Insert_Delete_GetRandom_O(1).hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
+#include "../leetcode/389_Find_the_Difference.hpp"
 #include "../leetcode/392_Is_Subsequence.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/404_Sum_of_Left_Leaves.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
 #include "../leetcode/412_Fizz_Buzz.hpp"
+#include "../leetcode/421_Maximum_XOR_of_Two_Numbers_in_an_Array.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
 #include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
@@ -116,6 +122,7 @@
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
+#include "../leetcode/495_Teemo_Attacking.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
@@ -146,6 +153,7 @@
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/969_Pancake_Sorting.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
+#include "../leetcode/980_Unique_Paths_III.hpp"
 #include "../leetcode/983_Minimum_Cost_For_Tickets.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
 #include "../leetcode/987_Vertical_Order_Traversal_of_a_Binary_Tree.hpp"
@@ -158,14 +166,17 @@
 #include "../leetcode/1029_Two_City_Scheduling.hpp"
 #include "../leetcode/1032_Stream_of_Characters.hpp"
 #include "../leetcode/1035_Uncrossed_Lines.hpp"
+#include "../leetcode/1041_Robot_Bounded_In_Circle.hpp"
 #include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
+#include "../leetcode/1094_Car_Pooling.hpp"
 #include "../leetcode/1103_Distribute_Candies_to_People.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1191_K_Concatenation_Maximum_Sum.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
+#include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 class Factory
@@ -263,6 +274,8 @@ public:
 			return new L116;
 		case 119:
 			return new L119;
+		case 121:
+			return new L121;
 		case 123:
 			return new L123;
 		case 124:
@@ -273,6 +286,8 @@ public:
 			return new L129;
 		case 130:
 			return new L130;
+		case 134:
+			return new L134;
 		case 137:
 			return new L137;
 		case 143:
@@ -295,6 +310,8 @@ public:
 			return new L171;
 		case 174:
 			return new L174;
+		case 179:
+			return new L179;
 		case 198:
 			return new L198;
 		case 200:
@@ -325,6 +342,8 @@ public:
 			return new L223;
 		case 226:
 			return new L226;
+		case 229:
+			return new L229;
 		case 230:
 			return new L230;
 		case 231:
@@ -375,6 +394,8 @@ public:
 			return new L383;
 		case 387:
 			return new L387;
+		case 389:
+			return new L389;
 		case 392:
 			return new L392;
 		case 402:
@@ -387,6 +408,8 @@ public:
 			return new L409;
 		case 412:
 			return new L412;
+		case 421:
+			return new L421;
 		case 435:
 			return new L435;
 		case 436:
@@ -409,6 +432,8 @@ public:
 			return new L470;
 		case 476:
 			return new L476;
+		case 495:
+			return new L495;
 		case 497:
 			return new RandPoint;
 		case 518:
@@ -469,6 +494,8 @@ public:
 			return new L969;
 		case 973:
 			return new L973;
+		case 980:
+			return new L980;
 		case 983:
 			return new L983;
 		case 986:
@@ -493,10 +520,14 @@ public:
 			return new StreamChecker;
 		case 1035:
 			return new L1035;
+		case 1041:
+			return new L1041;
 		case 1044:
 			return new L1044;
 		case 1046:
 			return new L1046;
+		case 1094:
+			return new L1094;
 		case 1103:
 			return new L1103;
 		case 1143:
@@ -509,6 +540,8 @@ public:
 			return new L1277;
 		case 1286:
 			return new CombinationIterator;
+		case 1291:
+			return new L1291;
 		case 1305:
 			return new L1305;
 		case 1401:
