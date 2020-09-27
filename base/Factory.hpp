@@ -61,6 +61,7 @@
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
 #include "../leetcode/174_Dungeon_Game.hpp"
+#include "../leetcode/179_Largest_Number.hpp"
 #include "../leetcode/198_House_Robber.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
@@ -121,6 +122,7 @@
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
+#include "../leetcode/495_Teemo_Attacking.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
@@ -308,6 +310,8 @@ public:
 			return new L171;
 		case 174:
 			return new L174;
+		case 179:
+			return new L179;
 		case 198:
 			return new L198;
 		case 200:
@@ -428,6 +432,8 @@ public:
 			return new L470;
 		case 476:
 			return new L476;
+		case 495:
+			return new L495;
 		case 497:
 			return new RandPoint;
 		case 518:
