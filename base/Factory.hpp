@@ -105,6 +105,7 @@
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/389_Find_the_Difference.hpp"
 #include "../leetcode/392_Is_Subsequence.hpp"
+#include "../leetcode/399_Evaluate_Division.hpp"
 #include "../leetcode/402_Remove_K_Digits.hpp"
 #include "../leetcode/404_Sum_of_Left_Leaves.hpp"
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
@@ -398,6 +399,8 @@ public:
 			return new L389;
 		case 392:
 			return new L392;
+		case 399:
+			return new L399;
 		case 402:
 			return new L402;
 		case 404:
