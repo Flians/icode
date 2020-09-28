@@ -32,6 +32,11 @@ public:
         unordered_map<string, vector<pair<string, double>>> record;
         for (size_t i = 0; i < equations.size(); ++i)
         {
+            /* 0 0 1
+            cout << record.size() << " ";
+            cout << record[equations[i][0]].size() << " ";
+            cout << record.size() << endl;
+            */
             record[equations[i][0]].push_back({equations[i][1], values[i]});
             record[equations[i][1]].push_back({equations[i][0], 1.0 / values[i]});
         }
