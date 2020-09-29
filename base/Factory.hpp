@@ -136,6 +136,7 @@
 #include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
+#include "../leetcode/713_Subarray_Product_Less_Than_K.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
@@ -461,6 +462,8 @@ public:
 			return new L704;
 		case 705:
 			return new MyHashSet;
+		case 713:
+			return new L713;
 		case 733:
 			return new L733;
 		case 763:
