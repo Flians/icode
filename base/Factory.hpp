@@ -132,6 +132,7 @@
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
+#include "../leetcode/572_Subtree_of_Another_Tree.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
@@ -455,6 +456,8 @@ public:
 			return new L560;
 		case 567:
 			return new L567;
+		case 572:
+			return new L572;
 		case 678:
 			return new L678;
 		case 679:
