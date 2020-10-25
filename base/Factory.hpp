@@ -182,6 +182,7 @@
 #include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
+#include "../leetcode/1510_Stone_Game_IV.hpp"
 class Factory
 {
 public:
@@ -555,6 +556,8 @@ public:
 			return new L1305;
 		case 1401:
 			return new L1401;
+		case 1510:
+			return new L1510;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
