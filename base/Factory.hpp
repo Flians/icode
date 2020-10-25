@@ -148,6 +148,7 @@
 #include "../leetcode/824_Goat_Latin.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
 #include "../leetcode/836_Rectangle_Overlap.hpp"
+#include "../leetcode/877_Stone_Game.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
@@ -490,6 +491,8 @@ public:
 			return new L835;
 		case 836:
 			return new L836;
+		case 877:
+			return new L877;
 		case 886:
 			return new L886;
 		case 889:
