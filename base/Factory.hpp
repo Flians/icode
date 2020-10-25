@@ -24,6 +24,7 @@
 #include "../leetcode/23_Merge_k_Sorted_Lists.hpp"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/35_Search_Insert_Position.hpp"
+#include "../leetcode/41_First_Missing_Positive.hpp"
 #include "../leetcode/46_Permutations.hpp"
 #include "../leetcode/54_spiral_matrix.hpp"
 #include "../leetcode/55_Jump_Game.hpp"
@@ -51,6 +52,7 @@
 #include "../leetcode/130_Surrounded_Regions.hpp"
 #include "../leetcode/134_Gas_Station.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
+#include "../leetcode/139_Word_Break.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/152_Maximum_Product_Subarray.hpp"
@@ -240,6 +242,8 @@ public:
 			return new L33;
 		case 35:
 			return new L35;
+		case 41:
+			return new L41;
 		case 46:
 			return new L46;
 		case 54:
@@ -294,6 +298,8 @@ public:
 			return new L134;
 		case 137:
 			return new L137;
+		case 139:
+			return new L139;
 		case 143:
 			return new L143;
 		case 146:
