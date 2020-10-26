@@ -40,8 +40,10 @@
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
 #include "../leetcode/96_Unique_Binary_Search_Trees.hpp"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.hpp"
+#include "../leetcode/104_Maximum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
+#include "../leetcode/111_Minimum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
 #include "../leetcode/121_Best_Time_to_Buy_and_Sell_Stock.hpp"
@@ -121,6 +123,7 @@
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/450_Delete_Node_in_a_BST.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
+#include "../leetcode/456_132_Pattern.hpp"
 #include "../leetcode/459_Repeated_Substring_Pattern.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
@@ -276,10 +279,14 @@ public:
 			return new L96;
 		case 103:
 			return new L103;
+		case 104:
+			return new L104;
 		case 105:
 			return new L105;
 		case 106:
 			return new L106;
+		case 111:
+			return new L111;
 		case 116:
 			return new L116;
 		case 119:
@@ -438,6 +445,8 @@ public:
 			return new L450;
 		case 451:
 			return new L451;
+		case 456:
+			return new L456;
 		case 459:
 			return new L459;
 		case 468:
