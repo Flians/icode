@@ -154,6 +154,7 @@
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/948_Bag_of_Tokens.hpp"
 #include "../leetcode/949_Largest_Time_for_Given_Digits.hpp"
 #include "../leetcode/952_Largest_Component_Size_by_Common_Factor.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
@@ -503,6 +504,8 @@ public:
 			return new L905;
 		case 918:
 			return new L918;
+		case 948:
+			return new L948;
 		case 949:
 			return new L949;
 		case 952:
