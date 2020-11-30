@@ -188,6 +188,7 @@
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
 #include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
+#include "../leetcode/1306_Jump_Game_III.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
 class Factory
@@ -575,6 +576,8 @@ public:
 			return new L1291;
 		case 1305:
 			return new L1305;
+		case 1306:
+			return new L1306;
 		case 1401:
 			return new L1401;
 		case 1510:
