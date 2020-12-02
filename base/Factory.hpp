@@ -43,6 +43,7 @@
 #include "../leetcode/104_Maximum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
+#include "../leetcode/107_Binary_Tree_Level_Order_Traversal_II.hpp"
 #include "../leetcode/111_Minimum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
@@ -120,6 +121,7 @@
 #include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
 #include "../leetcode/438_Find_All_Anagrams_in_a_String.hpp"
+#include "../leetcode/441_Arranging_Coins.hpp"
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/450_Delete_Node_in_a_BST.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
@@ -286,6 +288,8 @@ public:
 			return new L105;
 		case 106:
 			return new L106;
+		case 107:
+			return new L107;
 		case 111:
 			return new L111;
 		case 116:
@@ -440,6 +444,8 @@ public:
 			return new L437;
 		case 438:
 			return new L438;
+		case 441:
+			return new L441;
 		case 442:
 			return new L442;
 		case 450:
