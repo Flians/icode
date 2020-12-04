@@ -106,6 +106,7 @@
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/368_Largest_Divisible_Subset.hpp"
 #include "../leetcode/380_Insert_Delete_GetRandom_O(1).hpp"
+#include "../leetcode/382_Linked_List_Random_Node.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/389_Find_the_Difference.hpp"
@@ -156,6 +157,7 @@
 #include "../leetcode/877_Stone_Game.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
+#include "../leetcode/897_Increasing_Order_Search_Tree.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
@@ -414,6 +416,8 @@ public:
 			return new L368;
 		case 380:
 			return new RandomizedSet;
+		case 382:
+			return new L382;
 		case 383:
 			return new L383;
 		case 387:
@@ -514,6 +518,8 @@ public:
 			return new L886;
 		case 889:
 			return new L889;
+		case 897:
+			return new L897;
 		case 901:
 			return new StockSpanner;
 		case 905:
