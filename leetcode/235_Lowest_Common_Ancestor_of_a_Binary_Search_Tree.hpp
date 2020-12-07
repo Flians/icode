@@ -6,7 +6,7 @@ public:
         vector<int> nums = {6,2,8,0,4,7,9,-1,-1,3,5};
         TreeNode* p = new TreeNode(2);
         TreeNode* q = new TreeNode(4);
-        cout << lowestCommonAncestor(create_tree(nums), p, q)->val << " 2" << endl;
+        cout << lowestCommonAncestor(create_tree<int, TreeNode>(nums), p, q)->val << " 2" << endl;
     }
 
     TreeNode* inorder (TreeNode *root, int minv, int maxv) {

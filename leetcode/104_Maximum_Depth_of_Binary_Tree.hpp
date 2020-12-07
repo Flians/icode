@@ -4,9 +4,9 @@ class L104 : public icode
 public:
 	void run() {
         vector<int> nums = {2,-1,3,-1,4,-1,5,-1,6};
-        cout << maxDepth(create_tree(nums)) << " 5" << endl;
+        cout << maxDepth(create_tree<int, TreeNode>(nums)) << " 5" << endl;
         nums = {3,9,20,-1,-1,15,7};
-        cout << maxDepth(create_tree(nums)) << " 3" << endl;
+        cout << maxDepth(create_tree<int, TreeNode>(nums)) << " 3" << endl;
     }
 
     int maxDepth(TreeNode* root) {

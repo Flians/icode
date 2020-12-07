@@ -4,7 +4,7 @@ class L222 : public icode
 public:
 	void run() {
         vector<int> nums = {1,2,3,4,5,6};
-        TreeNode *root = create_tree(nums);
+        TreeNode *root = create_tree<int, TreeNode>(nums);
         cout << countNodes(root) << " 6" << endl;
     }
 

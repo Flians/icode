@@ -5,7 +5,7 @@ public:
 	void run() {
         vector<int> num = {3,9,20,-1,-1,15,7};
         // [[15,7],[9,20],[3]]
-        print_res(levelOrderBottom(create_tree(num)));
+        print_res(levelOrderBottom(create_tree<int, TreeNode>(num)));
     }
 
     vector<vector<int>> levelOrderBottom(TreeNode* root) {

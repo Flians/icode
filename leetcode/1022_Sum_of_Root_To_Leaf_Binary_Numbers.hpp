@@ -4,7 +4,7 @@ class L1022 : public icode
 public:
 	void run() {
         vector<int> nums ={1,0,1,0,1,0,1};
-        cout << sumRootToLeaf(create_tree(nums)) << " 22" << endl;
+        cout << sumRootToLeaf(create_tree<int, TreeNode>(nums)) << " 22" << endl;
     }
 
     void sumRootToLeaf(TreeNode* root, int cur, int &all) {

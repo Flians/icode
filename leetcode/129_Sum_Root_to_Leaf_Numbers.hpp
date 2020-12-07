@@ -4,7 +4,7 @@ class L129 : public icode
 public:
 	void run() {
         vector<int> nums = {4,9,0,5,1};
-        cout << sumNumbers(create_tree(nums)) << " 1026" << endl;
+        cout << sumNumbers(create_tree<int, TreeNode>(nums)) << " 1026" << endl;
     }
 
     void sumNumbers(TreeNode* root, int cur, int &all) {
