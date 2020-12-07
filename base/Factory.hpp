@@ -46,6 +46,7 @@
 #include "../leetcode/107_Binary_Tree_Level_Order_Traversal_II.hpp"
 #include "../leetcode/111_Minimum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
+#include "../leetcode/117_Populating_Next_Right_Pointers_in_Each_Node_II.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
 #include "../leetcode/121_Best_Time_to_Buy_and_Sell_Stock.hpp"
 #include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
@@ -140,6 +141,7 @@
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
+#include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
@@ -194,6 +196,7 @@
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
+#include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
 class Factory
 {
@@ -296,6 +299,8 @@ public:
 			return new L111;
 		case 116:
 			return new L116;
+		case 117:
+			return new L117;
 		case 119:
 			return new L119;
 		case 121:
@@ -484,6 +489,8 @@ public:
 			return new L567;
 		case 572:
 			return new L572;
+		case 605:
+			return new L605;
 		case 678:
 			return new L678;
 		case 679:
@@ -592,6 +599,8 @@ public:
 			return new L1306;
 		case 1401:
 			return new L1401;
+		case 1492:
+			return new L1492;
 		case 1510:
 			return new L1510;
 		default:
