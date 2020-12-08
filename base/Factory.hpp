@@ -34,6 +34,7 @@
 #include "../leetcode/59_Spiral_Matrix_II.hpp"
 #include "../leetcode/60_Permutation_Sequence.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
+#include "../leetcode/66_Plus_One.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/75_Sort_Colors.hpp"
 #include "../leetcode/78_Subsets.hpp"
@@ -279,6 +280,8 @@ public:
 			return new L60;
 		case 64:
 			return new L64;
+		case 66:
+			return new L66;
 		case 72:
 			return new L72;
 		case 75:
