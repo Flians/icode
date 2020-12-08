@@ -131,6 +131,7 @@
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
 #include "../leetcode/456_132_Pattern.hpp"
 #include "../leetcode/459_Repeated_Substring_Pattern.hpp"
+#include "../leetcode/461_Hamming_Distance.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
@@ -472,6 +473,8 @@ public:
 			return new L456;
 		case 459:
 			return new L459;
+		case 461:
+			return new L461;
 		case 468:
 			return new L468;
 		case 470:
