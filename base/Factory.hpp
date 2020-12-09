@@ -183,6 +183,7 @@
 #include "../leetcode/994_Rotting_Oranges.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
+#include "../leetcode/1010_Pairs_of_Songs_With_Total_Durations_Divisible_by_60.hpp"
 #include "../leetcode/1022_Sum_of_Root_To_Leaf_Binary_Numbers.hpp"
 #include "../leetcode/1028_Recover_a_Tree_From_Preorder_Traversal.hpp"
 #include "../leetcode/1029_Two_City_Scheduling.hpp"
@@ -579,6 +580,8 @@ public:
 			return new L997;
 		case 1008:
 			return new L1008;
+		case 1010:
+			return new L1010;
 		case 1022:
 			return new L1022;
 		case 1028:
