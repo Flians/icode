@@ -68,6 +68,7 @@
 #include "../leetcode/165_Compare_Version_Numbers.hpp"
 #include "../leetcode/169_Majority_Element.hpp"
 #include "../leetcode/171_Excel_Sheet_Column_Number.hpp"
+#include "../leetcode/173_Binary_Search_Tree_Iterator.hpp"
 #include "../leetcode/174_Dungeon_Game.hpp"
 #include "../leetcode/179_Largest_Number.hpp"
 #include "../leetcode/198_House_Robber.hpp"
@@ -109,7 +110,7 @@
 #include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/368_Largest_Divisible_Subset.hpp"
-#include "../leetcode/380_Insert_Delete_GetRandom_O(1).hpp"
+#include "../leetcode/380_Insert_Delete_GetRandom_O.hpp"
 #include "../leetcode/382_Linked_List_Random_Node.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
@@ -350,6 +351,8 @@ public:
 			return new L169;
 		case 171:
 			return new L171;
+		case 173:
+			return new BSTIterator;
 		case 174:
 			return new L174;
 		case 179:

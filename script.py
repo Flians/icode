@@ -25,6 +25,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'LRUCache'
             elif id == '155':
                 cn = 'MinStack'
+            elif id == '173':
+                cn = 'BSTIterator'
             elif id == '208':
                 cn = 'Trie'
             elif id == '211':
