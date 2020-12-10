@@ -5,6 +5,8 @@ public:
     vector<int> v;
     vector<vector<int>> rect;
     RandPoint() {}
+    virtual ~RandPoint(){};
+
     RandPoint(vector<vector<int>> &rects)
     {
         rect = rects;
@@ -35,5 +37,6 @@ public:
         print_res(obj->pick());
         print_res(obj->pick());
         print_res(obj->pick());
+        delete obj;
     }
 };

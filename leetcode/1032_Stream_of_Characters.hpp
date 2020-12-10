@@ -24,6 +24,10 @@ public:
         this->root = new TrieNode();
     }
 
+    virtual ~StreamChecker() {
+        delete root;
+    }
+
     StreamChecker(vector<string> &words)
     {
         this->root = new TrieNode();
@@ -60,11 +64,19 @@ public:
 
     void run()
     {
+        vector<string> words = {"cd","f","kl"};
+        StreamChecker *streamChecker = new StreamChecker(words); // init the dictionary.
+        cout << streamChecker->query('a') << " false" << endl;          // return false
+        cout << streamChecker->query('b') << " false" << endl;          // return false
+        cout << streamChecker->query('c') << " false" << endl;          // return false
+        cout << streamChecker->query('d') << " true" << endl;           // return true, because 'cd' is in the wordlist
+        cout << streamChecker->query('e') << " false" << endl;          // return false
+        cout << streamChecker->query('f') << " true" << endl;           // return true, because 'f' is in the wordlist
+        cout << streamChecker->query('g') << " false" << endl;          // return false
+        cout << streamChecker->query('h') << " false" << endl;          // return false
+        cout << streamChecker->query('i') << " false" << endl;          // return false
+        cout << streamChecker->query('j') << " false" << endl;          // return false
+        cout << streamChecker->query('k') << " false" << endl;          // return false
+        cout << streamChecker->query('l') << " false" << endl;
     }
 };
-
-/**
- * Your StreamChecker object will be instantiated and called as such:
- * StreamChecker* obj = new StreamChecker(words);
- * bool param_1 = obj->query(letter);
- */

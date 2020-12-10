@@ -1,12 +1,11 @@
 #include "../base/icode.hpp"
 class StockSpanner : public icode
 {
-public:
+private:
     stack<pair<int, int>> stock;
-    StockSpanner()
-    {
-    }
-
+public:
+    StockSpanner(){}
+    virtual ~StockSpanner(){}
     int next(int price)
     {
         int span = 1;
@@ -33,5 +32,6 @@ public:
         cout << obj->next(60) << endl;
         cout << obj->next(75) << endl;
         cout << obj->next(85) << endl;
+        delete obj;
     }
 };

@@ -8,6 +8,8 @@ public:
         srand((unsigned)time(NULL));
     }
 
+    virtual ~Random_pick(){};
+
     Random_pick(vector<int>& w) {
         srand((unsigned)time(NULL));
         if (!w.empty()) {
@@ -34,6 +36,7 @@ public:
         cout << obj->pickIndex() << endl;
         cout << obj->pickIndex() << endl;
         cout << obj->pickIndex() << endl;
+        delete obj;
     }
 };
 

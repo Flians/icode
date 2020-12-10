@@ -5,6 +5,7 @@ private:
     vector<string> all;
 public:
     CombinationIterator() {}
+    virtual ~CombinationIterator() {}
     CombinationIterator(string characters, int combinationLength) {
         this->index = 0;
         if ((int)characters.length() >= combinationLength) {
@@ -35,8 +36,9 @@ public:
         cout << obj->next() << " ab" << endl;
         cout << obj->hasNext() << " 1" << endl;
         cout << obj->next() << " ac" << endl;
-        cout << obj->hasNext() << " 1" << endl;;
+        cout << obj->hasNext() << " 1" << endl;
         cout << obj->next() << " bc" << endl;
-        cout << obj->hasNext() << " 0" << endl;;
+        cout << obj->hasNext() << " 0" << endl;
+        delete obj;
     }
 };

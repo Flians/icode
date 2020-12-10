@@ -5,6 +5,8 @@ public:
     /** Initialize your data structure here. */
     RandomizedSet() {
     }
+
+    virtual ~RandomizedSet(){};
     
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     bool insert(int val) {
@@ -32,5 +34,6 @@ public:
         cout << obj->remove(1) << " 1" << endl;
         cout << obj->insert(2) << " 0" << endl;
         cout << obj->getRandom() << " 2" << endl;
+        delete obj;
     }
 };
