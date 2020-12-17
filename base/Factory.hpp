@@ -57,6 +57,7 @@
 #include "../leetcode/125_Valid_Palindrome.hpp"
 #include "../leetcode/129_Sum_Root_to_Leaf_Numbers.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
+#include "../leetcode/131_Palindrome_Partitioning.hpp"
 #include "../leetcode/134_Gas_Station.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/139_Word_Break.hpp"
@@ -331,6 +332,8 @@ public:
 			return new L129;
 		case 130:
 			return new L130;
+		case 131:
+			return new L131;
 		case 134:
 			return new L134;
 		case 137:
