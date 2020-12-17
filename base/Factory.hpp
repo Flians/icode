@@ -41,6 +41,7 @@
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
 #include "../leetcode/96_Unique_Binary_Search_Trees.hpp"
+#include "../leetcode/98_Validate_Binary_Search_Tree.hpp"
 #include "../leetcode/103_Binary_Tree_Zigzag_Level_Order_Traversal.hpp"
 #include "../leetcode/104_Maximum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
@@ -297,6 +298,8 @@ public:
 			return new L94;
 		case 96:
 			return new L96;
+		case 98:
+			return new L98;
 		case 103:
 			return new L103;
 		case 104:
