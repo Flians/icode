@@ -177,6 +177,7 @@
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/969_Pancake_Sorting.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
+#include "../leetcode/977_Squares_of_a_Sorted_Array.hpp"
 #include "../leetcode/980_Unique_Paths_III.hpp"
 #include "../leetcode/983_Minimum_Cost_For_Tickets.hpp"
 #include "../leetcode/986_Interval_List_Intersections.hpp"
@@ -570,6 +571,8 @@ public:
 			return new L969;
 		case 973:
 			return new L973;
+		case 977:
+			return new L977;
 		case 980:
 			return new L980;
 		case 983:
