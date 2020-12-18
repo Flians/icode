@@ -62,7 +62,7 @@ public:
         }
     }
 
-    vector<vector<int>> fourSum(vector<int> &nums, int target)
+    vector<vector<int>> fourSum(vector<int> &&nums, int target)
     {
         vector<vector<int>> result;
         if (nums.size() >= 4)
@@ -92,7 +92,6 @@ public:
 
     void run()
     {
-        vector<int> nums = {1, 0, -1, 0, -2, 2};
-        print_res(fourSum(nums, 0));
+        print_res(fourSum({1, 0, -1, 0, -2, 2}, 0));
     }
 };

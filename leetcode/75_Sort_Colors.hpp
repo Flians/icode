@@ -5,7 +5,7 @@ public:
 	void run() {
         vector<int> nums = {2,0,2,1,1,0};
         sortColors(nums);
-        print_res(nums);
+        print_res(move(nums));
     }
 
     void sortColors(vector<int>& nums) {

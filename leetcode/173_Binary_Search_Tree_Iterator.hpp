@@ -38,8 +38,7 @@ public:
     }
 
     void run() {
-        vector<int> nums = {7, 3, 15, -1, -1, 9, 20};
-        BSTIterator* obj = new BSTIterator(create_tree<int, TreeNode>(nums));
+        BSTIterator* obj = new BSTIterator(create_tree<int, TreeNode>({7, 3, 15, -1, -1, 9, 20}));
         cout << obj->next() << " 3" << endl;    // return 3
         cout << obj->next() << " 7" << endl;    // return 7
         cout << obj->hasNext() << " true" << endl; // return True

@@ -4,7 +4,7 @@ class L338 : public icode
 public:
 	void run() {
         // [0,1,1,2,1,2]
-        print_res(countBits(5));
+        print_res(move(countBits(5)));
     }
 
     int number_1(int num) {

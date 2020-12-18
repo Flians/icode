@@ -5,10 +5,9 @@ private:
     TreeNode* res = NULL;
 public:
 	void run() {
-        vector<int> nums = {3,5,1,6,2,0,8,-1,-1,7,4};
         TreeNode* p = new TreeNode(5);
         TreeNode* q = new TreeNode(4);
-        cout << lowestCommonAncestor(create_tree<int, TreeNode>(nums), p, q)->val << " 5" << endl;
+        cout << lowestCommonAncestor(create_tree<int, TreeNode>({3,5,1,6,2,0,8,-1,-1,7,4}), p, q)->val << " 5" << endl;
     }
     
     TreeNode* inorder (TreeNode *root, int minv, int maxv) {

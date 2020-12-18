@@ -42,7 +42,7 @@ public:
                 dp[i][j] = dp[i - 1][j] + (j >= coins[i - 1] ? dp[i][j - coins[i - 1]] : 0);
             }
         }
-        print_res(dp);
+        print_res(move(dp));
         return dp[coins.size()][amount];
     }
     

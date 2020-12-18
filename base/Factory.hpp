@@ -104,6 +104,7 @@
 #include "../leetcode/290_Word_Pattern.hpp"
 #include "../leetcode/299_Bulls_and_Cows.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
+#include "../leetcode/312_Burst_Balloons.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
 #include "../leetcode/332_Reconstruct_Itinerary.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
@@ -427,6 +428,8 @@ public:
 			return new L299;
 		case 300:
 			return new L300;
+		case 312:
+			return new L312;
 		case 328:
 			return new L328;
 		case 332:

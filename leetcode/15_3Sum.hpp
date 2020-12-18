@@ -49,7 +49,7 @@ vector<vector<int>> threeSum(vector<int> &nums)
 class L15 : public icode
 {
 public:
-    vector<vector<int>> threeSum(vector<int> &nums)
+    vector<vector<int>> threeSum(vector<int>&& nums)
     {
         vector<vector<int>> res;
         std::sort(nums.begin(), nums.end());
@@ -99,8 +99,6 @@ public:
 
     void run()
     {
-        vector<int> strs = {2, 2, -1, -3, 3, 1, -2, 1, -2, 3, 0, -5, 0, 4, -3, 3};
-        vector<vector<int>> re = threeSum(strs);
-        icode::print_res(re);
+        icode::print_res(threeSum({2, 2, -1, -3, 3, 1, -2, 1, -2, 3, 0, -5, 0, 4, -3, 3}));
     }
 };

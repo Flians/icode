@@ -2,7 +2,7 @@
 class L46 : public icode
 {
 public:
-    vector<vector<int>> permute(vector<int> &nums)
+    vector<vector<int>> permute(vector<int>&& nums)
     {
         vector<vector<int>> res;
         vector<int> item;
@@ -32,7 +32,6 @@ public:
 
     void run()
     {
-        vector<int> nums = {1, 2, 3};
-        icode::print_res(nums);
+        icode::print_res(permute({1, 2, 3}));
     }
 };

@@ -3,10 +3,11 @@ class L235 : public icode
 {
 public:
 	void run() {
-        vector<int> nums = {6,2,8,0,4,7,9,-1,-1,3,5};
         TreeNode* p = new TreeNode(2);
         TreeNode* q = new TreeNode(4);
-        cout << lowestCommonAncestor(create_tree<int, TreeNode>(nums), p, q)->val << " 2" << endl;
+        cout << lowestCommonAncestor(create_tree<int, TreeNode>({6,2,8,0,4,7,9,-1,-1,3,5}), p, q)->val << " 2" << endl;
+        delete p;
+        delete q;
     }
 
     TreeNode* inorder (TreeNode *root, int minv, int maxv) {

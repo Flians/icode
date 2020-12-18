@@ -67,13 +67,7 @@ public:
 
     void run()
     {
-        // testcase: [5] [5]
-        // testcase: [2,4,3] [5,6,4]
-        vector<int> l1 = {5};
-        vector<int> l2 = {5};
-        print_res(addTwoNumbers_(create_list(l1), create_list(l2)));
-        l1 = {2,4,3};
-        l2 = {5,6,4};
-        print_res(addTwoNumbers_(create_list(l1), create_list(l2)));
+        print_res(addTwoNumbers_(create_list<int>({5}), create_list<int>({5})));
+        print_res(addTwoNumbers_(create_list<int>({2, 4, 3}), create_list<int>({5, 6, 4})));
     }
 };

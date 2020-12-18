@@ -62,13 +62,13 @@ public:
     virtual void run() = 0;
 
     template <typename T>
-    ListNode *create_list(vector<T> nums);
+    ListNode *create_list(vector<T>&& nums);
 
     template <typename T, typename C>
-    C *create_tree(vector<T> nums);
+    C *create_tree(vector<T>&& nums);
 
     template <typename T>
-    Node *create_BPlusTree(vector<T> nums);
+    Node *create_BPlusTree(vector<T>&& nums);
 
     void print_res(ListNode *root);
 
@@ -77,13 +77,13 @@ public:
     void print_res(Node *root);
 
     template <typename T>
-    void print_res(vector<T> data);
+    void print_res(vector<T>&& data);
     template <typename T>
-    void print_res(vector<vector<T>> data);
+    void print_res(vector<vector<T>>&& data);
 };
 
 template <typename T>
-ListNode *icode::create_list(vector<T> nums)
+ListNode *icode::create_list(vector<T>&& nums)
 {
     ListNode *root = NULL;
     if (nums.empty())
@@ -101,7 +101,7 @@ ListNode *icode::create_list(vector<T> nums)
 }
 
 template <typename T, typename C>
-C *icode::create_tree(vector<T> nums)
+C *icode::create_tree(vector<T>&& nums)
 {
     C *root = NULL;
     if (nums.empty())
@@ -133,7 +133,7 @@ C *icode::create_tree(vector<T> nums)
 }
 
 template <typename T>
-Node *icode::create_BPlusTree(vector<T> nums)
+Node *icode::create_BPlusTree(vector<T>&& nums)
 {
     Node *root = NULL;
     if (nums.empty())
@@ -231,7 +231,7 @@ void icode::print_res(Node *root) {
 }
 
 template <typename T>
-void icode::print_res(vector<T> data)
+void icode::print_res(vector<T>&& data)
 {
     for (auto i : data)
     {
@@ -241,11 +241,11 @@ void icode::print_res(vector<T> data)
 }
 
 template <typename T>
-void icode::print_res(vector<vector<T>> data)
+void icode::print_res(vector<vector<T>>&& data)
 {
     for (auto ip : data)
     {
-        this->print_res(ip);
+        this->print_res(move(ip));
     }
 }
 

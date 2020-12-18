@@ -5,7 +5,7 @@ public:
 	void run() {
         vector<vector<char>> board = {{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}};
         solve(board);
-        print_res(board);
+        print_res(move(board));
     }
 
     void dfs(int x, int y, vector<vector<char>>& board) {
