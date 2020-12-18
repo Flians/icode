@@ -133,6 +133,7 @@
 #include "../leetcode/442_Find_All_Duplicates_in_an_Array.hpp"
 #include "../leetcode/450_Delete_Node_in_a_BST.hpp"
 #include "../leetcode/451_Sort_Characters_By_Frequency.hpp"
+#include "../leetcode/454_4Sum_II.hpp"
 #include "../leetcode/456_132_Pattern.hpp"
 #include "../leetcode/459_Repeated_Substring_Pattern.hpp"
 #include "../leetcode/461_Hamming_Distance.hpp"
@@ -484,6 +485,8 @@ public:
 			return new L450;
 		case 451:
 			return new L451;
+		case 454:
+			return new L454;
 		case 456:
 			return new L456;
 		case 459:
