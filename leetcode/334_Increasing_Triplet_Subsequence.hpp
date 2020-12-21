@@ -7,8 +7,9 @@ public:
     {
         if (nums.size() < 3)
             return false;
-        int fir = nums[0], sec = INT_MAX, i = 1;
-        for (; i < (int)nums.size(); ++i)
+        int fir = nums[0], sec = INT_MAX;
+        size_t i = 1;
+        for (; i < nums.size(); ++i)
         {
             if (nums[i] > sec)
             {
@@ -29,6 +30,6 @@ public:
     void run()
     {
         vector<int> nums = {1, 2, 3, 4, 5};
-        cout << increasingTriplet(nums) << endl;
+        cout << increasingTriplet(nums) << " true" << endl;
     }
 };
