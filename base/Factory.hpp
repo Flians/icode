@@ -210,6 +210,7 @@
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
+#include "../leetcode/1463_Cherry_Pickup_II.hpp"
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
 class Factory
@@ -641,6 +642,8 @@ public:
 			return new L1306;
 		case 1401:
 			return new L1401;
+		case 1463:
+			return new L1463;
 		case 1492:
 			return new L1492;
 		case 1510:
