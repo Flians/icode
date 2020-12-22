@@ -173,6 +173,7 @@
 #include "../leetcode/897_Increasing_Order_Search_Tree.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
+#include "../leetcode/910_Smallest_Range_II.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/948_Bag_of_Tokens.hpp"
 #include "../leetcode/949_Largest_Time_for_Given_Digits.hpp"
@@ -568,6 +569,8 @@ public:
 			return new StockSpanner;
 		case 905:
 			return new L905;
+		case 910:
+			return new L910;
 		case 918:
 			return new L918;
 		case 948:
