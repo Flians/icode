@@ -149,6 +149,7 @@
 #include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/528_Random_Pick_with_Weight.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
+#include "../leetcode/556_Next_Greater_Element_III.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
@@ -523,6 +524,8 @@ public:
 			return new Random_pick;
 		case 540:
 			return new L540;
+		case 556:
+			return new L556;
 		case 560:
 			return new L560;
 		case 567:
