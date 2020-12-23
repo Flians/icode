@@ -3,7 +3,7 @@ class L450 : public icode
 {
 public:
 	void run() {
-        print_res(deleteNode(create_tree<int, TreeNode>({5,3,6,2,4,-1,7}), 3)); // [5,4,6,2,null,null,7]
+        print_res(deleteNode(create_tree<int, TreeNode>({5,3,6,2,4,INT_MIN,7}), 3)); // [5,4,6,2,null,null,7]
     }
 
     TreeNode* deleteNode(TreeNode* root, int key) {

@@ -193,16 +193,14 @@ void icode::print_res(TreeNode *root)
     while (!level.empty())
     {
         TreeNode *tmp = level.front();
-        cout << tmp->val << " ";
-        if (tmp->left)
-        {
-            level.push(tmp->left);
-        }
-        if (tmp->right)
-        {
-            level.push(tmp->right);
-        }
         level.pop();
+        if (!tmp) {
+            cout << "# ";
+            continue;
+        }
+        cout << tmp->val << " ";
+        level.push(tmp->left);
+        level.push(tmp->right);
     }
     cout << endl;
 }

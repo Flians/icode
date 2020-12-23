@@ -3,8 +3,8 @@ class L572 : public icode
 {
 public:
 	void run() {
-        cout << isSubtree(create_tree<int, TreeNode>({3,4,5,1,-1,2}), create_tree<int, TreeNode>({3,1,2})) << " false" << endl;
-        cout << isSubtree(create_tree<int, TreeNode>({3,4,5,1,2,-1,-1,-1,6}), create_tree<int, TreeNode>({4,1,2})) << " false" << endl;
+        cout << isSubtree(create_tree<int, TreeNode>({3,4,5,1,INT_MIN,2}), create_tree<int, TreeNode>({3,1,2})) << " false" << endl;
+        cout << isSubtree(create_tree<int, TreeNode>({3,4,5,1,2,INT_MIN,INT_MIN,INT_MIN,6}), create_tree<int, TreeNode>({4,1,2})) << " false" << endl;
         cout << isSubtree(create_tree<int, TreeNode>({3,4,5,1,2}), create_tree<int, TreeNode>({4,1,2})) << " true" << endl;
     }
 

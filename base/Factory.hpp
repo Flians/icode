@@ -47,6 +47,7 @@
 #include "../leetcode/105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.hpp"
 #include "../leetcode/106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.hpp"
 #include "../leetcode/107_Binary_Tree_Level_Order_Traversal_II.hpp"
+#include "../leetcode/110_Balanced_Binary_Tree.hpp"
 #include "../leetcode/111_Minimum_Depth_of_Binary_Tree.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/117_Populating_Next_Right_Pointers_in_Each_Node_II.hpp"
@@ -318,6 +319,8 @@ public:
 			return new L106;
 		case 107:
 			return new L107;
+		case 110:
+			return new L110;
 		case 111:
 			return new L111;
 		case 116:

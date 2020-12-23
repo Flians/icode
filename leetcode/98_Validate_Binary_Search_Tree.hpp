@@ -5,7 +5,7 @@ public:
 	void run() {
         cout << isValidBST(create_tree<int, TreeNode>({1,1})) << " false" << endl;
         cout << isValidBST(create_tree<int, TreeNode>({-2147483648})) << " true" << endl;
-        cout << isValidBST(create_tree<int, TreeNode>({5,4,6,-1,-1,3,7})) << " false" << endl;
+        cout << isValidBST(create_tree<int, TreeNode>({5,4,6,INT_MIN,INT_MIN,3,7})) << " false" << endl;
     }
 
     bool inorder(TreeNode* root, double &pre) {
