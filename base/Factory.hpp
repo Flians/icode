@@ -22,6 +22,7 @@
 #include "../leetcode/21_Merge_Two_Sorted_Lists.hpp"
 #include "../leetcode/22_Generate_Parentheses.hpp"
 #include "../leetcode/23_Merge_k_Sorted_Lists.hpp"
+#include "../leetcode/24_Swap_Nodes_in_Pairs.hpp"
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/35_Search_Insert_Position.hpp"
 #include "../leetcode/41_First_Missing_Positive.hpp"
@@ -273,6 +274,8 @@ public:
 			return new L22;
 		case 23:
 			return new L23;
+		case 24:
+			return new L24;
 		case 33:
 			return new L33;
 		case 35:
