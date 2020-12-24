@@ -167,6 +167,7 @@
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
+#include "../leetcode/827_Making_A_Large_Island.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
 #include "../leetcode/836_Rectangle_Overlap.hpp"
 #include "../leetcode/877_Stone_Game.hpp"
@@ -561,6 +562,8 @@ public:
 			return new L812;
 		case 824:
 			return new L824;
+		case 827:
+			return new L827;
 		case 835:
 			return new L835;
 		case 836:
