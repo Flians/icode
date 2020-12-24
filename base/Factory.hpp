@@ -156,6 +156,7 @@
 #include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
+#include "../leetcode/695_Max_Area_of_Island.hpp"
 #include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
@@ -538,6 +539,8 @@ public:
 			return new L678;
 		case 679:
 			return new L679;
+		case 695:
+			return new L695;
 		case 700:
 			return new L700;
 		case 704:
