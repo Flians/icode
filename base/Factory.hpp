@@ -34,6 +34,7 @@
 #include "../leetcode/58_length_of_last_word.hpp"
 #include "../leetcode/59_Spiral_Matrix_II.hpp"
 #include "../leetcode/60_Permutation_Sequence.hpp"
+#include "../leetcode/62_Unique_Paths.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
 #include "../leetcode/66_Plus_One.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
@@ -298,6 +299,8 @@ public:
 			return new L59;
 		case 60:
 			return new L60;
+		case 62:
+			return new L62;
 		case 64:
 			return new L64;
 		case 66:
