@@ -151,6 +151,7 @@
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/495_Teemo_Attacking.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
+#include "../leetcode/498_Diagonal_Traverse.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/528_Random_Pick_with_Weight.hpp"
@@ -537,6 +538,8 @@ public:
 			return new L495;
 		case 497:
 			return new RandPoint;
+		case 498:
+			return new L498;
 		case 518:
 			return new L518;
 		case 520:
