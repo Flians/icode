@@ -3,7 +3,7 @@ class L117 : public icode
 {
 public:
 	void run() {
-        print_res(connect_DFS(create_tree<int, Node>({1,2,3,4,5,INT_MIN,7})));
+        print_res(connect_DFS(create_tree<Node>({1,2,3,4,5,INT_MIN,7})));
     }
 
     Node* connect_DFS(Node* root) {

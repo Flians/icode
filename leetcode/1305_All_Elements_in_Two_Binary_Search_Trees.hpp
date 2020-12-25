@@ -3,7 +3,7 @@ class L1305 : public icode
 {
 public:
 	void run() {
-        print_res(move(getAllElements(create_tree<int, TreeNode>({2,1,4}), create_tree<int, TreeNode>({1,0,3}))));
+        print_res(move(getAllElements(create_tree({2,1,4}), create_tree({1,0,3}))));
     }
 
     void inorder(TreeNode *root, vector<int> &res) {

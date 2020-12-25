@@ -4,7 +4,7 @@ class L897 : public icode
 public:
 	void run() {
         // [1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9]
-        print_res(increasingBST(create_tree<int, TreeNode>({5,3,6,2,4,INT_MIN,8,1,INT_MIN,INT_MIN,INT_MIN,7,9})));
+        print_res(increasingBST(create_tree({5,3,6,2,4,INT_MIN,8,1,INT_MIN,INT_MIN,INT_MIN,7,9})));
     }
 
     void inorder(vector<TreeNode *> &nodes, TreeNode* root) {

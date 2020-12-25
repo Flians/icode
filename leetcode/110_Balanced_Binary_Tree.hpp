@@ -3,9 +3,9 @@ class L110 : public icode
 {
 public:
 	void run() {
-        cout << isBalanced(create_tree<int, TreeNode>({3,9,20,INT_MIN,INT_MIN,15,7})) << " true" << endl;
-        cout << isBalanced(create_tree<int, TreeNode>({1,2,2,3,3,INT_MIN,INT_MIN,4,4})) << " false" << endl;
-        cout << isBalanced(create_tree<int, TreeNode>({})) << " true" << endl;
+        cout << isBalanced(create_tree({3,9,20,INT_MIN,INT_MIN,15,7})) << " true" << endl;
+        cout << isBalanced(create_tree({1,2,2,3,3,INT_MIN,INT_MIN,4,4})) << " false" << endl;
+        cout << isBalanced(create_tree({})) << " true" << endl;
     }
 
     int dfs(TreeNode* root) {

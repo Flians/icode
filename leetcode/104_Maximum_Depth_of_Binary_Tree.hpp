@@ -3,8 +3,8 @@ class L104 : public icode
 {
 public:
 	void run() {
-        cout << maxDepth(create_tree<int, TreeNode>({2,INT_MIN,3,INT_MIN,4,INT_MIN,5,INT_MIN,6})) << " 5" << endl;
-        cout << maxDepth(create_tree<int, TreeNode>({3,9,20,INT_MIN,INT_MIN,15,7})) << " 3" << endl;
+        cout << maxDepth(create_tree({2,INT_MIN,3,INT_MIN,4,INT_MIN,5,INT_MIN,6})) << " 5" << endl;
+        cout << maxDepth(create_tree({3,9,20,INT_MIN,INT_MIN,15,7})) << " 3" << endl;
     }
 
     int maxDepth(TreeNode* root) {

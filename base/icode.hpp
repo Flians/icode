@@ -30,13 +30,6 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class BinaryMatrix
-{
-public:
-    int get(int x, int y);
-    vector<int> dimensions();
-};
-
 // Definition for a Node.
 class Node
 {
@@ -54,6 +47,13 @@ public:
         : val(_val), left(_left), right(_right), next(_next) {}
 };
 
+class BinaryMatrix
+{
+public:
+    int get(int x, int y);
+    vector<int> dimensions();
+};
+
 class icode
 {
 private:
@@ -61,14 +61,12 @@ private:
 public:
     virtual void run() = 0;
 
-    template <typename T>
-    ListNode *create_list(vector<T>&& nums);
+    ListNode *create_list(vector<int>&& nums);
 
-    template <typename T, typename C>
-    C *create_tree(vector<T>&& nums);
+    template <typename C = TreeNode>
+    C *create_tree(vector<int>&& nums);
 
-    template <typename T>
-    Node *create_BPlusTree(vector<T>&& nums);
+    Node *create_BPlusTree(vector<int>&& nums);
 
     void print_res(ListNode *root);
 
@@ -76,14 +74,13 @@ public:
 
     void print_res(Node *root);
 
-    template <typename T>
+    template <typename T = int>
     void print_res(vector<T>&& data);
-    template <typename T>
+    template <typename T = int>
     void print_res(vector<vector<T>>&& data);
 };
 
-template <typename T>
-ListNode *icode::create_list(vector<T>&& nums)
+ListNode *icode::create_list(vector<int>&& nums)
 {
     ListNode *root = NULL;
     if (nums.empty())
@@ -100,8 +97,8 @@ ListNode *icode::create_list(vector<T>&& nums)
     return root;
 }
 
-template <typename T, typename C>
-C *icode::create_tree(vector<T>&& nums)
+template <typename C>
+C *icode::create_tree(vector<int>&& nums)
 {
     C *root = NULL;
     if (nums.empty())
@@ -132,8 +129,7 @@ C *icode::create_tree(vector<T>&& nums)
     return root;
 }
 
-template <typename T>
-Node *icode::create_BPlusTree(vector<T>&& nums)
+Node *icode::create_BPlusTree(vector<int>&& nums)
 {
     Node *root = NULL;
     if (nums.empty())

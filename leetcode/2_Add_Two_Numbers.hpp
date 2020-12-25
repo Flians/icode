@@ -67,7 +67,7 @@ public:
 
     void run()
     {
-        print_res(addTwoNumbers_(create_list<int>({5}), create_list<int>({5})));
-        print_res(addTwoNumbers_(create_list<int>({2, 4, 3}), create_list<int>({5, 6, 4})));
+        print_res(addTwoNumbers_(create_list({5}), create_list({5})));
+        print_res(addTwoNumbers_(create_list({2, 4, 3}), create_list({5, 6, 4})));
     }
 };

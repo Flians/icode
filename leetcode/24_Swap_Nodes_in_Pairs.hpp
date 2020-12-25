@@ -4,7 +4,7 @@ class L24 : public icode
 public:
 	void run() {
         // [2,1,4,3]
-        print_res(swapPairs(create_list<ListNode>({1,2,3,4})));
+        print_res(swapPairs(create_list({1,2,3,4})));
     }
 
     ListNode* swapPairs(ListNode* head) {

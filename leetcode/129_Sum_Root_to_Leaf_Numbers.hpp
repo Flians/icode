@@ -3,7 +3,7 @@ class L129 : public icode
 {
 public:
 	void run() {
-        cout << sumNumbers(create_tree<int, TreeNode>({4,9,0,5,1})) << " 1026" << endl;
+        cout << sumNumbers(create_tree({4,9,0,5,1})) << " 1026" << endl;
     }
 
     void sumNumbers(TreeNode* root, int cur, int &all) {

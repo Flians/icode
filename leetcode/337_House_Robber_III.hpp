@@ -16,7 +16,7 @@ private:
     map<pair<TreeNode*, bool>, int> dp;
 public:
 	void run() {
-        cout << rob(create_tree<int, TreeNode>({3,4,5,1,3,INT_MIN,1})) << " 9" << endl;
+        cout << rob(create_tree({3,4,5,1,3,INT_MIN,1})) << " 9" << endl;
     }
 
     int fun(TreeNode* root, bool flag) {

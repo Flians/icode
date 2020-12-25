@@ -53,7 +53,7 @@ public:
 
     void run() {
         // input: [3,1,null,null,2], output: [1,2,3] 
-        TreeNode *root = create_tree<int, TreeNode>({3,1,INT_MIN,INT_MIN,2});
+        TreeNode *root = create_tree({3,1,INT_MIN,INT_MIN,2});
         print_res(inorderTraversal(root));
         delete root;
     }

@@ -3,8 +3,8 @@ class L61 : public icode
 {
 public:
 	void run() {
-        print_res(rotateRight(create_list<int>({1,2,3,4,5}), 2));
-        print_res(rotateRight(create_list<int>({1,2,3,4,5}), 2));
+        print_res(rotateRight(create_list({1,2,3,4,5}), 2));
+        print_res(rotateRight(create_list({1,2,3,4,5}), 2));
     }
 
     ListNode* rotateRight(ListNode* head, int k) {

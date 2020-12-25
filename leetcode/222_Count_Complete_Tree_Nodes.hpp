@@ -3,7 +3,7 @@ class L222 : public icode
 {
 public:
 	void run() {
-        TreeNode *root = create_tree<int, TreeNode>({1,2,3,4,5,6});
+        TreeNode *root = create_tree({1,2,3,4,5,6});
         cout << countNodes(root) << " 6" << endl;
         delete root;
     }

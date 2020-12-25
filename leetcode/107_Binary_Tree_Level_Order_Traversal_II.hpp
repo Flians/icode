@@ -4,7 +4,7 @@ class L107 : public icode
 public:
 	void run() {
         // [[15,7],[9,20],[3]]
-        print_res(levelOrderBottom(create_tree<int, TreeNode>({3,9,20,INT_MIN,INT_MIN,15,7})));
+        print_res(levelOrderBottom(create_tree({3,9,20,INT_MIN,INT_MIN,15,7})));
     }
 
     vector<vector<int>> levelOrderBottom(TreeNode* root) {
