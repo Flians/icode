@@ -38,6 +38,7 @@
 #include "../leetcode/62_Unique_Paths.hpp"
 #include "../leetcode/63_Unique_Paths_II.hpp"
 #include "../leetcode/64_Minimum_Path_Sum.hpp"
+#include "../leetcode/65_Valid_Number.hpp"
 #include "../leetcode/66_Plus_One.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/75_Sort_Colors.hpp"
@@ -309,6 +310,8 @@ public:
 			return new L63;
 		case 64:
 			return new L64;
+		case 65:
+			return new L65;
 		case 66:
 			return new L66;
 		case 72:
