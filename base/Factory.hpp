@@ -224,6 +224,7 @@
 #include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
+#include "../leetcode/1345_Jump_Game_IV.hpp"
 #include "../leetcode/1382_Balance_a_Binary_Search_Tree.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 #include "../leetcode/1463_Cherry_Pickup_II.hpp"
@@ -686,6 +687,8 @@ public:
 			return new L1305;
 		case 1306:
 			return new L1306;
+		case 1345:
+			return new L1345;
 		case 1382:
 			return new L1382;
 		case 1401:
