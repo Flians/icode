@@ -162,6 +162,7 @@
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
+#include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/695_Max_Area_of_Island.hpp"
@@ -561,6 +562,8 @@ public:
 			return new L572;
 		case 605:
 			return new L605;
+		case 639:
+			return new L639;
 		case 678:
 			return new L678;
 		case 679:
