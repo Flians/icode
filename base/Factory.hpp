@@ -171,6 +171,7 @@
 #include "../leetcode/705_Design_HashSet.hpp"
 #include "../leetcode/713_Subarray_Product_Less_Than_K.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
+#include "../leetcode/754_Reach_a_Number.hpp"
 #include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
@@ -582,6 +583,8 @@ public:
 			return new L713;
 		case 733:
 			return new L733;
+		case 754:
+			return new L754;
 		case 763:
 			return new L763;
 		case 771:
