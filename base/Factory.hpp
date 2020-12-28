@@ -230,6 +230,7 @@
 #include "../leetcode/1463_Cherry_Pickup_II.hpp"
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
+#include "../leetcode/1696_Jump_Game_VI.hpp"
 class Factory
 {
 public:
@@ -699,6 +700,8 @@ public:
 			return new L1492;
 		case 1510:
 			return new L1510;
+		case 1696:
+			return new L1696;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
