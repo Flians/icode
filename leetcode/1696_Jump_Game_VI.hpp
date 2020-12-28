@@ -8,10 +8,10 @@ public:
     }
 
     int maxResult(vector<int>&& nums, int k) {
-        size_t len = nums.size();
+        int len = nums.size();
         vector<int> dp(len, 0);
         dp[0] = nums[0];
-        for (size_t i = 1; i < len; ++i) {
+        for (int i = 1; i < len; ++i) {
             int tmp = dp[i-1];
             for (int j = i - 2, range = i <= k?0:i-k;  j >= range; --j) {
                 tmp = max(tmp, dp[j]);
@@ -23,7 +23,7 @@ public:
 
     int maxResult_monodeq(vector<int>&& nums, int k) {
         deque<int> d{0};
-        for (int i = 1; i < nums.size(); ++i) {
+        for (int i = 1, len = nums.size(); i < len; ++i) {
             if (d.front() + k < i)
                 d.pop_front();        
             nums[i] += nums[d.front()];
