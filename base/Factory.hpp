@@ -109,6 +109,7 @@
 #include "../leetcode/278_First_Bad_Version.hpp"
 #include "../leetcode/279_Perfect_Squares.hpp"
 #include "../leetcode/287_Find_the_Duplicate_Number.hpp"
+#include "../leetcode/289_Game_of_Life.hpp"
 #include "../leetcode/290_Word_Pattern.hpp"
 #include "../leetcode/299_Bulls_and_Cows.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
@@ -460,6 +461,8 @@ public:
 			return new L279;
 		case 287:
 			return new L287;
+		case 289:
+			return new L289;
 		case 290:
 			return new L290;
 		case 299:
