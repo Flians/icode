@@ -228,6 +228,7 @@
 #include "../leetcode/1345_Jump_Game_IV.hpp"
 #include "../leetcode/1382_Balance_a_Binary_Search_Tree.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
+#include "../leetcode/1457_Pseudo_Palindromic_Paths_in_a_Binary_Tree.hpp"
 #include "../leetcode/1463_Cherry_Pickup_II.hpp"
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
@@ -697,6 +698,8 @@ public:
 			return new L1382;
 		case 1401:
 			return new L1401;
+		case 1457:
+			return new L1457;
 		case 1463:
 			return new L1463;
 		case 1492:
