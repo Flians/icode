@@ -157,6 +157,7 @@
 #include "../leetcode/498_Diagonal_Traverse.hpp"
 #include "../leetcode/518_Coin_Change_2.hpp"
 #include "../leetcode/520_Detect_Capital.hpp"
+#include "../leetcode/526_Beautiful_Arrangement.hpp"
 #include "../leetcode/528_Random_Pick_with_Weight.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/556_Next_Greater_Element_III.hpp"
@@ -558,6 +559,8 @@ public:
 			return new L518;
 		case 520:
 			return new L520;
+		case 526:
+			return new L526;
 		case 528:
 			return new Random_pick;
 		case 540:
