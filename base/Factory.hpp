@@ -45,6 +45,7 @@
 #include "../leetcode/75_Sort_Colors.hpp"
 #include "../leetcode/78_Subsets.hpp"
 #include "../leetcode/79_Word_Search.hpp"
+#include "../leetcode/82_Remove_Duplicates_from_Sorted_List_II.hpp"
 #include "../leetcode/84_Largest_Rectangle_in_Histogram.hpp"
 #include "../leetcode/91_Decode_Ways.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
@@ -336,6 +337,8 @@ public:
 			return new L78;
 		case 79:
 			return new L79;
+		case 82:
+			return new L82;
 		case 84:
 			return new L84;
 		case 91:
