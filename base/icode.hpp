@@ -176,8 +176,10 @@ void icode::print_res(ListNode *root)
 {
     while (root)
     {
+        ListNode *tmp = root;
         cout << root->val << " ";
         root = root->next;
+        delete tmp;
     }
     cout << endl;
 }
@@ -197,6 +199,7 @@ void icode::print_res(TreeNode *root)
         cout << tmp->val << " ";
         level.push(tmp->left);
         level.push(tmp->right);
+        delete tmp;
     }
     cout << endl;
 }
@@ -207,6 +210,7 @@ void icode::print_res(Node *root) {
     while (!level.empty())
     {
         Node *tmp = level.front();
+        level.pop();
         cout << tmp->val << " ";
         if (!tmp->next) {
             cout << "# ";
@@ -219,7 +223,7 @@ void icode::print_res(Node *root) {
         {
             level.push(tmp->right);
         }
-        level.pop();
+        delete tmp;
     }
     cout << endl;
 }
