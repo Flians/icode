@@ -230,6 +230,7 @@
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
 #include "../leetcode/1345_Jump_Game_IV.hpp"
+#include "../leetcode/1379_Find_a_Corresponding_Node_of_a_Binary_Tree_in_a_Clone_of_That_Tree.hpp"
 #include "../leetcode/1382_Balance_a_Binary_Search_Tree.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 #include "../leetcode/1457_Pseudo_Palindromic_Paths_in_a_Binary_Tree.hpp"
@@ -707,6 +708,8 @@ public:
 			return new L1306;
 		case 1345:
 			return new L1345;
+		case 1379:
+			return new L1379;
 		case 1382:
 			return new L1382;
 		case 1401:
