@@ -15,7 +15,9 @@
                 "-Wno-format",
                 "-finput-charset=UTF-8",
                 "-fexec-charset=UTF-8",
-                "-pthread"
+                "-pthread",
+                "-lboost_thread",
+                "-lboost_system"
             ],
             "problemMatcher": [],
             "group": {

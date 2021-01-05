@@ -71,7 +71,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "strstream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "cmake.buildDirectory": "${workspaceRoot}/build",
