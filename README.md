@@ -38,7 +38,7 @@ In the leetcode directory, create a file and name it as the problem name, such a
 Then run script.py to change the file name.
 
 ``` bash
-python .\rename.py
+python .\script.py
 ```
 
 Finally, run script.py to create Factory.hpp.
