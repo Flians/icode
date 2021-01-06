@@ -238,6 +238,7 @@
 #include "../leetcode/1463_Cherry_Pickup_II.hpp"
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
+#include "../leetcode/1539_Kth_Missing_Positive_Number.hpp"
 #include "../leetcode/1640_Check_Array_Formation_Through_Concatenation.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
 class Factory
@@ -725,6 +726,8 @@ public:
 			return new L1492;
 		case 1510:
 			return new L1510;
+		case 1539:
+			return new L1539;
 		case 1640:
 			return new L1640;
 		case 1696:
