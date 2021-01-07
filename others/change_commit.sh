@@ -1,7 +1,6 @@
 #!/bin/sh
 
 git filter-branch --env-filter '
-
 CORRECT_NAME="Flians"
 CORRECT_EMAIL="rongliangfu@outlook.com"
 
@@ -16,3 +15,6 @@ then
     export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
+
+
+git push --force --tags origin 'refs/heads/*'
