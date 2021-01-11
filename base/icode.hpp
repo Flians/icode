@@ -228,7 +228,7 @@ void icode::print_res(Node *root) {
     cout << endl;
 }
 
-template <typename T>
+template <typename T = int>
 void icode::print_res(vector<T>&& data)
 {
     for (auto i : data)
@@ -238,7 +238,7 @@ void icode::print_res(vector<T>&& data)
     cout << endl;
 }
 
-template <typename T>
+template <typename T = int>
 void icode::print_res(vector<vector<T>>&& data)
 {
     for (auto ip : data)
