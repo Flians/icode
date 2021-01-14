@@ -242,6 +242,7 @@
 #include "../leetcode/1510_Stone_Game_IV.hpp"
 #include "../leetcode/1539_Kth_Missing_Positive_Number.hpp"
 #include "../leetcode/1640_Check_Array_Formation_Through_Concatenation.hpp"
+#include "../leetcode/1658_Minimum_Operations_to_Reduce_X_to_Zero.hpp"
 #include "../leetcode/1662_Check_If_Two_String_Arrays_are_Equivalent.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
 class Factory
@@ -737,6 +738,8 @@ public:
 			return new L1539;
 		case 1640:
 			return new L1640;
+		case 1658:
+			return new L1658;
 		case 1662:
 			return new L1662;
 		case 1696:
