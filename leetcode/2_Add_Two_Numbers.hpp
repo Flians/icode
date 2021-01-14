@@ -65,9 +65,37 @@ public:
         return head->next;
     }
 
+    ListNode* addTwoNumbers__(ListNode* l1, ListNode* l2) {
+        ListNode* root = new ListNode(0);
+        ListNode* cur = root;
+        int carry = 0;
+        while(l1 || l2) {
+            if (l1) {
+                carry += l1->val; 
+                if (l2) {
+                    carry += l2->val;
+                    l2 = l2->next;
+                }
+                l1 = l1->next;
+            } else {
+                carry += l2->val; 
+                l2 = l2->next;
+            }
+            cur->next = new ListNode(carry%10);
+            cur = cur->next;
+            carry /= 10;
+        }
+        if (carry) {
+            cur->next = new ListNode(carry);
+        }
+        cur = root->next;
+        delete root;
+        return cur;
+    }
+
     void run()
     {
-        print_res(addTwoNumbers_(create_list({5}), create_list({5})));
-        print_res(addTwoNumbers_(create_list({2, 4, 3}), create_list({5, 6, 4})));
+        print_res(addTwoNumbers__(create_list({5}), create_list({5})));
+        print_res(addTwoNumbers__(create_list({2, 4, 3}), create_list({5, 6, 4})));
     }
 };
