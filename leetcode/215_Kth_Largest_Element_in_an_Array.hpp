@@ -10,7 +10,7 @@ public:
         swap((*nums).at(0), (*nums).at(id));
     }
 
-    int findKthLargest(vector<int> &nums, int k)
+    int findKthLargest(vector<int> &&nums, int k)
     {
         get_elem_rand(&nums);
         int povit = nums.front();
@@ -30,7 +30,20 @@ public:
             return findKthLargest(lnums, k);
     }
 
+    int findKthLargest_(vector<int>&& nums, int k) {
+        priority_queue<int, vector<int>, greater<int> > kth;
+        for (int i : nums)
+        {
+            kth.emplace(i);
+            if (kth.size() > k) {
+                kth.pop();
+            }
+        }
+        return kth.top();
+    }
+
     void run()
     {
+        cout << findKthLargest_({3,2,3,1,2,4,5,5,6}, 4) << " 4" << endl;
     }
 };
