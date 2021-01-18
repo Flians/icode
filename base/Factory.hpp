@@ -244,6 +244,7 @@
 #include "../leetcode/1539_Kth_Missing_Positive_Number.hpp"
 #include "../leetcode/1640_Check_Array_Formation_Through_Concatenation.hpp"
 #include "../leetcode/1641_Count_Sorted_Vowel_Strings.hpp"
+#include "../leetcode/1646_Get_Maximum_in_Generated_Array.hpp"
 #include "../leetcode/1658_Minimum_Operations_to_Reduce_X_to_Zero.hpp"
 #include "../leetcode/1662_Check_If_Two_String_Arrays_are_Equivalent.hpp"
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
@@ -745,6 +746,8 @@ public:
 			return new L1640;
 		case 1641:
 			return new L1641;
+		case 1646:
+			return new L1646;
 		case 1658:
 			return new L1658;
 		case 1662:
