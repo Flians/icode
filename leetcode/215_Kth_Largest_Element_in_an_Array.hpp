@@ -25,17 +25,21 @@ public:
         if ((int)lnums.size() == k - 1)
             return povit;
         else if ((int)lnums.size() < k - 1)
-            return findKthLargest(rnums, k - lnums.size() - 1);
+            return findKthLargest(move(rnums), k - lnums.size() - 1);
         else
-            return findKthLargest(lnums, k);
+            return findKthLargest(move(lnums), k);
     }
 
-    int findKthLargest_(vector<int>&& nums, int k) {
-        priority_queue<int, vector<int>, greater<int> > kth;
+    int findKthLargest_(vector<int> &&nums, int k)
+    {
+        bool flag = false;
+        priority_queue<int, vector<int>, greater<int>> kth;
         for (int i : nums)
         {
             kth.emplace(i);
-            if (kth.size() > k) {
+            if (flag || (int)kth.size() > k)
+            {
+                flag = true;
                 kth.pop();
             }
         }
@@ -44,6 +48,6 @@ public:
 
     void run()
     {
-        cout << findKthLargest_({3,2,3,1,2,4,5,5,6}, 4) << " 4" << endl;
+        cout << findKthLargest_({3, 2, 3, 1, 2, 4, 5, 5, 6}, 4) << " 4" << endl;
     }
 };
