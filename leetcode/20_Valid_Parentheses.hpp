@@ -28,6 +28,40 @@ public:
         }
         return brackets.empty();
     }
+    bool isValid_(string s)
+    {
+        stack<char> record;
+        for (size_t i = 0, len = s.size(); i < len; ++i)
+        {
+            switch (s[i])
+            {
+            case ')':
+                if (record.empty() || record.top() != '(')
+                {
+                    return false;
+                }
+                record.pop();
+                break;
+            case ']':
+                if (record.empty() || record.top() != '[')
+                {
+                    return false;
+                }
+                record.pop();
+                break;
+            case '}':
+                if (record.empty() || record.top() != '{')
+                {
+                    return false;
+                }
+                record.pop();
+                break;
+            default:
+                record.push(s[i]);
+            }
+        }
+        return record.empty();
+    }
     void run()
     {
         cout << isValid("()[]{}") << endl;
