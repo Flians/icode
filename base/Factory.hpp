@@ -247,6 +247,7 @@
 #include "../leetcode/1646_Get_Maximum_in_Generated_Array.hpp"
 #include "../leetcode/1658_Minimum_Operations_to_Reduce_X_to_Zero.hpp"
 #include "../leetcode/1662_Check_If_Two_String_Arrays_are_Equivalent.hpp"
+#include "../leetcode/1673_Find_the_Most_Competitive_Subsequence.hpp"
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
 class Factory
@@ -752,6 +753,8 @@ public:
 			return new L1658;
 		case 1662:
 			return new L1662;
+		case 1673:
+			return new L1673;
 		case 1679:
 			return new L1679;
 		case 1696:
