@@ -14,7 +14,7 @@ public:
     {
         vector<int> stack;
         int nums_to_delete = nums.size() - k;
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0, len = nums.size(); i < len; i++)
         {
             while (!stack.empty() && nums[i] < stack.back() && nums_to_delete)
             {
