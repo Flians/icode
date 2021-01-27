@@ -251,6 +251,7 @@
 #include "../leetcode/1662_Check_If_Two_String_Arrays_are_Equivalent.hpp"
 #include "../leetcode/1673_Find_the_Most_Competitive_Subsequence.hpp"
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
+#include "../leetcode/1680_Concatenation_of_Consecutive_Binary_Numbers.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
 class Factory
 {
@@ -763,6 +764,8 @@ public:
 			return new L1673;
 		case 1679:
 			return new L1679;
+		case 1680:
+			return new L1680;
 		case 1696:
 			return new L1696;
 		default:
