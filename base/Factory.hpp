@@ -249,6 +249,7 @@
 #include "../leetcode/1646_Get_Maximum_in_Generated_Array.hpp"
 #include "../leetcode/1658_Minimum_Operations_to_Reduce_X_to_Zero.hpp"
 #include "../leetcode/1662_Check_If_Two_String_Arrays_are_Equivalent.hpp"
+#include "../leetcode/1663_Smallest_String_With_A_Given_Numeric_Value.hpp"
 #include "../leetcode/1673_Find_the_Most_Competitive_Subsequence.hpp"
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
 #include "../leetcode/1680_Concatenation_of_Consecutive_Binary_Numbers.hpp"
@@ -760,6 +761,8 @@ public:
 			return new L1658;
 		case 1662:
 			return new L1662;
+		case 1663:
+			return new L1663;
 		case 1673:
 			return new L1673;
 		case 1679:
