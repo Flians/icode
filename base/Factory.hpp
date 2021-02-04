@@ -74,6 +74,7 @@
 #include "../leetcode/134_Gas_Station.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/139_Word_Break.hpp"
+#include "../leetcode/141_Linked_List_Cycle.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/152_Maximum_Product_Subarray.hpp"
@@ -411,6 +412,8 @@ public:
 			return new L137;
 		case 139:
 			return new L139;
+		case 141:
+			return new L141;
 		case 143:
 			return new L143;
 		case 146:
