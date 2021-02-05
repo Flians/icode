@@ -169,6 +169,7 @@
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
+#include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
@@ -602,6 +603,8 @@ public:
 			return new L567;
 		case 572:
 			return new L572;
+		case 594:
+			return new L594;
 		case 605:
 			return new L605;
 		case 639:
