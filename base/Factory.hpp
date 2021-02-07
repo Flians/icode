@@ -88,6 +88,7 @@
 #include "../leetcode/174_Dungeon_Game.hpp"
 #include "../leetcode/179_Largest_Number.hpp"
 #include "../leetcode/198_House_Robber.hpp"
+#include "../leetcode/199_Binary_Tree_Right_Side_View.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
@@ -441,6 +442,8 @@ public:
 			return new L179;
 		case 198:
 			return new L198;
+		case 199:
+			return new L199;
 		case 200:
 			return new L200;
 		case 201:
