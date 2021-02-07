@@ -42,6 +42,7 @@
 #include "../leetcode/66_Plus_One.hpp"
 #include "../leetcode/67_Add_Binary.hpp"
 #include "../leetcode/69_Sqrt(x).hpp"
+#include "../leetcode/71_Simplify_Path.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/75_Sort_Colors.hpp"
 #include "../leetcode/78_Subsets.hpp"
@@ -350,6 +351,8 @@ public:
 			return new L67;
 		case 69:
 			return new L69;
+		case 71:
+			return new L71;
 		case 72:
 			return new L72;
 		case 75:
