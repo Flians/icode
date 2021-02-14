@@ -226,6 +226,7 @@
 #include "../leetcode/1041_Robot_Bounded_In_Circle.hpp"
 #include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
+#include "../leetcode/1091_Shortest_Path_in_Binary_Matrix.hpp"
 #include "../leetcode/1094_Car_Pooling.hpp"
 #include "../leetcode/1103_Distribute_Candies_to_People.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
@@ -719,6 +720,8 @@ public:
 			return new L1044;
 		case 1046:
 			return new L1046;
+		case 1091:
+			return new L1091;
 		case 1094:
 			return new L1094;
 		case 1103:
