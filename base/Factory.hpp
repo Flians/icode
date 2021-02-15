@@ -185,6 +185,7 @@
 #include "../leetcode/754_Reach_a_Number.hpp"
 #include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/785_Is_Graph_Bipartite.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/821_Shortest_Distance_to_a_Character.hpp"
@@ -639,6 +640,8 @@ public:
 			return new L763;
 		case 771:
 			return new L771;
+		case 785:
+			return new L785;
 		case 787:
 			return new L787;
 		case 812:
