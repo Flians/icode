@@ -227,6 +227,7 @@
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
 #include "../leetcode/1191_K_Concatenation_Maximum_Sum.hpp"
 #include "../leetcode/1232_Check_If_It_Is_a_Straight_Line.hpp"
+#include "../leetcode/1249_Minimum_Remove_to_Make_Valid_Parentheses.hpp"
 #include "../leetcode/1254_Number_of_Closed_Islands.hpp"
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
@@ -716,6 +717,8 @@ public:
 			return new L1191;
 		case 1232:
 			return new L1232;
+		case 1249:
+			return new L1249;
 		case 1254:
 			return new L1254;
 		case 1277:
