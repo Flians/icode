@@ -42,6 +42,7 @@
 #include "../leetcode/66_Plus_One.hpp"
 #include "../leetcode/67_Add_Binary.hpp"
 #include "../leetcode/69_Sqrt(x).hpp"
+#include "../leetcode/71_Simplify_Path.hpp"
 #include "../leetcode/72_Edit_Distance.hpp"
 #include "../leetcode/75_Sort_Colors.hpp"
 #include "../leetcode/78_Subsets.hpp"
@@ -74,6 +75,7 @@
 #include "../leetcode/134_Gas_Station.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/139_Word_Break.hpp"
+#include "../leetcode/141_Linked_List_Cycle.hpp"
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/152_Maximum_Product_Subarray.hpp"
@@ -87,6 +89,7 @@
 #include "../leetcode/174_Dungeon_Game.hpp"
 #include "../leetcode/179_Largest_Number.hpp"
 #include "../leetcode/198_House_Robber.hpp"
+#include "../leetcode/199_Binary_Tree_Right_Side_View.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
@@ -168,6 +171,7 @@
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
+#include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
@@ -181,8 +185,10 @@
 #include "../leetcode/754_Reach_a_Number.hpp"
 #include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/785_Is_Graph_Bipartite.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
+#include "../leetcode/821_Shortest_Distance_to_a_Character.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
 #include "../leetcode/827_Making_A_Large_Island.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
@@ -222,6 +228,7 @@
 #include "../leetcode/1041_Robot_Bounded_In_Circle.hpp"
 #include "../leetcode/1044_Longest_Duplicate_Substring.hpp"
 #include "../leetcode/1046_Last_Stone_Weight.hpp"
+#include "../leetcode/1091_Shortest_Path_in_Binary_Matrix.hpp"
 #include "../leetcode/1094_Car_Pooling.hpp"
 #include "../leetcode/1103_Distribute_Candies_to_People.hpp"
 #include "../leetcode/1143_Longest_Common_Subsequence.hpp"
@@ -234,6 +241,7 @@
 #include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
+#include "../leetcode/1337_The_K_Weakest_Rows_in_a_Matrix.hpp"
 #include "../leetcode/1345_Jump_Game_IV.hpp"
 #include "../leetcode/1379_Find_a_Corresponding_Node_of_a_Binary_Tree_in_a_Clone_of_That_Tree.hpp"
 #include "../leetcode/1382_Balance_a_Binary_Search_Tree.hpp"
@@ -250,6 +258,7 @@
 #include "../leetcode/1646_Get_Maximum_in_Generated_Array.hpp"
 #include "../leetcode/1658_Minimum_Operations_to_Reduce_X_to_Zero.hpp"
 #include "../leetcode/1662_Check_If_Two_String_Arrays_are_Equivalent.hpp"
+#include "../leetcode/1663_Smallest_String_With_A_Given_Numeric_Value.hpp"
 #include "../leetcode/1673_Find_the_Most_Competitive_Subsequence.hpp"
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
 #include "../leetcode/1680_Concatenation_of_Consecutive_Binary_Numbers.hpp"
@@ -347,6 +356,8 @@ public:
 			return new L67;
 		case 69:
 			return new L69;
+		case 71:
+			return new L71;
 		case 72:
 			return new L72;
 		case 75:
@@ -411,6 +422,8 @@ public:
 			return new L137;
 		case 139:
 			return new L139;
+		case 141:
+			return new L141;
 		case 143:
 			return new L143;
 		case 146:
@@ -437,6 +450,8 @@ public:
 			return new L179;
 		case 198:
 			return new L198;
+		case 199:
+			return new L199;
 		case 200:
 			return new L200;
 		case 201:
@@ -599,6 +614,8 @@ public:
 			return new L567;
 		case 572:
 			return new L572;
+		case 594:
+			return new L594;
 		case 605:
 			return new L605;
 		case 639:
@@ -625,10 +642,14 @@ public:
 			return new L763;
 		case 771:
 			return new L771;
+		case 785:
+			return new L785;
 		case 787:
 			return new L787;
 		case 812:
 			return new L812;
+		case 821:
+			return new L821;
 		case 824:
 			return new L824;
 		case 827:
@@ -707,6 +728,8 @@ public:
 			return new L1044;
 		case 1046:
 			return new L1046;
+		case 1091:
+			return new L1091;
 		case 1094:
 			return new L1094;
 		case 1103:
@@ -731,6 +754,8 @@ public:
 			return new L1305;
 		case 1306:
 			return new L1306;
+		case 1337:
+			return new L1337;
 		case 1345:
 			return new L1345;
 		case 1379:
@@ -763,6 +788,8 @@ public:
 			return new L1658;
 		case 1662:
 			return new L1662;
+		case 1663:
+			return new L1663;
 		case 1673:
 			return new L1673;
 		case 1679:
