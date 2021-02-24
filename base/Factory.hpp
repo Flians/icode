@@ -110,6 +110,7 @@
 #include "../leetcode/235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.hpp"
 #include "../leetcode/236_Lowest_Common_Ancestor_of_a_Binary_Tree.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
+#include "../leetcode/240_Search_a_2D_Matrix_II.hpp"
 #include "../leetcode/264_Ugly_Number_II.hpp"
 #include "../leetcode/270_Closest_Binary_Search_Tree_Value.hpp"
 #include "../leetcode/274_H_Index.hpp"
@@ -493,6 +494,8 @@ public:
 			return new L236;
 		case 238:
 			return new L238;
+		case 240:
+			return new L240;
 		case 264:
 			return new L264;
 		case 270:
