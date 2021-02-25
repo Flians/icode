@@ -194,6 +194,7 @@
 #include "../leetcode/827_Making_A_Large_Island.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
 #include "../leetcode/836_Rectangle_Overlap.hpp"
+#include "../leetcode/856_Score_of_Parentheses.hpp"
 #include "../leetcode/877_Stone_Game.hpp"
 #include "../leetcode/880_Decoded_String_at_Index.hpp"
 #include "../leetcode/881_Boats_to_Save_People.hpp"
@@ -662,6 +663,8 @@ public:
 			return new L835;
 		case 836:
 			return new L836;
+		case 856:
+			return new L856;
 		case 877:
 			return new L877;
 		case 880:
