@@ -194,11 +194,13 @@
 #include "../leetcode/827_Making_A_Large_Island.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
 #include "../leetcode/836_Rectangle_Overlap.hpp"
+#include "../leetcode/856_Score_of_Parentheses.hpp"
 #include "../leetcode/877_Stone_Game.hpp"
 #include "../leetcode/880_Decoded_String_at_Index.hpp"
 #include "../leetcode/881_Boats_to_Save_People.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
+#include "../leetcode/895_Maximum_Frequency_Stack.hpp"
 #include "../leetcode/897_Increasing_Order_Search_Tree.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
@@ -662,6 +664,8 @@ public:
 			return new L835;
 		case 836:
 			return new L836;
+		case 856:
+			return new L856;
 		case 877:
 			return new L877;
 		case 880:
@@ -672,6 +676,8 @@ public:
 			return new L886;
 		case 889:
 			return new L889;
+		case 895:
+			return new FreqStack;
 		case 897:
 			return new L897;
 		case 901:
