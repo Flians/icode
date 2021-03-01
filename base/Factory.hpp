@@ -200,6 +200,7 @@
 #include "../leetcode/881_Boats_to_Save_People.hpp"
 #include "../leetcode/886_Possible_Bipartition.hpp"
 #include "../leetcode/889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal.hpp"
+#include "../leetcode/895_Maximum_Frequency_Stack.hpp"
 #include "../leetcode/897_Increasing_Order_Search_Tree.hpp"
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
@@ -675,6 +676,8 @@ public:
 			return new L886;
 		case 889:
 			return new L889;
+		case 895:
+			return new FreqStack;
 		case 897:
 			return new L897;
 		case 901:
