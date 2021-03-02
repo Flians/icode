@@ -680,7 +680,7 @@ public:
 		case 889:
 			return new L889;
 		case 895:
-			return new L895;
+			return new FreqStack;
 		case 897:
 			return new L897;
 		case 901:
