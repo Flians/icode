@@ -172,6 +172,7 @@
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
 #include "../leetcode/567_Permutation_in_String.hpp"
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
+#include "../leetcode/575_Distribute_Candies.hpp"
 #include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
@@ -620,6 +621,8 @@ public:
 			return new L567;
 		case 572:
 			return new L572;
+		case 575:
+			return new L575;
 		case 594:
 			return new L594;
 		case 605:
@@ -677,7 +680,7 @@ public:
 		case 889:
 			return new L889;
 		case 895:
-			return new FreqStack;
+			return new L895;
 		case 897:
 			return new L897;
 		case 901:
