@@ -176,6 +176,7 @@
 #include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
+#include "../leetcode/645_Set_Mismatch.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/695_Max_Area_of_Island.hpp"
@@ -629,6 +630,8 @@ public:
 			return new L605;
 		case 639:
 			return new L639;
+		case 645:
+			return new L645;
 		case 678:
 			return new L678;
 		case 679:
