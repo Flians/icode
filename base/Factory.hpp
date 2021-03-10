@@ -175,6 +175,7 @@
 #include "../leetcode/575_Distribute_Candies.hpp"
 #include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
+#include "../leetcode/623_Add_One_Row_to_Tree.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/645_Set_Mismatch.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
@@ -628,6 +629,8 @@ public:
 			return new L594;
 		case 605:
 			return new L605;
+		case 623:
+			return new L623;
 		case 639:
 			return new L639;
 		case 645:

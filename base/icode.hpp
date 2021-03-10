@@ -28,6 +28,7 @@ struct TreeNode
     TreeNode *right;
     TreeNode() : val(0), left(NULL), right(NULL) {}
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
 // Definition for a Node.
@@ -61,12 +62,12 @@ private:
 public:
     virtual void run() = 0;
 
-    ListNode *create_list(vector<int>&& nums);
+    ListNode *create_list(vector<int> &&nums);
 
     template <typename C = TreeNode>
-    C *create_tree(vector<int>&& nums);
+    C *create_tree(vector<int> &&nums);
 
-    Node *create_BPlusTree(vector<int>&& nums);
+    Node *create_BPlusTree(vector<int> &&nums);
 
     void print_res(ListNode *root);
 
@@ -75,12 +76,12 @@ public:
     void print_res(Node *root);
 
     template <typename T = int>
-    void print_res(vector<T>&& data);
+    void print_res(vector<T> &&data);
     template <typename T = int>
-    void print_res(vector<vector<T>>&& data);
+    void print_res(vector<vector<T>> &&data);
 };
 
-ListNode *icode::create_list(vector<int>&& nums)
+ListNode *icode::create_list(vector<int> &&nums)
 {
     ListNode *root = NULL;
     if (nums.empty())
@@ -98,7 +99,7 @@ ListNode *icode::create_list(vector<int>&& nums)
 }
 
 template <typename C>
-C *icode::create_tree(vector<int>&& nums)
+C *icode::create_tree(vector<int> &&nums)
 {
     C *root = NULL;
     if (nums.empty())
@@ -129,7 +130,7 @@ C *icode::create_tree(vector<int>&& nums)
     return root;
 }
 
-Node *icode::create_BPlusTree(vector<int>&& nums)
+Node *icode::create_BPlusTree(vector<int> &&nums)
 {
     Node *root = NULL;
     if (nums.empty())
@@ -192,7 +193,8 @@ void icode::print_res(TreeNode *root)
     {
         TreeNode *tmp = level.front();
         level.pop();
-        if (!tmp) {
+        if (!tmp)
+        {
             cout << "# ";
             continue;
         }
@@ -204,7 +206,8 @@ void icode::print_res(TreeNode *root)
     cout << endl;
 }
 
-void icode::print_res(Node *root) {
+void icode::print_res(Node *root)
+{
     queue<Node *> level;
     level.push(root);
     while (!level.empty())
@@ -212,7 +215,8 @@ void icode::print_res(Node *root) {
         Node *tmp = level.front();
         level.pop();
         cout << tmp->val << " ";
-        if (!tmp->next) {
+        if (!tmp->next)
+        {
             cout << "# ";
         }
         if (tmp->left)
@@ -229,7 +233,7 @@ void icode::print_res(Node *root) {
 }
 
 template <typename T = int>
-void icode::print_res(vector<T>&& data)
+void icode::print_res(vector<T> &&data)
 {
     for (auto i : data)
     {
@@ -239,7 +243,7 @@ void icode::print_res(vector<T>&& data)
 }
 
 template <typename T = int>
-void icode::print_res(vector<vector<T>>&& data)
+void icode::print_res(vector<vector<T>> &&data)
 {
     for (auto ip : data)
     {
