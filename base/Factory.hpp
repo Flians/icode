@@ -256,6 +256,7 @@
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 #include "../leetcode/1437_Check_If_All_1's_Are_at_Least_Length_K_Places_Away.hpp"
 #include "../leetcode/1457_Pseudo_Palindromic_Paths_in_a_Binary_Tree.hpp"
+#include "../leetcode/1461_Check_If_a_String_Contains_All_Binary_Codes_of_Size_K.hpp"
 #include "../leetcode/1463_Cherry_Pickup_II.hpp"
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
@@ -792,6 +793,8 @@ public:
 			return new L1437;
 		case 1457:
 			return new L1457;
+		case 1461:
+			return new L1461;
 		case 1463:
 			return new L1463;
 		case 1492:
