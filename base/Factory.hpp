@@ -271,6 +271,7 @@
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
 #include "../leetcode/1680_Concatenation_of_Consecutive_Binary_Numbers.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
+#include "../leetcode/1721_Swapping_Nodes_in_a_Linked_List.hpp"
 class Factory
 {
 public:
@@ -822,6 +823,8 @@ public:
 			return new L1680;
 		case 1696:
 			return new L1696;
+		case 1721:
+			return new L1721;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
