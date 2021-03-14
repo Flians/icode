@@ -194,6 +194,7 @@
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/821_Shortest_Distance_to_a_Character.hpp"
+#include "../leetcode/823_Binary_Trees_With_Factors.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
 #include "../leetcode/827_Making_A_Large_Island.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
@@ -256,6 +257,7 @@
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 #include "../leetcode/1437_Check_If_All_1's_Are_at_Least_Length_K_Places_Away.hpp"
 #include "../leetcode/1457_Pseudo_Palindromic_Paths_in_a_Binary_Tree.hpp"
+#include "../leetcode/1461_Check_If_a_String_Contains_All_Binary_Codes_of_Size_K.hpp"
 #include "../leetcode/1463_Cherry_Pickup_II.hpp"
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
@@ -669,6 +671,8 @@ public:
 			return new L812;
 		case 821:
 			return new L821;
+		case 823:
+			return new L823;
 		case 824:
 			return new L824;
 		case 827:
@@ -793,6 +797,8 @@ public:
 			return new L1437;
 		case 1457:
 			return new L1457;
+		case 1461:
+			return new L1461;
 		case 1463:
 			return new L1463;
 		case 1492:
