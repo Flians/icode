@@ -250,6 +250,7 @@
 #include "../leetcode/1291_Sequential_Digits.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
+#include "../leetcode/1332_Remove_Palindromic_Subsequences.hpp"
 #include "../leetcode/1337_The_K_Weakest_Rows_in_a_Matrix.hpp"
 #include "../leetcode/1345_Jump_Game_IV.hpp"
 #include "../leetcode/1379_Find_a_Corresponding_Node_of_a_Binary_Tree_in_a_Clone_of_That_Tree.hpp"
@@ -783,6 +784,8 @@ public:
 			return new L1305;
 		case 1306:
 			return new L1306;
+		case 1332:
+			return new L1332;
 		case 1337:
 			return new L1337;
 		case 1345:
