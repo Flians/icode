@@ -168,6 +168,7 @@
 #include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/526_Beautiful_Arrangement.hpp"
 #include "../leetcode/528_Random_Pick_with_Weight.hpp"
+#include "../leetcode/535_Encode_and_Decode_TinyURL.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/556_Next_Greater_Element_III.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
@@ -620,6 +621,8 @@ public:
 			return new L526;
 		case 528:
 			return new Random_pick;
+		case 535:
+			return new L535;
 		case 540:
 			return new L540;
 		case 556:
