@@ -161,6 +161,7 @@
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
 #include "../leetcode/476_Number_Complement.hpp"
+#include "../leetcode/478_Generate_Random_Point_in_a_Circle.hpp"
 #include "../leetcode/495_Teemo_Attacking.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
 #include "../leetcode/498_Diagonal_Traverse.hpp"
@@ -608,6 +609,8 @@ public:
 			return new L470;
 		case 476:
 			return new L476;
+		case 478:
+			return new L478;
 		case 495:
 			return new L495;
 		case 497:
