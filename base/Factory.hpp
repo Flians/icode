@@ -132,6 +132,7 @@
 #include "../leetcode/342_Power_of_Four.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/368_Largest_Divisible_Subset.hpp"
+#include "../leetcode/376_Wiggle_Subsequence.hpp"
 #include "../leetcode/380_Insert_Delete_GetRandom_O.hpp"
 #include "../leetcode/382_Linked_List_Random_Node.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
@@ -551,6 +552,8 @@ public:
 			return new L367;
 		case 368:
 			return new L368;
+		case 376:
+			return new L376;
 		case 380:
 			return new RandomizedSet;
 		case 382:
