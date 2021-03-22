@@ -223,6 +223,7 @@
 #include "../leetcode/949_Largest_Time_for_Given_Digits.hpp"
 #include "../leetcode/952_Largest_Component_Size_by_Common_Factor.hpp"
 #include "../leetcode/957_Prison_Cells_After_N_Days.hpp"
+#include "../leetcode/966_Vowel_Spellchecker.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/969_Pancake_Sorting.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
@@ -738,6 +739,8 @@ public:
 			return new L952;
 		case 957:
 			return new L957;
+		case 966:
+			return new L966;
 		case 967:
 			return new L967;
 		case 969:
