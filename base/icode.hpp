@@ -32,6 +32,16 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+struct HashNode
+{
+    int key;
+    int val;
+    HashNode *next;
+
+    HashNode() : key(0), val(0), next(nullptr) {}
+    HashNode(int _key, int _val, HashNode *_next) : key(_key), val(_val), next(_next) {}
+};
+
 // Definition for a Node.
 class Node
 {
@@ -61,6 +71,8 @@ class icode
 private:
     /* data */
 public:
+    icode() = default;
+    virtual ~icode() = default;
     virtual void run() = 0;
 
     ListNode *create_list(vector<int> &&nums);

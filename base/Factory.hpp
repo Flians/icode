@@ -189,6 +189,7 @@
 #include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
+#include "../leetcode/706_Design_HashMap.hpp"
 #include "../leetcode/713_Subarray_Product_Less_Than_K.hpp"
 #include "../leetcode/714_Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
@@ -672,6 +673,8 @@ public:
 			return new L704;
 		case 705:
 			return new MyHashSet;
+		case 706:
+			return new MyHashMap;
 		case 713:
 			return new L713;
 		case 714:

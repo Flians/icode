@@ -39,6 +39,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'Random_pick'
             elif id == '705':
                 cn = 'MyHashSet'
+            elif id == '706':
+                cn = 'MyHashMap'
             elif id == '895':
                 cn = 'FreqStack'
             elif id == '901':
