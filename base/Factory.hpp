@@ -209,6 +209,7 @@
 #include "../leetcode/841_Keys_and_Rooms.hpp"
 #include "../leetcode/856_Score_of_Parentheses.hpp"
 #include "../leetcode/869_Reordered_Power_of_2.hpp"
+#include "../leetcode/870_Advantage_Shuffle.hpp"
 #include "../leetcode/877_Stone_Game.hpp"
 #include "../leetcode/880_Decoded_String_at_Index.hpp"
 #include "../leetcode/881_Boats_to_Save_People.hpp"
@@ -713,6 +714,8 @@ public:
 			return new L856;
 		case 869:
 			return new L869;
+		case 870:
+			return new L870;
 		case 877:
 			return new L877;
 		case 880:
