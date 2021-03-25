@@ -10,7 +10,7 @@ public:
 
     vector<int> advantageCount(vector<int> &&A, vector<int> &&B)
     {
-        std::sort(A.begin(), A.end(), std::greater<>());
+        std::sort(A.begin(), A.end(), std::greater<int>());
         std::size_t n = A.size();
         vector<int> res(n, 0), order(n, 0);
         for (std::size_t i = 0; i < n; ++i)
