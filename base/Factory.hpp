@@ -221,6 +221,7 @@
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/910_Smallest_Range_II.hpp"
+#include "../leetcode/916_Word_Subsets.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/923_3Sum_With_Multiplicity.hpp"
 #include "../leetcode/948_Bag_of_Tokens.hpp"
@@ -740,6 +741,8 @@ public:
 			return new L905;
 		case 910:
 			return new L910;
+		case 916:
+			return new L916;
 		case 918:
 			return new L918;
 		case 923:
