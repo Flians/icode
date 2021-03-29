@@ -147,6 +147,7 @@
 #include "../leetcode/412_Fizz_Buzz.hpp"
 #include "../leetcode/417_Pacific_Atlantic_Water_Flow.hpp"
 #include "../leetcode/421_Maximum_XOR_of_Two_Numbers_in_an_Array.hpp"
+#include "../leetcode/423_Reconstruct_Original_Digits_from_English.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
 #include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
@@ -593,6 +594,8 @@ public:
 			return new L417;
 		case 421:
 			return new L421;
+		case 423:
+			return new L423;
 		case 435:
 			return new L435;
 		case 436:
