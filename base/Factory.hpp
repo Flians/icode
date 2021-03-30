@@ -130,6 +130,7 @@
 #include "../leetcode/337_House_Robber_III.hpp"
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
+#include "../leetcode/354_Russian_Doll_Envelopes.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/368_Largest_Divisible_Subset.hpp"
 #include "../leetcode/376_Wiggle_Subsequence.hpp"
@@ -562,6 +563,8 @@ public:
 			return new L338;
 		case 342:
 			return new L342;
+		case 354:
+			return new L354;
 		case 367:
 			return new L367;
 		case 368:
