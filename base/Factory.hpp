@@ -165,6 +165,7 @@
 #include "../leetcode/463_Island_Perimeter.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
+#include "../leetcode/474_Ones_and_Zeroes.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
 #include "../leetcode/478_Generate_Random_Point_in_a_Circle.hpp"
 #include "../leetcode/495_Teemo_Attacking.hpp"
@@ -634,6 +635,8 @@ public:
 			return new L468;
 		case 470:
 			return new L470;
+		case 474:
+			return new L474;
 		case 476:
 			return new L476;
 		case 478:
