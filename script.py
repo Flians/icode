@@ -37,6 +37,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'RandPoint'
             elif id == '528':
                 cn = 'Random_pick'
+            elif id == '622':
+                cn = 'MyCircularQueue'
             elif id == '705':
                 cn = 'MyHashSet'
             elif id == '706':
