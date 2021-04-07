@@ -285,6 +285,7 @@
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
 #include "../leetcode/1539_Kth_Missing_Positive_Number.hpp"
+#include "../leetcode/1551_Minimum_Operations_to_Make_Array_Equal.hpp"
 #include "../leetcode/1631_Path_With_Minimum_Effort.hpp"
 #include "../leetcode/1640_Check_Array_Formation_Through_Concatenation.hpp"
 #include "../leetcode/1641_Count_Sorted_Vowel_Strings.hpp"
@@ -876,6 +877,8 @@ public:
 			return new L1510;
 		case 1539:
 			return new L1539;
+		case 1551:
+			return new L1551;
 		case 1631:
 			return new L1631;
 		case 1640:
