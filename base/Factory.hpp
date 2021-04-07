@@ -203,6 +203,7 @@
 #include "../leetcode/754_Reach_a_Number.hpp"
 #include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/775_Global_and_Local_Inversions.hpp"
 #include "../leetcode/785_Is_Graph_Bipartite.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
 #include "../leetcode/797_All_Paths_From_Source_to_Target.hpp"
@@ -713,6 +714,8 @@ public:
 			return new L763;
 		case 771:
 			return new L771;
+		case 775:
+			return new L775;
 		case 785:
 			return new L785;
 		case 787:
