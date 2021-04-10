@@ -9,6 +9,20 @@ public:
         print_res(head);
     }
 
+    bool hasCycle_(ListNode *head)
+    {
+        ListNode *l1 = head;
+        ListNode *l2 = head;
+        do
+        {
+            if (l1 == NULL || l2 == NULL || l2->next == NULL)
+                return false;
+            l1 = l1->next;
+            l2 = l2->next->next;
+        } while (l1 != l2);
+        return true;
+    }
+
     bool hasCycle(ListNode *head)
     {
         ListNode *root = head, *last = nullptr;
