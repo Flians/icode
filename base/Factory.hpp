@@ -190,6 +190,7 @@
 #include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/645_Set_Mismatch.hpp"
 #include "../leetcode/647_Palindromic_Substrings.hpp"
+#include "../leetcode/667_Beautiful_Arrangement_II.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/695_Max_Area_of_Island.hpp"
@@ -688,6 +689,8 @@ public:
 			return new L645;
 		case 647:
 			return new L647;
+		case 667:
+			return new L667;
 		case 678:
 			return new L678;
 		case 679:
