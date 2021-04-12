@@ -271,6 +271,7 @@
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
 #include "../leetcode/1291_Sequential_Digits.hpp"
+#include "../leetcode/1302_Deepest_Leaves_Sum.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
 #include "../leetcode/1332_Remove_Palindromic_Subsequences.hpp"
@@ -851,6 +852,8 @@ public:
 			return new CombinationIterator;
 		case 1291:
 			return new L1291;
+		case 1302:
+			return new L1302;
 		case 1305:
 			return new L1305;
 		case 1306:
