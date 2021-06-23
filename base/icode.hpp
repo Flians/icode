@@ -1,6 +1,7 @@
 #ifndef _ICODE_H_
 #define _ICODE_H_
 
+#define _USE_MATH_DEFINES
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -29,6 +30,16 @@ struct TreeNode
     TreeNode() : val(0), left(NULL), right(NULL) {}
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
+struct HashNode
+{
+    int key;
+    int val;
+    HashNode *next;
+
+    HashNode() : key(0), val(0), next(nullptr) {}
+    HashNode(int _key, int _val, HashNode *_next) : key(_key), val(_val), next(_next) {}
 };
 
 // Definition for a Node.
@@ -60,6 +71,8 @@ class icode
 private:
     /* data */
 public:
+    icode() = default;
+    virtual ~icode() = default;
     virtual void run() = 0;
 
     ListNode *create_list(vector<int> &&nums);
@@ -232,7 +245,7 @@ void icode::print_res(Node *root)
     cout << endl;
 }
 
-template <typename T = int>
+template <typename T>
 void icode::print_res(vector<T> &&data)
 {
     for (auto i : data)
@@ -242,7 +255,7 @@ void icode::print_res(vector<T> &&data)
     cout << endl;
 }
 
-template <typename T = int>
+template <typename T>
 void icode::print_res(vector<vector<T>> &&data)
 {
     for (auto ip : data)

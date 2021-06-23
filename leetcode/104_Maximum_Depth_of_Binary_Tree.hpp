@@ -2,20 +2,32 @@
 class L104 : public icode
 {
 public:
-	void run() {
-        cout << maxDepth(create_tree({2,INT_MIN,3,INT_MIN,4,INT_MIN,5,INT_MIN,6})) << " 5" << endl;
-        cout << maxDepth(create_tree({3,9,20,INT_MIN,INT_MIN,15,7})) << " 3" << endl;
+    void run()
+    {
+        cout << maxDepth(create_tree({2, INT_MIN, 3, INT_MIN, 4, INT_MIN, 5, INT_MIN, 6})) << " 5" << endl;
+        cout << maxDepth(create_tree({3, 9, 20, INT_MIN, INT_MIN, 15, 7})) << " 3" << endl;
     }
 
-    int maxDepth(TreeNode* root) {
-        if(root == NULL)
+    int maxDepth(TreeNode *root, int d = 0)
+    {
+        if (!root)
+            return d;
+        ++d;
+        int ld = maxDepth(root->left, d);
+        int rd = maxDepth(root->right, d);
+        return max(ld, rd);
+    }
+
+    int maxDepth_(TreeNode *root)
+    {
+        if (root == NULL)
             return 0;
-        
+
         /*
         // recursively
         return 1+max(maxDepth(root->left), maxDepth(root->right));
         */
-        
+
         /*
         //dfs
         stack<TreeNode*> nodes;
@@ -42,23 +54,24 @@ public:
         }
         return deepth;
         */
-        
+
         //bfs
-        queue<TreeNode*> nodes;
-        int deepth=0;
+        queue<TreeNode *> nodes;
+        int deepth = 0;
         nodes.push(root);
-        while(!nodes.empty())
+        while (!nodes.empty())
         {
             int width = nodes.size();
-            while(width--)
+            while (width--)
             {
-                TreeNode* temp_node = nodes.front();
+                TreeNode *temp_node = nodes.front();
                 nodes.pop();
-                if(temp_node->left!=NULL)
+                if (temp_node->left != NULL)
                 {
                     nodes.push(temp_node->left);
                 }
-                if(temp_node->right!=NULL){
+                if (temp_node->right != NULL)
+                {
                     nodes.push(temp_node->right);
                 }
             }

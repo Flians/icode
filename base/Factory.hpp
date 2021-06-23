@@ -107,6 +107,7 @@
 #include "../leetcode/229_Majority_Element_II.hpp"
 #include "../leetcode/230_Kth_Smallest_Element_in_a_BST.hpp"
 #include "../leetcode/231_Power_of_Two.hpp"
+#include "../leetcode/234_Palindrome_Linked_List.hpp"
 #include "../leetcode/235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.hpp"
 #include "../leetcode/236_Lowest_Common_Ancestor_of_a_Binary_Tree.hpp"
 #include "../leetcode/238_Product_of_Array_Except_Self.hpp"
@@ -130,8 +131,10 @@
 #include "../leetcode/337_House_Robber_III.hpp"
 #include "../leetcode/338_Counting_Bits.hpp"
 #include "../leetcode/342_Power_of_Four.hpp"
+#include "../leetcode/354_Russian_Doll_Envelopes.hpp"
 #include "../leetcode/367_Valid_Perfect_Square.hpp"
 #include "../leetcode/368_Largest_Divisible_Subset.hpp"
+#include "../leetcode/376_Wiggle_Subsequence.hpp"
 #include "../leetcode/380_Insert_Delete_GetRandom_O.hpp"
 #include "../leetcode/382_Linked_List_Random_Node.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
@@ -144,7 +147,9 @@
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
 #include "../leetcode/412_Fizz_Buzz.hpp"
+#include "../leetcode/417_Pacific_Atlantic_Water_Flow.hpp"
 #include "../leetcode/421_Maximum_XOR_of_Two_Numbers_in_an_Array.hpp"
+#include "../leetcode/423_Reconstruct_Original_Digits_from_English.hpp"
 #include "../leetcode/435_Non_overlapping_Intervals.hpp"
 #include "../leetcode/436_Find_Right_Interval.hpp"
 #include "../leetcode/437_Path_Sum_III.hpp"
@@ -160,7 +165,9 @@
 #include "../leetcode/463_Island_Perimeter.hpp"
 #include "../leetcode/468_Validate_IP_Address.hpp"
 #include "../leetcode/470_Implement_Rand10()_Using_Rand7().hpp"
+#include "../leetcode/474_Ones_and_Zeroes.hpp"
 #include "../leetcode/476_Number_Complement.hpp"
+#include "../leetcode/478_Generate_Random_Point_in_a_Circle.hpp"
 #include "../leetcode/495_Teemo_Attacking.hpp"
 #include "../leetcode/497_Random_Point_in_Non_overlapping_Rectangles.hpp"
 #include "../leetcode/498_Diagonal_Traverse.hpp"
@@ -168,6 +175,7 @@
 #include "../leetcode/520_Detect_Capital.hpp"
 #include "../leetcode/526_Beautiful_Arrangement.hpp"
 #include "../leetcode/528_Random_Pick_with_Weight.hpp"
+#include "../leetcode/535_Encode_and_Decode_TinyURL.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/556_Next_Greater_Element_III.hpp"
 #include "../leetcode/560_Subarray_Sum_Equals_K.hpp"
@@ -176,22 +184,30 @@
 #include "../leetcode/575_Distribute_Candies.hpp"
 #include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
+#include "../leetcode/622_Design_Circular_Queue.hpp"
 #include "../leetcode/623_Add_One_Row_to_Tree.hpp"
+#include "../leetcode/637_Average_of_Levels_in_Binary_Tree.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/645_Set_Mismatch.hpp"
+#include "../leetcode/647_Palindromic_Substrings.hpp"
+#include "../leetcode/667_Beautiful_Arrangement_II.hpp"
 #include "../leetcode/678_Valid_Parenthesis_String.hpp"
 #include "../leetcode/679_24_Game.hpp"
 #include "../leetcode/695_Max_Area_of_Island.hpp"
 #include "../leetcode/700_Search_in_a_Binary_Search_Tree.hpp"
 #include "../leetcode/704_Binary_Search.hpp"
 #include "../leetcode/705_Design_HashSet.hpp"
+#include "../leetcode/706_Design_HashMap.hpp"
 #include "../leetcode/713_Subarray_Product_Less_Than_K.hpp"
+#include "../leetcode/714_Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee.hpp"
 #include "../leetcode/733_Flood_Fill.hpp"
 #include "../leetcode/754_Reach_a_Number.hpp"
 #include "../leetcode/763_Partition_Labels.hpp"
 #include "../leetcode/771_Jewels_and_Stones.hpp"
+#include "../leetcode/775_Global_and_Local_Inversions.hpp"
 #include "../leetcode/785_Is_Graph_Bipartite.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
+#include "../leetcode/797_All_Paths_From_Source_to_Target.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/821_Shortest_Distance_to_a_Character.hpp"
 #include "../leetcode/823_Binary_Trees_With_Factors.hpp"
@@ -199,7 +215,10 @@
 #include "../leetcode/827_Making_A_Large_Island.hpp"
 #include "../leetcode/835_Image_Overlap.hpp"
 #include "../leetcode/836_Rectangle_Overlap.hpp"
+#include "../leetcode/841_Keys_and_Rooms.hpp"
 #include "../leetcode/856_Score_of_Parentheses.hpp"
+#include "../leetcode/869_Reordered_Power_of_2.hpp"
+#include "../leetcode/870_Advantage_Shuffle.hpp"
 #include "../leetcode/877_Stone_Game.hpp"
 #include "../leetcode/880_Decoded_String_at_Index.hpp"
 #include "../leetcode/881_Boats_to_Save_People.hpp"
@@ -210,13 +229,17 @@
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/910_Smallest_Range_II.hpp"
+#include "../leetcode/916_Word_Subsets.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
+#include "../leetcode/923_3Sum_With_Multiplicity.hpp"
 #include "../leetcode/948_Bag_of_Tokens.hpp"
 #include "../leetcode/949_Largest_Time_for_Given_Digits.hpp"
 #include "../leetcode/952_Largest_Component_Size_by_Common_Factor.hpp"
 #include "../leetcode/957_Prison_Cells_After_N_Days.hpp"
+#include "../leetcode/966_Vowel_Spellchecker.hpp"
 #include "../leetcode/967_Numbers_With_Same_Consecutive_Differences.hpp"
 #include "../leetcode/969_Pancake_Sorting.hpp"
+#include "../leetcode/971_Flip_Binary_Tree_To_Match_Preorder_Traversal.hpp"
 #include "../leetcode/973_K_Closest_Points_to_Origin.hpp"
 #include "../leetcode/977_Squares_of_a_Sorted_Array.hpp"
 #include "../leetcode/980_Unique_Paths_III.hpp"
@@ -248,12 +271,15 @@
 #include "../leetcode/1277_Count_Square_Submatrices_with_All_Ones.hpp"
 #include "../leetcode/1286_Iterator_for_Combination.hpp"
 #include "../leetcode/1291_Sequential_Digits.hpp"
+#include "../leetcode/1302_Deepest_Leaves_Sum.hpp"
 #include "../leetcode/1305_All_Elements_in_Two_Binary_Search_Trees.hpp"
 #include "../leetcode/1306_Jump_Game_III.hpp"
+#include "../leetcode/1332_Remove_Palindromic_Subsequences.hpp"
 #include "../leetcode/1337_The_K_Weakest_Rows_in_a_Matrix.hpp"
 #include "../leetcode/1345_Jump_Game_IV.hpp"
 #include "../leetcode/1379_Find_a_Corresponding_Node_of_a_Binary_Tree_in_a_Clone_of_That_Tree.hpp"
 #include "../leetcode/1382_Balance_a_Binary_Search_Tree.hpp"
+#include "../leetcode/1396_Design_Underground_System.hpp"
 #include "../leetcode/1401_Circle_and_Rectangle_Overlapping.hpp"
 #include "../leetcode/1437_Check_If_All_1's_Are_at_Least_Length_K_Places_Away.hpp"
 #include "../leetcode/1457_Pseudo_Palindromic_Paths_in_a_Binary_Tree.hpp"
@@ -262,6 +288,7 @@
 #include "../leetcode/1492_The_kth_Factor_of_n.hpp"
 #include "../leetcode/1510_Stone_Game_IV.hpp"
 #include "../leetcode/1539_Kth_Missing_Positive_Number.hpp"
+#include "../leetcode/1551_Minimum_Operations_to_Make_Array_Equal.hpp"
 #include "../leetcode/1631_Path_With_Minimum_Effort.hpp"
 #include "../leetcode/1640_Check_Array_Formation_Through_Concatenation.hpp"
 #include "../leetcode/1641_Count_Sorted_Vowel_Strings.hpp"
@@ -273,6 +300,7 @@
 #include "../leetcode/1679_Max_Number_of_K_Sum_Pairs.hpp"
 #include "../leetcode/1680_Concatenation_of_Consecutive_Binary_Numbers.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
+#include "../leetcode/1721_Swapping_Nodes_in_a_Linked_List.hpp"
 class Factory
 {
 public:
@@ -496,6 +524,8 @@ public:
 			return new L230;
 		case 231:
 			return new L231;
+		case 234:
+			return new L234;
 		case 235:
 			return new L235;
 		case 236:
@@ -542,10 +572,14 @@ public:
 			return new L338;
 		case 342:
 			return new L342;
+		case 354:
+			return new L354;
 		case 367:
 			return new L367;
 		case 368:
 			return new L368;
+		case 376:
+			return new L376;
 		case 380:
 			return new RandomizedSet;
 		case 382:
@@ -570,8 +604,12 @@ public:
 			return new L409;
 		case 412:
 			return new L412;
+		case 417:
+			return new L417;
 		case 421:
 			return new L421;
+		case 423:
+			return new L423;
 		case 435:
 			return new L435;
 		case 436:
@@ -602,8 +640,12 @@ public:
 			return new L468;
 		case 470:
 			return new L470;
+		case 474:
+			return new L474;
 		case 476:
 			return new L476;
+		case 478:
+			return new L478;
 		case 495:
 			return new L495;
 		case 497:
@@ -618,6 +660,8 @@ public:
 			return new L526;
 		case 528:
 			return new Random_pick;
+		case 535:
+			return new L535;
 		case 540:
 			return new L540;
 		case 556:
@@ -634,12 +678,20 @@ public:
 			return new L594;
 		case 605:
 			return new L605;
+		case 622:
+			return new MyCircularQueue;
 		case 623:
 			return new L623;
+		case 637:
+			return new L637;
 		case 639:
 			return new L639;
 		case 645:
 			return new L645;
+		case 647:
+			return new L647;
+		case 667:
+			return new L667;
 		case 678:
 			return new L678;
 		case 679:
@@ -652,8 +704,12 @@ public:
 			return new L704;
 		case 705:
 			return new MyHashSet;
+		case 706:
+			return new MyHashMap;
 		case 713:
 			return new L713;
+		case 714:
+			return new L714;
 		case 733:
 			return new L733;
 		case 754:
@@ -662,10 +718,14 @@ public:
 			return new L763;
 		case 771:
 			return new L771;
+		case 775:
+			return new L775;
 		case 785:
 			return new L785;
 		case 787:
 			return new L787;
+		case 797:
+			return new L797;
 		case 812:
 			return new L812;
 		case 821:
@@ -680,8 +740,14 @@ public:
 			return new L835;
 		case 836:
 			return new L836;
+		case 841:
+			return new L841;
 		case 856:
 			return new L856;
+		case 869:
+			return new L869;
+		case 870:
+			return new L870;
 		case 877:
 			return new L877;
 		case 880:
@@ -702,8 +768,12 @@ public:
 			return new L905;
 		case 910:
 			return new L910;
+		case 916:
+			return new L916;
 		case 918:
 			return new L918;
+		case 923:
+			return new L923;
 		case 948:
 			return new L948;
 		case 949:
@@ -712,10 +782,14 @@ public:
 			return new L952;
 		case 957:
 			return new L957;
+		case 966:
+			return new L966;
 		case 967:
 			return new L967;
 		case 969:
 			return new L969;
+		case 971:
+			return new L971;
 		case 973:
 			return new L973;
 		case 977:
@@ -778,10 +852,14 @@ public:
 			return new CombinationIterator;
 		case 1291:
 			return new L1291;
+		case 1302:
+			return new L1302;
 		case 1305:
 			return new L1305;
 		case 1306:
 			return new L1306;
+		case 1332:
+			return new L1332;
 		case 1337:
 			return new L1337;
 		case 1345:
@@ -790,6 +868,8 @@ public:
 			return new L1379;
 		case 1382:
 			return new L1382;
+		case 1396:
+			return new UndergroundSystem;
 		case 1401:
 			return new L1401;
 		case 1437:
@@ -806,6 +886,8 @@ public:
 			return new L1510;
 		case 1539:
 			return new L1539;
+		case 1551:
+			return new L1551;
 		case 1631:
 			return new L1631;
 		case 1640:
@@ -828,6 +910,8 @@ public:
 			return new L1680;
 		case 1696:
 			return new L1696;
+		case 1721:
+			return new L1721;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
