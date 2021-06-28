@@ -73,6 +73,7 @@
 #include "../leetcode/130_Surrounded_Regions.hpp"
 #include "../leetcode/131_Palindrome_Partitioning.hpp"
 #include "../leetcode/134_Gas_Station.hpp"
+#include "../leetcode/135_Candy.hpp"
 #include "../leetcode/137_Single_Number_II.hpp"
 #include "../leetcode/139_Word_Break.hpp"
 #include "../leetcode/141_Linked_List_Cycle.hpp"
@@ -456,6 +457,8 @@ public:
 			return new L131;
 		case 134:
 			return new L134;
+		case 135:
+			return new L135;
 		case 137:
 			return new L137;
 		case 139:
