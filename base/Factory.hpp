@@ -251,6 +251,7 @@
 #include "../leetcode/993_Cousins_in_Binary_Tree.hpp"
 #include "../leetcode/994_Rotting_Oranges.hpp"
 #include "../leetcode/997_Find_the_Town_Judge.hpp"
+#include "../leetcode/1004_Max_Consecutive_Ones_III.hpp"
 #include "../leetcode/1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.hpp"
 #include "../leetcode/1010_Pairs_of_Songs_With_Total_Durations_Divisible_by_60.hpp"
 #include "../leetcode/1022_Sum_of_Root_To_Leaf_Binary_Numbers.hpp"
@@ -813,6 +814,8 @@ public:
 			return new L994;
 		case 997:
 			return new L997;
+		case 1004:
+			return new L1004;
 		case 1008:
 			return new L1008;
 		case 1010:
