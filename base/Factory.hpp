@@ -123,6 +123,7 @@
 #include "../leetcode/287_Find_the_Duplicate_Number.hpp"
 #include "../leetcode/289_Game_of_Life.hpp"
 #include "../leetcode/290_Word_Pattern.hpp"
+#include "../leetcode/295_Find_Median_from_Data_Stream.hpp"
 #include "../leetcode/299_Bulls_and_Cows.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
 #include "../leetcode/312_Burst_Balloons.hpp"
@@ -559,6 +560,8 @@ public:
 			return new L289;
 		case 290:
 			return new L290;
+		case 295:
+			return new L295;
 		case 299:
 			return new L299;
 		case 300:
