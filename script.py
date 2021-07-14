@@ -31,6 +31,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'Trie'
             elif id == '211':
                 cn = 'WordDictionary'
+            elif id == '295':
+                cn = 'MedianFinder'
             elif id == '380':
                 cn = 'RandomizedSet'
             elif id == '497':

@@ -83,6 +83,7 @@
 #include "../leetcode/152_Maximum_Product_Subarray.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
+#include "../leetcode/162_Find_Peak_Element.hpp"
 #include "../leetcode/163_Missing_Ranges.hpp"
 #include "../leetcode/165_Compare_Version_Numbers.hpp"
 #include "../leetcode/169_Majority_Element.hpp"
@@ -480,6 +481,8 @@ public:
 			return new MinStack;
 		case 160:
 			return new L160;
+		case 162:
+			return new L162;
 		case 163:
 			return new L163;
 		case 165:
@@ -561,7 +564,7 @@ public:
 		case 290:
 			return new L290;
 		case 295:
-			return new L295;
+			return new MedianFinder;
 		case 299:
 			return new L299;
 		case 300:
