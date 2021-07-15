@@ -211,6 +211,7 @@
 #include "../leetcode/775_Global_and_Local_Inversions.hpp"
 #include "../leetcode/785_Is_Graph_Bipartite.hpp"
 #include "../leetcode/787_Cheapest_Flights_Within_K_Stops.hpp"
+#include "../leetcode/791_Custom_Sort_String.hpp"
 #include "../leetcode/797_All_Paths_From_Source_to_Target.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
 #include "../leetcode/821_Shortest_Distance_to_a_Character.hpp"
@@ -737,6 +738,8 @@ public:
 			return new L785;
 		case 787:
 			return new L787;
+		case 791:
+			return new L791;
 		case 797:
 			return new L797;
 		case 812:
