@@ -188,6 +188,7 @@
 #include "../leetcode/575_Distribute_Candies.hpp"
 #include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
+#include "../leetcode/611_Valid_Triangle_Number.hpp"
 #include "../leetcode/622_Design_Circular_Queue.hpp"
 #include "../leetcode/623_Add_One_Row_to_Tree.hpp"
 #include "../leetcode/637_Average_of_Levels_in_Binary_Tree.hpp"
@@ -692,6 +693,8 @@ public:
 			return new L594;
 		case 605:
 			return new L605;
+		case 611:
+			return new L611;
 		case 622:
 			return new MyCircularQueue;
 		case 623:
