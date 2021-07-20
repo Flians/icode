@@ -2,27 +2,54 @@
 class L235 : public icode
 {
 public:
-	void run() {
-        TreeNode* p = new TreeNode(2);
-        TreeNode* q = new TreeNode(4);
-        cout << lowestCommonAncestor(create_tree({6,2,8,0,4,7,9,INT_MIN,INT_MIN,3,5}), p, q)->val << " 2" << endl;
+    void run()
+    {
+        TreeNode *p = new TreeNode(2);
+        TreeNode *q = new TreeNode(4);
+        cout << lowestCommonAncestor(create_tree({6, 2, 8, 0, 4, 7, 9, INT_MIN, INT_MIN, 3, 5}), p, q)->val << " 2" << endl;
         delete p;
         delete q;
     }
 
-    TreeNode* inorder (TreeNode *root, int minv, int maxv) {
-        if (root->val < minv) {
+    TreeNode *inorder(TreeNode *root, int minv, int maxv)
+    {
+        if (root->val < minv)
+        {
             return inorder(root->right, minv, maxv);
-        } else if (root->val > maxv) {
+        }
+        else if (root->val > maxv)
+        {
             return inorder(root->left, minv, maxv);
-        } else {
+        }
+        else
+        {
             return root;
         }
     }
-    
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+
+    TreeNode *lowestCommonAncestor_(TreeNode *root, TreeNode *p, TreeNode *q)
+    {
         int minv = min(p->val, q->val);
         int maxv = max(p->val, q->val);
         return inorder(root, minv, maxv);
+    }
+
+    TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
+    {
+        if (!root)
+            return root;
+        int minv = min(p->val, q->val), maxv = max(p->val, q->val);
+        if (root->val < minv)
+        {
+            return lowestCommonAncestor(root->right, p, q);
+        }
+        else if (root->val > maxv)
+        {
+            return lowestCommonAncestor(root->left, p, q);
+        }
+        else
+        {
+            return root;
+        }
     }
 };
