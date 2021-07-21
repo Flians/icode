@@ -145,6 +145,7 @@
 #include "../leetcode/380_Insert_Delete_GetRandom_O.hpp"
 #include "../leetcode/382_Linked_List_Random_Node.hpp"
 #include "../leetcode/383_Ransom_Note.hpp"
+#include "../leetcode/384_Shuffle_an_Array.hpp"
 #include "../leetcode/387_First_Unique_Character_in_a_String.hpp"
 #include "../leetcode/389_Find_the_Difference.hpp"
 #include "../leetcode/392_Is_Subsequence.hpp"
@@ -610,6 +611,8 @@ public:
 			return new L382;
 		case 383:
 			return new L383;
+		case 384:
+			return new ShuffleArray;
 		case 387:
 			return new L387;
 		case 389:

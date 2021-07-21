@@ -35,6 +35,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'MedianFinder'
             elif id == '380':
                 cn = 'RandomizedSet'
+            elif id == '384':
+                cn = 'ShuffleArray'
             elif id == '497':
                 cn = 'RandPoint'
             elif id == '528':
