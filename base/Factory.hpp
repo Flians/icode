@@ -240,6 +240,7 @@
 #include "../leetcode/901_Online_Stock_Span.hpp"
 #include "../leetcode/905_Sort_Array_By_Parity.hpp"
 #include "../leetcode/910_Smallest_Range_II.hpp"
+#include "../leetcode/915_Partition_Array_into_Disjoint_Intervals.hpp"
 #include "../leetcode/916_Word_Subsets.hpp"
 #include "../leetcode/918_Maximum_Sum_Circular_Subarray.hpp"
 #include "../leetcode/923_3Sum_With_Multiplicity.hpp"
@@ -802,6 +803,8 @@ public:
 			return new L905;
 		case 910:
 			return new L910;
+		case 915:
+			return new L915;
 		case 916:
 			return new L916;
 		case 918:
