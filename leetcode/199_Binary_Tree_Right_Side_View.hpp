@@ -5,7 +5,7 @@ public:
     void run()
     {
         // [1,3,4]
-        print_res(rightSideView(create_tree({1, 2, 3, -1, 5, -1, 4})));
+        print_res(rightSideView(create_tree({1, 2, 3, INT_MIN, 5, INT_MIN, 4})));
     }
 
     vector<int> rightSideView(TreeNode *root)

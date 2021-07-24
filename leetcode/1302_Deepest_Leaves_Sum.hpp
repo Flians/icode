@@ -4,7 +4,7 @@ class L1302 : public icode
 public:
     void run()
     {
-        std::cout << deepestLeavesSum(create_tree({1, 2, 3, 4, 5, -1, 6, 7, -1, -1, -1, -1, 8})) << " 15" << std::endl;
+        std::cout << deepestLeavesSum(create_tree({1, 2, 3, 4, 5, INT_MIN, 6, 7, INT_MIN, INT_MIN, INT_MIN, INT_MIN, 8})) << " 15" << std::endl;
     }
 
     int deepestLeavesSum(TreeNode *root)

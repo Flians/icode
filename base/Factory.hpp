@@ -219,6 +219,7 @@
 #include "../leetcode/791_Custom_Sort_String.hpp"
 #include "../leetcode/797_All_Paths_From_Source_to_Target.hpp"
 #include "../leetcode/812_Largest_Triangle_Area.hpp"
+#include "../leetcode/814_Binary_Tree_Pruning.hpp"
 #include "../leetcode/821_Shortest_Distance_to_a_Character.hpp"
 #include "../leetcode/823_Binary_Trees_With_Factors.hpp"
 #include "../leetcode/824_Goat_Latin.hpp"
@@ -761,6 +762,8 @@ public:
 			return new L797;
 		case 812:
 			return new L812;
+		case 814:
+			return new L814;
 		case 821:
 			return new L821;
 		case 823:

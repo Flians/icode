@@ -7,7 +7,7 @@ private:
 public:
     void run()
     {
-        TreeNode *root = create_tree({1, 3, -1, -1, 2});
+        TreeNode *root = create_tree({1, 3, INT_MIN, INT_MIN, 2});
         recoverTree(root);
         print_res(root); // [3,1,null,null,2]
     }
