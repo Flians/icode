@@ -72,6 +72,7 @@
 #include "../leetcode/123_Best_Time_to_Buy_and_Sell_Stock_III.hpp"
 #include "../leetcode/124_Binary_Tree_Maximum_Path_Sum.hpp"
 #include "../leetcode/125_Valid_Palindrome.hpp"
+#include "../leetcode/126_Word_Ladder_II.hpp"
 #include "../leetcode/127_Word_Ladder.hpp"
 #include "../leetcode/129_Sum_Root_to_Leaf_Numbers.hpp"
 #include "../leetcode/130_Surrounded_Regions.hpp"
@@ -468,6 +469,8 @@ public:
 			return new L124;
 		case 125:
 			return new L125;
+		case 126:
+			return new L126;
 		case 127:
 			return new L127;
 		case 129:
