@@ -35,4 +35,27 @@ public:
         vector<int> nums = {-1, 2, 1, -4};
         cout << threeSumClosest(nums, 1) << endl;
     }
+    
+    int threeSumClosest_bs(vector<int>& nums, int target) {
+        sort(nums.begin(), nums.end());
+        int res = 1e4, n = nums.size();
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                int tmp = target - nums[i] - nums[j];
+                int l = j + 1, r = n - 1;
+                while (l <= r) {
+                    int mid = (l + r) / 2;
+                    res = abs(target - res) < abs(tmp - nums[mid]) ? res : target - tmp + nums[mid];
+                    if (nums[mid] < tmp) {
+                        l = mid + 1;
+                    } else if (nums[mid] == tmp) {
+                        return target;
+                    } else {
+                        r = mid - 1;
+                    }
+                }
+            }
+        }
+        return res;
+    }
 };
