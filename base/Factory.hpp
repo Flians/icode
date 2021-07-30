@@ -698,6 +698,8 @@ public:
 			return new L535;
 		case 540:
 			return new L540;
+		case 542:
+			return new L542;
 		case 556:
 			return new L556;
 		case 560:
