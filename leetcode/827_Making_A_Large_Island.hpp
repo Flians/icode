@@ -46,4 +46,63 @@ public:
         }
         return flag || !has0  ? res : res + 1;
     }
+    
+    
+    vector<pair<int,int>> dir = {{1,0},{0,1},{-1,0},{0,-1}};
+    int vis[501][501];
+    bool check(int i,int j,vector<vector<int>>& grid){
+        if(i>=0 && i<grid.size() && j>=0 && j<grid[0].size() && grid[i][j] == 1)
+            return true;
+        return false;
+    }
+    int dfs_(vector<vector<int>>& grid,int i,int j,int &val){
+        int count = 1;
+        vis[i][j] = val;
+        for(auto x:dir){
+            if(check(i+x.first,j+x.second,grid) && vis[i+x.first][j+x.second] != val)
+                count += dfs_(grid,i+x.first,j+x.second,val);
+        }
+        return count;
+    }
+    int largestIsland_(vector<vector<int>>& grid) {
+        memset(vis,0,sizeof(vis));
+        int val = 1;
+        int dp[grid.size()*grid[0].size()+2];
+        memset(dp,0,sizeof(dp));
+        for(int i=0;i<grid.size();i++){
+            for(int j=0;j<grid[0].size();j++){
+                if(grid[i][j] == 1 && vis[i][j] == 0){
+                    dp[val] = dfs_(grid,i,j,val);
+                    val++;
+                }
+            }  
+        }
+        int ans = 0;
+        for(int i=0;i<grid.size();i++){
+            for(int j=0;j<grid[0].size();j++){
+                if(grid[i][j] == 0){
+                    int temp = 1;
+                    map<int,int> mp;
+                    if(i-1>=0 && vis[i-1][j]){
+                        temp += dp[vis[i-1][j]];
+                        mp[vis[i-1][j]]++;
+                    }
+                    if(j-1>=0 && vis[i][j-1] && !mp[vis[i][j-1]]){
+                        temp += dp[vis[i][j-1]];
+                        mp[vis[i][j-1]]++;
+                    }
+                    if(i+1<grid.size() && vis[i+1][j] && !mp[vis[i+1][j]]){
+                        temp += dp[vis[i+1][j]];
+                        mp[vis[i+1][j]]++;
+                    }
+                    if(j+1<grid[0].size() && vis[i][j+1] && !mp[vis[i][j+1]]){
+                        temp += dp[vis[i][j+1]];
+                        mp[vis[i][j+1]]++;
+                    }
+                    ans = max(ans,temp);
+                }
+            }  
+        }
+        return ans == 0 ? grid.size()*grid[0].size() : ans;
+    }
 };
