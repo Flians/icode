@@ -43,6 +43,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'Random_pick'
             elif id == '622':
                 cn = 'MyCircularQueue'
+            elif id == '677':
+                cn = 'MapSum'
             elif id == '705':
                 cn = 'MyHashSet'
             elif id == '706':

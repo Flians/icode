@@ -730,6 +730,8 @@ public:
 			return new L647;
 		case 667:
 			return new L667;
+		case 677:
+			return new MapSum;
 		case 678:
 			return new L678;
 		case 679:
