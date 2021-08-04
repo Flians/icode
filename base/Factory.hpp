@@ -65,6 +65,7 @@
 #include "../leetcode/107_Binary_Tree_Level_Order_Traversal_II.hpp"
 #include "../leetcode/110_Balanced_Binary_Tree.hpp"
 #include "../leetcode/111_Minimum_Depth_of_Binary_Tree.hpp"
+#include "../leetcode/113_Path_Sum_II.hpp"
 #include "../leetcode/116_Populating_Next_Right_Pointers_in_Each_Node.hpp"
 #include "../leetcode/117_Populating_Next_Right_Pointers_in_Each_Node_II.hpp"
 #include "../leetcode/119_Pascal's_Triangle_II.hpp"
@@ -458,6 +459,8 @@ public:
 			return new L110;
 		case 111:
 			return new L111;
+		case 113:
+			return new L113;
 		case 116:
 			return new L116;
 		case 117:
