@@ -51,7 +51,7 @@ public:
     vector<pair<int,int>> dir = {{1,0},{0,1},{-1,0},{0,-1}};
     int vis[501][501];
     bool check(int i,int j,vector<vector<int>>& grid){
-        if(i>=0 && i<grid.size() && j>=0 && j<grid[0].size() && grid[i][j] == 1)
+        if(i>=0 && (size_t)i<grid.size() && j>=0 && (size_t)j<grid[0].size() && grid[i][j] == 1)
             return true;
         return false;
     }
@@ -66,11 +66,11 @@ public:
     }
     int largestIsland_(vector<vector<int>>& grid) {
         memset(vis,0,sizeof(vis));
-        int val = 1;
-        int dp[grid.size()*grid[0].size()+2];
+        int val = 1, n = grid.size(), m = grid[0].size();
+        int dp[n * m + 2];
         memset(dp,0,sizeof(dp));
-        for(int i=0;i<grid.size();i++){
-            for(int j=0;j<grid[0].size();j++){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
                 if(grid[i][j] == 1 && vis[i][j] == 0){
                     dp[val] = dfs_(grid,i,j,val);
                     val++;
@@ -78,8 +78,8 @@ public:
             }  
         }
         int ans = 0;
-        for(int i=0;i<grid.size();i++){
-            for(int j=0;j<grid[0].size();j++){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
                 if(grid[i][j] == 0){
                     int temp = 1;
                     map<int,int> mp;
@@ -91,11 +91,11 @@ public:
                         temp += dp[vis[i][j-1]];
                         mp[vis[i][j-1]]++;
                     }
-                    if(i+1<grid.size() && vis[i+1][j] && !mp[vis[i+1][j]]){
+                    if(i+1<n && vis[i+1][j] && !mp[vis[i+1][j]]){
                         temp += dp[vis[i+1][j]];
                         mp[vis[i+1][j]]++;
                     }
-                    if(j+1<grid[0].size() && vis[i][j+1] && !mp[vis[i][j+1]]){
+                    if(j+1<m && vis[i][j+1] && !mp[vis[i][j+1]]){
                         temp += dp[vis[i][j+1]];
                         mp[vis[i][j+1]]++;
                     }
@@ -103,6 +103,6 @@ public:
                 }
             }  
         }
-        return ans == 0 ? grid.size()*grid[0].size() : ans;
+        return ans == 0 ? n*m : ans;
     }
 };

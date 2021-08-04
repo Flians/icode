@@ -49,7 +49,7 @@ public:
     void run() {
         MapSum* obj = new MapSum();
         obj->insert("apple",2);
-        int param_2 = obj->sum("app");
+        cout << obj->sum("app") << " 2\n";
         delete obj;
     }
 };
