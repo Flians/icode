@@ -52,6 +52,7 @@
 #include "../leetcode/84_Largest_Rectangle_in_Histogram.hpp"
 #include "../leetcode/88_Merge_Sorted_Array.hpp"
 #include "../leetcode/89_Gray_Code.hpp"
+#include "../leetcode/90_Subsets_II.hpp"
 #include "../leetcode/91_Decode_Ways.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
 #include "../leetcode/96_Unique_Binary_Search_Trees.hpp"
@@ -433,6 +434,8 @@ public:
 			return new L88;
 		case 89:
 			return new L89;
+		case 90:
+			return new L90;
 		case 91:
 			return new L91;
 		case 94:

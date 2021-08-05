@@ -1,5 +1,11 @@
-class Solution {
+#include "../base/icode.hpp"
+
+class L90 : public icode {
 public:
+    void run() {
+	// [[],[1],[1,2],[1,2,2],[2],[2,2]]
+        print_res(subsetsWithDup({1,2,2}));
+    }
     void dfs(int index, int nums[], vector<int> cur, vector<vector<int>> &res) {
         if (index == 21) {
             res.push_back(cur);
@@ -11,7 +17,7 @@ public:
         }
     }
     
-    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+    vector<vector<int>> subsetsWithDup(vector<int>&& nums) {
         int _nums[21] = {0};
         for (int i : nums) {
             ++_nums[i+10];
