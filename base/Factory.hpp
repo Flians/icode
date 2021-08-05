@@ -27,6 +27,7 @@
 #include "../leetcode/33_Search_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/35_Search_Insert_Position.hpp"
 #include "../leetcode/41_First_Missing_Positive.hpp"
+#include "../leetcode/42_Trapping_Rain_Water.hpp"
 #include "../leetcode/46_Permutations.hpp"
 #include "../leetcode/54_spiral_matrix.hpp"
 #include "../leetcode/55_Jump_Game.hpp"
@@ -384,6 +385,8 @@ public:
 			return new L35;
 		case 41:
 			return new L41;
+		case 42:
+			return new L42;
 		case 46:
 			return new L46;
 		case 54:

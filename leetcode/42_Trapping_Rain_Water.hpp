@@ -1,5 +1,11 @@
-class Solution {
+#include "../base/icode.hpp"
+class L42 : public icode
+{
 public:
+    void run() {
+    	cout << trap({0,1,0,2,1,0,1,3,2,1,2,1}) << " 6\n";
+    }
+
     int trap_dp(vector<int>& height) {
         if (height.empty())
             return 0;
@@ -11,7 +17,7 @@ public:
             l[i] = temp;
         }
         temp = 0;
-        for(i=height.size()-1; i>=0; i—) {
+        for(i=height.size()-1; i>=0; i--) {
             temp = max(temp, height[i]);
             r[i] = temp;
         }
@@ -21,7 +27,7 @@ public:
         return sum;
     }
     
-    int trap(vector<int> &height) {
+    int trap(vector<int> &&height) {
         int l = 0, r = height.size()-1;
         int res = 0, lmax = 0, rmax = 0;
         while (l < r) {
@@ -33,9 +39,9 @@ public:
                 }
             } else {
                 if (height[r] >= rmax) {
-                    rmax = height[r—];
+                    rmax = height[r--];
                 } else {
-                    res += rmax - height[r—];
+                    res += rmax - height[r--];
                 }
             }
         }
