@@ -1,7 +1,6 @@
 {
     "version": "2.0.0",
-    "tasks": [
-        {
+    "tasks": [{
             "type": "shell",
             "label": "compile_linux",
             "command": "/usr/bin/g++",
@@ -64,8 +63,7 @@
                 "-finput-charset=UTF-8",
                 "-fexec-charset=UTF-8"
             ],
-            "options": {
-            },
+            "options": {},
             "problemMatcher": [],
             "group": {
                 "kind": "build",
