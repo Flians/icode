@@ -311,6 +311,7 @@
 #include "../leetcode/1539_Kth_Missing_Positive_Number.hpp"
 #include "../leetcode/1551_Minimum_Operations_to_Make_Array_Equal.hpp"
 #include "../leetcode/1631_Path_With_Minimum_Effort.hpp"
+#include "../leetcode/1632_Rank_Transform_of_a_Matrix.hpp"
 #include "../leetcode/1640_Check_Array_Formation_Through_Concatenation.hpp"
 #include "../leetcode/1641_Count_Sorted_Vowel_Strings.hpp"
 #include "../leetcode/1646_Get_Maximum_in_Generated_Array.hpp"
@@ -953,6 +954,8 @@ public:
 			return new L1551;
 		case 1631:
 			return new L1631;
+		case 1632:
+			return new L1632;
 		case 1640:
 			return new L1640;
 		case 1641:
