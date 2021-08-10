@@ -159,6 +159,7 @@
 #include "../leetcode/406_Queue_Reconstruction_by_Height.hpp"
 #include "../leetcode/409_Longest_Palindrome.hpp"
 #include "../leetcode/412_Fizz_Buzz.hpp"
+#include "../leetcode/415_Add_Strings.hpp"
 #include "../leetcode/417_Pacific_Atlantic_Water_Flow.hpp"
 #include "../leetcode/421_Maximum_XOR_of_Two_Numbers_in_an_Array.hpp"
 #include "../leetcode/423_Reconstruct_Original_Digits_from_English.hpp"
@@ -650,6 +651,8 @@ public:
 			return new L409;
 		case 412:
 			return new L412;
+		case 415:
+			return new L415;
 		case 417:
 			return new L417;
 		case 421:
