@@ -134,6 +134,7 @@
 #include "../leetcode/295_Find_Median_from_Data_Stream.hpp"
 #include "../leetcode/299_Bulls_and_Cows.hpp"
 #include "../leetcode/300_Longest_Increasing_Subsequence.hpp"
+#include "../leetcode/303_Range_Sum_Query_Immutable.hpp"
 #include "../leetcode/312_Burst_Balloons.hpp"
 #include "../leetcode/322_Coin_Change.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
@@ -601,6 +602,8 @@ public:
 			return new L299;
 		case 300:
 			return new L300;
+		case 303:
+			return new NumArray;
 		case 312:
 			return new L312;
 		case 322:

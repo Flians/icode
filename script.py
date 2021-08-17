@@ -33,6 +33,8 @@ def makeFactory(root_path, factory_path):
                 cn = 'WordDictionary'
             elif id == '295':
                 cn = 'MedianFinder'
+            elif id == '303':
+                cn = 'NumArray'
             elif id == '380':
                 cn = 'RandomizedSet'
             elif id == '384':
