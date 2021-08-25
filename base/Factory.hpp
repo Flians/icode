@@ -190,6 +190,7 @@
 #include "../leetcode/526_Beautiful_Arrangement.hpp"
 #include "../leetcode/528_Random_Pick_with_Weight.hpp"
 #include "../leetcode/535_Encode_and_Decode_TinyURL.hpp"
+#include "../leetcode/537_Complex_Number_Multiplication.hpp"
 #include "../leetcode/540_Single_Element_in_a_Sorted_Array.hpp"
 #include "../leetcode/542_01_Matrix.hpp"
 #include "../leetcode/556_Next_Greater_Element_III.hpp"
@@ -714,6 +715,8 @@ public:
 			return new Random_pick;
 		case 535:
 			return new L535;
+		case 537:
+			return new L537;
 		case 540:
 			return new L540;
 		case 542:
