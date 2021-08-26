@@ -203,6 +203,7 @@
 #include "../leetcode/611_Valid_Triangle_Number.hpp"
 #include "../leetcode/622_Design_Circular_Queue.hpp"
 #include "../leetcode/623_Add_One_Row_to_Tree.hpp"
+#include "../leetcode/633_Sum_of_Square_Numbers.hpp"
 #include "../leetcode/637_Average_of_Levels_in_Binary_Tree.hpp"
 #include "../leetcode/639_Decode_Ways_II.hpp"
 #include "../leetcode/645_Set_Mismatch.hpp"
@@ -741,6 +742,8 @@ public:
 			return new MyCircularQueue;
 		case 623:
 			return new L623;
+		case 633:
+			return new L633;
 		case 637:
 			return new L637;
 		case 639:
