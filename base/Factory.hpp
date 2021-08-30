@@ -138,6 +138,7 @@
 #include "../leetcode/312_Burst_Balloons.hpp"
 #include "../leetcode/322_Coin_Change.hpp"
 #include "../leetcode/328_Odd_Even_Linked_List.hpp"
+#include "../leetcode/330_Patching_Array.hpp"
 #include "../leetcode/332_Reconstruct_Itinerary.hpp"
 #include "../leetcode/334_Increasing_Triplet_Subsequence.hpp"
 #include "../leetcode/337_House_Robber_III.hpp"
@@ -612,6 +613,8 @@ public:
 			return new L322;
 		case 328:
 			return new L328;
+		case 330:
+			return new L330;
 		case 332:
 			return new L332;
 		case 334:
