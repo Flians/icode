@@ -200,6 +200,7 @@
 #include "../leetcode/572_Subtree_of_Another_Tree.hpp"
 #include "../leetcode/575_Distribute_Candies.hpp"
 #include "../leetcode/594_Longest_Harmonious_Subsequence.hpp"
+#include "../leetcode/598_Range_Addition_II.hpp"
 #include "../leetcode/605_Can_Place_Flowers.hpp"
 #include "../leetcode/611_Valid_Triangle_Number.hpp"
 #include "../leetcode/622_Design_Circular_Queue.hpp"
@@ -737,6 +738,8 @@ public:
 			return new L575;
 		case 594:
 			return new L594;
+		case 598:
+			return new L598;
 		case 605:
 			return new L605;
 		case 611:
