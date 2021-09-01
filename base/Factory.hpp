@@ -88,6 +88,7 @@
 #include "../leetcode/143_Reorder_List.hpp"
 #include "../leetcode/146_LRU_Cache.hpp"
 #include "../leetcode/152_Maximum_Product_Subarray.hpp"
+#include "../leetcode/153_Find_Minimum_in_Rotated_Sorted_Array.hpp"
 #include "../leetcode/155_Min_Stack.hpp"
 #include "../leetcode/160_Intersection_of_Two_Linked_Lists.hpp"
 #include "../leetcode/162_Find_Peak_Element.hpp"
@@ -514,6 +515,8 @@ public:
 			return new LRUCache;
 		case 152:
 			return new L152;
+		case 153:
+			return new L153;
 		case 155:
 			return new MinStack;
 		case 160:
