@@ -56,6 +56,7 @@
 #include "../leetcode/90_Subsets_II.hpp"
 #include "../leetcode/91_Decode_Ways.hpp"
 #include "../leetcode/94_Binary_Tree_Inorder_Traversal.hpp"
+#include "../leetcode/95_Unique_Binary_Search_Trees_II.hpp"
 #include "../leetcode/96_Unique_Binary_Search_Trees.hpp"
 #include "../leetcode/98_Validate_Binary_Search_Tree.hpp"
 #include "../leetcode/99_Recover_Binary_Search_Tree.hpp"
@@ -451,6 +452,8 @@ public:
 			return new L91;
 		case 94:
 			return new L94;
+		case 95:
+			return new L95;
 		case 96:
 			return new L96;
 		case 98:

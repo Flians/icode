@@ -7,10 +7,10 @@ int main()
     Factory *factory = new Factory();
     while (id > 0)
     {
-        cout << "please input the id of the problem: " << endl;
-        cin >> id;
+        std::cout << "please input the id of the problem: " << std::endl;
+        std::cin >> id;
         factory->problem(id)->run();
-        system("pause");
+        std::system("pause");
     }
     return 0;
 }

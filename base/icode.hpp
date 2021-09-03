@@ -3,14 +3,34 @@
 
 #define _USE_MATH_DEFINES
 #include <bits/stdc++.h>
+#include <type_traits>
 
 using namespace std;
 
-static auto fast = []() {
+static auto fast = []()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     return 0;
 }();
+
+template <typename T, typename U>
+struct IsSameType
+{
+    operator bool()
+    {
+        return false;
+    }
+};
+
+template <typename T>
+struct IsSameType<T, T>
+{
+    operator bool()
+    {
+        return true;
+    }
+};
 
 //Definition for singly-linked list.
 struct ListNode
@@ -242,23 +262,28 @@ void icode::print_res(Node *root)
         }
         delete tmp;
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 template <typename T>
 void icode::print_res(vector<T> &&data)
 {
-    for (auto i : data)
+    for (auto &i : data)
     {
-        cout << i << " ";
+        /*
+        if (IsSameType<T, ListNode *>() || IsSameType<T, TreeNode *>() || IsSameType<T, Node *>())
+            print_res(i);
+        else
+        */
+        std::cout << i << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 template <typename T>
 void icode::print_res(vector<vector<T>> &&data)
 {
-    for (auto ip : data)
+    for (auto &ip : data)
     {
         this->print_res(move(ip));
     }
