@@ -104,6 +104,7 @@
 #include "../leetcode/199_Binary_Tree_Right_Side_View.hpp"
 #include "../leetcode/200_Number_of_Islands.hpp"
 #include "../leetcode/201_Bitwise_AND_of_Numbers_Range.hpp"
+#include "../leetcode/206_Reverse_Linked_List.hpp"
 #include "../leetcode/207_Course_Schedule.hpp"
 #include "../leetcode/208_Implement_Trie_(Prefix_Tree).hpp"
 #include "../leetcode/210_Course_Schedule_II.hpp"
@@ -549,6 +550,8 @@ public:
 			return new L200;
 		case 201:
 			return new L201;
+		case 206:
+			return new L206;
 		case 207:
 			return new L207;
 		case 208:
