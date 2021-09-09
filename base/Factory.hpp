@@ -243,6 +243,7 @@
 #include "../leetcode/836_Rectangle_Overlap.hpp"
 #include "../leetcode/838_Push_Dominoes.hpp"
 #include "../leetcode/841_Keys_and_Rooms.hpp"
+#include "../leetcode/848_Shifting_Letters.hpp"
 #include "../leetcode/856_Score_of_Parentheses.hpp"
 #include "../leetcode/869_Reordered_Power_of_2.hpp"
 #include "../leetcode/870_Advantage_Shuffle.hpp"
@@ -828,6 +829,8 @@ public:
 			return new L838;
 		case 841:
 			return new L841;
+		case 848:
+			return new L848;
 		case 856:
 			return new L856;
 		case 869:
