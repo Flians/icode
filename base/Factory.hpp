@@ -334,6 +334,10 @@
 #include "../leetcode/1680_Concatenation_of_Consecutive_Binary_Numbers.hpp"
 #include "../leetcode/1696_Jump_Game_VI.hpp"
 #include "../leetcode/1721_Swapping_Nodes_in_a_Linked_List.hpp"
+#include "../leetcode/2027_Minimum_Moves_to_Convert_String.hpp"
+#include "../leetcode/2028_Find_Missing_Observations.hpp"
+#include "../leetcode/2029_Stone_Game_IX.hpp"
+#include "../leetcode/2030_Smallest_K_Length_Subsequence_With_Occurrences_of_a_Letter.hpp"
 class Factory
 {
 public:
@@ -1011,6 +1015,14 @@ public:
 			return new L1696;
 		case 1721:
 			return new L1721;
+		case 2027:
+			return new L2027;
+		case 2028:
+			return new L2028;
+		case 2029:
+			return new L2029;
+		case 2030:
+			return new L2030;
 		default:
 			cout << "This question is not existed!" << endl;
 			exit(-1);
