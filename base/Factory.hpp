@@ -51,6 +51,7 @@
 #include "../leetcode/79_Word_Search.hpp"
 #include "../leetcode/82_Remove_Duplicates_from_Sorted_List_II.hpp"
 #include "../leetcode/84_Largest_Rectangle_in_Histogram.hpp"
+#include "../leetcode/85_Maximal_Rectangle.hpp"
 #include "../leetcode/88_Merge_Sorted_Array.hpp"
 #include "../leetcode/89_Gray_Code.hpp"
 #include "../leetcode/90_Subsets_II.hpp"
@@ -449,6 +450,8 @@ public:
 			return new L82;
 		case 84:
 			return new L84;
+		case 85:
+			return new L85;
 		case 88:
 			return new L88;
 		case 89:
