@@ -1,6 +1,7 @@
 {
     "version": "2.0.0",
-    "tasks": [{
+    "tasks": [
+        {
             "type": "shell",
             "label": "compile_linux",
             "command": "/usr/bin/g++",
@@ -10,7 +11,7 @@
                 "-o",
                 "${workspaceFolder}/build/${fileBasenameNoExtension}",
                 "-Wall",
-                "-std=c++11",
+                "-std=c++17",
                 "-Wno-format",
                 "-finput-charset=UTF-8",
                 "-fexec-charset=UTF-8",
