@@ -6,11 +6,30 @@
 
 </center>
 
-之前的[文章](https://mp.weixin.qq.com/s?__biz=Mzg2NjY5NTE0Mw==&mid=2247483676&idx=1&sn=7ef872fc7d4106c243a54c61d6cb2138&chksm=ce47a394f9302a82d30996167721af6d18e3f13ab477355c680f728bd04e98e41a82e9b04d08&token=1050164083&lang=en_US#rd)已经介绍了拉格朗日乘数法（Lagrange Multipliers），对于一般性约束问题（包含等式约束和不等式约束）：
+&emsp;&emsp;之前的[文章](https://mp.weixin.qq.com/s?__biz=Mzg2NjY5NTE0Mw==&mid=2247483676&idx=1&sn=7ef872fc7d4106c243a54c61d6cb2138&chksm=ce47a394f9302a82d30996167721af6d18e3f13ab477355c680f728bd04e98e41a82e9b04d08&token=1050164083&lang=en_US#rd)已经介绍了拉格朗日乘数法（Lagrange Multipliers），对于一般性约束问题（包含等式约束和不等式约束）：
 
 $$
-\mathrm{min} = -\left(\frac{2}{4}\log_2 \frac{2}{4} + \frac{2}{4}\log_2 \frac{2}{4}\right) = 1
+\begin{equation}
+\begin{aligned}
+\mathrm{min}\ \ &f(x),\ x\in R^n \\
+\mathrm{s.t.}\ \ &g(x)=c,\ c\in R^m \\
+&h(x)\ge 0,\ k\in R^k
+\end{aligned}
+\end{equation}
 $$
+
+可以得到其拉格朗日函数：
+
+$$
+\begin{equation}
+\begin{aligned}
+L(x,\lambda, \gamma)&=f(x)+\lambda^T\left(g(x)-c\right)+\gamma^T\left(h(x)-\eta\right) \\
+\mathrm{s.t.}\ \ \eta&\ge 0,\ \eta\in R^k,\ \lambda\in R^m,\ \eta\in R^k
+\end{aligned}
+\end{equation}
+$$
+
+拉格朗日乘数法通过引入拉格朗日乘子来加入一个控制项，将有约束问题转化为无约束问题。如果满足约束条件，那么这个控制项就有助于最优化，而不满足约束条件，则这个控制项就惩罚最优化。拉格朗日乘数法求解比较缓慢，且优化过程不平滑。为此，增广拉格朗日乘子法在拉格朗日函数的基础上增加了一个二次惩罚项，来平滑优化过程。
 
 ## 1 Markdown Nice 简介
 

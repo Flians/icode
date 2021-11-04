@@ -87,7 +87,7 @@ $$
 \begin{equation}
 \begin{aligned}
 L(x,\lambda)&=f(x)+\lambda^T\left(g(x)-c\right)  \\
-\mathrm{s.t.}\ \ &c\ge 0
+\mathrm{s.t.}\ \ &\lambda\ge 0
 \end{aligned}
 \end{equation}
 $$
