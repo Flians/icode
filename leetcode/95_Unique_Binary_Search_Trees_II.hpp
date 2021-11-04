@@ -15,6 +15,8 @@ public:
             print_res(item);
         }
         std::cout << "]" << std::endl;
+
+        // print_res(generateTrees(3));
     }
 
     vector<TreeNode *> generateTrees(int n, int s = 1)

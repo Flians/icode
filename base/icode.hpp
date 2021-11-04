@@ -275,6 +275,16 @@ void icode::print_res(vector<T> &&data)
             print_res(i);
         else
         */
+        /*
+        if (typeid(T) == typeid(ListNode *) || typeid(T) == typeid(TreeNode *) || typeid(T) == typeid(Node *))
+            print_res(i);
+        else
+        
+        /*
+        if (std::is_same<T, ListNode *>::value || std::is_same<T, TreeNode *>::value || std::is_same<T, Node *>::value)
+            print_res(i);
+        else
+        */
         std::cout << i << " ";
     }
     std::cout << std::endl;
