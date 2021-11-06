@@ -50,6 +50,17 @@ $$
 \end{equation}
 $$
 
+&emsp;&emsp;此外，还可以通过**梯度下降法**来求解拉格朗日函数，令步长 $s$，则 $x$ 和 $\lambda$
+
+$$
+\begin{equation}
+\begin{cases}
+x^{k+1}=x^k-s\left(\bigtriangledown{f(x^k)}+\lambda^T\bigtriangledown{g(x^k)}\right) \\
+\lambda^{k+1}=\lambda^{k}+s\left(g(x)-c\right)
+\end{cases}
+\end{equation}
+$$
+
 2. 不等式约束
 
 &emsp;&emsp;对于问题：
@@ -92,7 +103,7 @@ L(x,\lambda)&=f(x)+\lambda^T\left(g(x)-c\right)  \\
 \end{equation}
 $$
 
-&emsp;&emsp;由于$\bigtriangledown{L(x,y,\lambda)}=0$，而两者法向量相反，则有 $\lambda\le 0$，这是不等式约束与等式约束问题拉格朗日乘子法的一个重要区别。
+&emsp;&emsp;由于$\bigtriangledown{L(x,\lambda)}=0$，而两者法向量相反，则有 $\lambda\le 0$，这是不等式约束与等式约束问题拉格朗日乘子法的一个重要区别。
 
 &emsp;&emsp;可联立方程求解：
 
@@ -143,10 +154,16 @@ x=\pm\sqrt{1.5} \\
 y=1.5 \\
 \lambda=1
 \end{cases}
+\mathrm{or}
+\begin{cases}
+x=0 \\
+y=0 \\
+\lambda=4
+\end{cases}
 \end{equation}
 $$
 
-&emsp;&emsp;故 $\mathrm{min}f(x,y)=x^2+(y-2)^2$ 在极值点 $(\pm\sqrt{1.5}, 1.5)$ 取得极值 1.75。
+&emsp;&emsp;这里进一步说明了拉格朗日乘子法找到的切点可能不只一个，拉格朗日乘子法是一种寻找极值的策略，并不能保证找到的所有切点一定是原问题的极值点（如 $(0,0)$），还需要根据原问题本身的具体情况来检验。故 $\mathrm{min}f(x,y)=x^2+(y-2)^2$ 在极值点 $(\pm\sqrt{1.5}, 1.5)$ 取得极值 1.75。
 
 2. 不等式约束
 
@@ -158,7 +175,7 @@ $$
 
 &emsp;&emsp;对于问题 $\mathrm{min}f(x,y)=x^2+(y-2)^2,\,\mathrm{s.t.}\ y\le x^2$，圆点(0,2)在 $y\le x^2$ 区域外，故 $\mathrm{min}f(x,y)=x^2+(y-2)^2$ 极值在 $y=x^2$ 上，即转化为了等式约束问题 $\mathrm{min}f(x,y)=x^2+(y-2)^2,\,\mathrm{s.t.}\ y=x^2$ 来求解。
 
-3. 总结
+## 三、总结
 
 &emsp;&emsp;对于一般性约束问题（包含等式约束和不等式约束）：
 
@@ -183,7 +200,7 @@ L(x,\lambda)&=f(x)+\lambda_1^T\left(g(x)-c\right)+\lambda_2^T\left(h(x)-\eta\rig
 \end{equation}
 $$
 
-&emsp;&emsp;在可行域 $D=\left\{x|g(x)=0,h(x)\ge 0\right\}$ 内，目标函数 $f(x)$ 是拉格朗日函数的一个上届，即
+&emsp;&emsp;在可行域 $D=\left\{x|g(x)=0,h(x)\ge 0\right\}$ 内，目标函数 $f(x)$ 是拉格朗日函数的一个上界，即
 
 $$
 \begin{equation}
@@ -202,3 +219,9 @@ $$
 
 &emsp;&emsp;故拉格朗日乘子法将有约束的最优化问题转换为了无约束的最优化问题，
 且函数 $\underset{\lambda}{\mathrm{max}}$ 取 $+\infty$ 时 $\lambda_2$ 为 $-\infty$，优化过程非常不光滑。
+
+## Reference
+
+[1] [格朗日乘子法](http://luojinping.com/2018/03/04/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E5%AD%90%E6%B3%95/)  
+[2] [\[Math & Algorithm\] 拉格朗日乘数法](https://www.cnblogs.com/maybe2030/p/4946256.html)  
+[3] [优化问题中拉格朗日函数的意义](https://goodgoodstudy.blog.csdn.net/article/details/105063551)
