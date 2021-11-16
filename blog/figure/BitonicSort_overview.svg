@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 BitonicSort_overview.svg 页-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="5.12905in" height="1.38129in"
+		viewBox="0 0 369.291 99.4526" xml:space="preserve" color-interpolation-filters="sRGB" class="st13">
+	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st3 {fill:#000000;font-family:Microsoft Sans Serif;font-size:0.666664em}
+		.st4 {font-family:微软雅黑;font-size:1em}
+		.st5 {font-family:微软雅黑;font-size:1em;font-weight:bold}
+		.st6 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st7 {stroke:#000000;stroke-linecap:butt;stroke-width:1.5}
+		.st8 {fill:#ffc000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st9 {fill:#000000;font-family:Times New Roman;font-size:0.833336em}
+		.st10 {marker-end:url(#mrkr5-144);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st11 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.34246575342466}
+		.st12 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st13 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend5">
+			<path d="M 2 1 L 0 0 L 1.98117 -0.993387 C 1.67173 -0.364515 1.67301 0.372641 1.98465 1.00043 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr5-144" class="st11" v:arrowType="5" v:arrowSize="0" v:setback="5.11" refX="-5.11" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(-2.92,-2.92) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="LineBusCount" v:prompt="" v:val="VT0(8):26"/>
+		</v:userDefs>
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="电气" v:index="0"/>
+		<v:layer v:name="连接线" v:index="1"/>
+		<g id="shape361-1" v:mID="361" v:groupContext="shape" transform="translate(228.583,-70.9861)">
+			<title>正方形.361</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape276-3" v:mID="276" v:groupContext="shape" transform="translate(42.9134,-0.12)">
+			<title>矩形.276</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="14.4132" width="141.732" height="85.0394" class="st2"/>
+		</g>
+		<g id="shape277-5" v:mID="277" v:groupContext="shape" transform="translate(57.0866,-49.7263)">
+			<title>矩形.277</title>
+			<desc>n输入的升序双调排序</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="85.2794" width="56.7" height="28.3465"/>
+			<rect x="0" y="71.1061" width="56.6929" height="28.3465" class="st2"/>
+			<text x="6.12" y="82.85" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>n<tspan class="st4">输入的</tspan><tspan
+						class="st5">升序</tspan><tspan x="12.35" dy="1.216em" class="st4">双调排序</tspan></text>		</g>
+		<g id="shape278-11" v:mID="278" v:groupContext="shape" transform="translate(57.0866,-7.20662)">
+			<title>矩形.278</title>
+			<desc>n输入的降序双调排序</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="85.2794" width="56.7" height="28.3465"/>
+			<rect x="0" y="71.1061" width="56.6929" height="28.3465" class="st2"/>
+			<text x="6.12" y="81.71" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>n<tspan class="st4">输入的</tspan><tspan
+						class="st5">降序</tspan><tspan x="12.35" dy="1.429em" class="st4">双调排序</tspan></text>		</g>
+		<g id="shape280-17" v:mID="280" v:groupContext="shape" transform="translate(127.953,-7.20662)">
+			<title>矩形.280</title>
+			<desc>2n输入的双调合并</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="64.0195" width="42.52" height="70.8661"/>
+			<rect x="0" y="28.5865" width="42.5197" height="70.8661" class="st6"/>
+			<text x="4.81" y="61.59" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>2n<tspan class="st4">输入的</tspan><tspan
+						x="5.26" dy="1.216em" class="st4">双调合并</tspan></text>		</g>
+		<g id="shape281-22" v:mID="281" v:groupContext="shape" v:layerMember="0" transform="translate(113.78,-59.6476)">
+			<title>三线总线</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W3)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape282-32" v:mID="282" v:groupContext="shape" v:layerMember="0" transform="translate(113.78,-17.1279)">
+			<title>三线总线.282</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W4)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape283-42" v:mID="283" v:groupContext="shape" v:layerMember="0" transform="translate(42.9134,-59.6476)">
+			<title>三线总线.283</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W5)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape284-52" v:mID="284" v:groupContext="shape" v:layerMember="0" transform="translate(42.9134,-17.1279)">
+			<title>三线总线.284</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W6)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape290-62" v:mID="290" v:groupContext="shape" transform="translate(212.992,-0.120003)">
+			<title>矩形.290</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="14.4132" width="113.386" height="85.0394" class="st2"/>
+		</g>
+		<g id="shape291-64" v:mID="291" v:groupContext="shape" transform="translate(269.685,-49.7263)">
+			<title>矩形.291</title>
+			<desc>n输入的双调合并</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="85.2794" width="42.52" height="28.3465"/>
+			<rect x="0" y="71.1061" width="42.5197" height="28.3465" class="st2"/>
+			<text x="7.04" y="82.85" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>n<tspan class="st4">输入的</tspan><tspan
+						x="5.26" dy="1.216em" class="st4">双调合并</tspan></text>		</g>
+		<g id="shape292-69" v:mID="292" v:groupContext="shape" transform="translate(269.685,-7.20662)">
+			<title>矩形.292</title>
+			<desc>n输入的双调合并</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="85.2794" width="42.52" height="28.3465"/>
+			<rect x="0" y="71.1061" width="42.5197" height="28.3465" class="st2"/>
+			<text x="7.04" y="81.71" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>n<tspan class="st4">输入的</tspan><tspan
+						x="5.26" dy="1.429em" class="st4">双调合并</tspan></text>		</g>
+		<g id="shape294-74" v:mID="294" v:groupContext="shape" v:layerMember="0" transform="translate(312.205,-59.6476)">
+			<title>三线总线.294</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W3)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape295-84" v:mID="295" v:groupContext="shape" v:layerMember="0" transform="translate(312.205,-17.1279)">
+			<title>三线总线.295</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W4)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape298-94" v:mID="298" v:groupContext="shape" v:layerMember="0" transform="translate(170.472,-44.7657)">
+			<title>三线总线.298</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W7)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape299-104" v:mID="299" v:groupContext="shape" v:layerMember="0" transform="translate(170.472,-32.0098)">
+			<title>三线总线.299</title>
+			<v:custProps>
+				<v:cp v:nameU="Label" v:lbl="标签" v:prompt="" v:type="0" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="2052" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visDescription" v:val="VT4(4-channel bus elbow. Adjust height handle to control line spacing.)"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="YSpacing" v:val="VT0(0.059055118110236):24"/>
+				<v:ud v:nameU="NumLines" v:val="VT4(3)"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="SolSH" v:prompt="" v:val="VT4({2EE3C7D2-E26E-4B72-9E9C-5170DDBF261A})"/>
+				<v:ud v:nameU="Label" v:prompt="" v:val="VT4(W4)"/>
+			</v:userDefs>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 95.2 L14.17 95.2" class="st7"/>
+			<path d="M0 90.95 L14.17 90.95" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+			<path d="M0 99.45 L14.17 99.45" class="st7"/>
+		</g>
+		<g id="shape362-114" v:mID="362" v:groupContext="shape" transform="translate(228.583,-56.8129)">
+			<title>正方形.362</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape363-116" v:mID="363" v:groupContext="shape" transform="translate(228.583,-42.6397)">
+			<title>正方形.363</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape364-118" v:mID="364" v:groupContext="shape" transform="translate(228.583,-28.4665)">
+			<title>正方形.364</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape365-120" v:mID="365" v:groupContext="shape" transform="translate(228.583,-14.2932)">
+			<title>正方形.365</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape370-122" v:mID="370" v:groupContext="shape" transform="translate(242.756,-56.8129)">
+			<title>正方形.370</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape371-124" v:mID="371" v:groupContext="shape" transform="translate(242.756,-42.6397)">
+			<title>正方形.371</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape372-126" v:mID="372" v:groupContext="shape" transform="translate(242.756,-28.4665)">
+			<title>正方形.372</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape373-128" v:mID="373" v:groupContext="shape" transform="translate(242.756,-14.2932)">
+			<title>正方形.373</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<rect x="0" y="85.2794" width="14.1732" height="14.1732" class="st1"/>
+		</g>
+		<g id="shape406-130" v:mID="406" v:groupContext="shape" transform="translate(222.913,-72.4035)">
+			<title>矩形.406</title>
+			<desc>MIN</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,0,4,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.7559" cy="93.7833" width="25.52" height="11.3386"/>
+			<rect x="0" y="88.114" width="25.5118" height="11.3386" class="st8"/>
+			<text x="3.03" y="96.78" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>MIN</text>		</g>
+		<g id="shape407-133" v:mID="407" v:groupContext="shape" transform="translate(222.913,-15.7106)">
+			<title>矩形.407</title>
+			<desc>MAX</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,0,4,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.7559" cy="93.7833" width="25.52" height="11.3386"/>
+			<rect x="0" y="88.114" width="25.5118" height="11.3386" class="st8"/>
+			<text x="1.09" y="96.78" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>MAX</text>		</g>
+		<g id="shape408-136" v:mID="408" v:groupContext="shape" transform="translate(237.087,-1.53733)">
+			<title>矩形.408</title>
+			<desc>MAX</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,0,4,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.7559" cy="93.7833" width="25.52" height="11.3386"/>
+			<rect x="0" y="88.114" width="25.5118" height="11.3386" class="st8"/>
+			<text x="1.09" y="96.78" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>MAX</text>		</g>
+		<g id="shape393-139" v:mID="393" v:groupContext="shape" v:layerMember="1" transform="translate(228.583,-70.9861)">
+			<title>动态连接线.393</title>
+			<path d="M7.09 99.45 L7.09 138.14" class="st10"/>
+		</g>
+		<g id="shape394-145" v:mID="394" v:groupContext="shape" v:layerMember="1" transform="translate(256.929,-56.8129)">
+			<title>动态连接线.394</title>
+			<path d="M-7.09 99.45 L-7.09 138.14" class="st10"/>
+		</g>
+		<g id="shape409-150" v:mID="409" v:groupContext="shape" transform="translate(237.087,-58.2302)">
+			<title>矩形.409</title>
+			<desc>MIN</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,0,4,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.7559" cy="93.7833" width="25.52" height="11.3386"/>
+			<rect x="0" y="88.114" width="25.5118" height="11.3386" class="st8"/>
+			<text x="3.03" y="96.78" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>MIN</text>		</g>
+		<g id="shape398-153" v:mID="398" v:groupContext="shape" v:layerMember="1" transform="translate(212.992,-63.8995)">
+			<title>动态连接线.398</title>
+			<path d="M0 92.37 L56.69 92.37" class="st12"/>
+		</g>
+		<g id="shape401-156" v:mID="401" v:groupContext="shape" v:layerMember="1" transform="translate(212.992,-21.3798)">
+			<title>动态连接线.210</title>
+			<path d="M0 92.37 L56.69 92.37" class="st12"/>
+		</g>
+		<g id="shape402-159" v:mID="402" v:groupContext="shape" v:layerMember="1" transform="translate(212.992,-7.20662)">
+			<title>动态连接线.402</title>
+			<path d="M0 92.37 L56.69 92.37" class="st12"/>
+		</g>
+		<g id="shape399-162" v:mID="399" v:groupContext="shape" v:layerMember="1" transform="translate(212.992,-49.7263)">
+			<title>动态连接线.208</title>
+			<path d="M0 92.37 L56.69 92.37" class="st12"/>
+		</g>
+		<g id="shape410-165" v:mID="410" v:groupContext="shape" transform="translate(42.9134,-85.1594)">
+			<title>矩形.410</title>
+			<desc>2n输入的升序双调排序</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="92.366" width="141.74" height="14.1732"/>
+			<rect x="0" y="85.2794" width="141.732" height="14.1732" class="st2"/>
+			<text x="30.42" y="94.8" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>2n<tspan class="st4">输入的</tspan><tspan
+						class="st5">升序</tspan><tspan class="st4">双调排序</tspan></text>		</g>
+		<g id="shape411-171" v:mID="411" v:groupContext="shape" transform="translate(212.992,-85.1594)">
+			<title>矩形.411</title>
+			<desc>2n输入的双调合并</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visMasterStencil" v:prompt="" v:val="VT4(Basic_M.vssx)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="92.366" width="113.39" height="14.1732"/>
+			<rect x="0" y="85.2794" width="113.386" height="14.1732" class="st2"/>
+			<text x="24.24" y="94.8" class="st3" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>2n<tspan class="st4">输入的双调合并</tspan></text>		</g>
+	</g>
+</svg>
