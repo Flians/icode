@@ -3,7 +3,7 @@
 <!-- 由 Microsoft Visio, SVG Export 生成 StochasticComputing_adder.svg 页-1 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
 		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="2.79109in" height="1.70813in"
-		viewBox="0 0 200.959 122.986" xml:space="preserve" color-interpolation-filters="sRGB" class="st10">
+		viewBox="0 0 200.959 122.986" xml:space="preserve" color-interpolation-filters="sRGB" class="st9">
 	<v:documentProperties v:langID="2052" v:viewMarkup="false"/>
 
 	<style type="text/css">
@@ -11,13 +11,12 @@
 		.st1 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st2 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st3 {fill:none;stroke:none;stroke-width:0.25}
-		.st4 {fill:#4672c4;font-family:Times New Roman;font-size:0.666664em}
+		.st4 {fill:#000000;font-family:Times New Roman;font-size:0.666664em}
 		.st5 {baseline-shift:-32.4939%;font-size:0.649878em}
 		.st6 {fill:#000000;font-family:Times New Roman;font-size:0.499992em}
 		.st7 {font-size:1em}
 		.st8 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st9 {fill:#4672c4;font-family:Times New Roman;font-size:0.499992em}
-		.st10 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+		.st9 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
 	</style>
 
@@ -350,7 +349,7 @@
 			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
 			<v:textRect cx="17.7165" cy="119.442" width="35.44" height="7.08661"/>
 			<rect x="0" y="115.899" width="35.4331" height="7.08661" class="st3"/>
-			<text x="5.72" y="117.64" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>11111011 <tspan
+			<text x="5.72" y="117.64" class="st6" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>11111011 <tspan
 						x="11.88" dy="1.2em" class="st7">(7/8)</tspan></text>		</g>
 		<g id="shape127-161" v:mID="127" v:groupContext="shape" transform="translate(64.0295,-29.6031)">
 			<title>工作表.127</title>
@@ -358,7 +357,7 @@
 			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
 			<v:textRect cx="17.7165" cy="119.442" width="35.44" height="7.08661"/>
 			<rect x="0" y="115.899" width="35.4331" height="7.08661" class="st3"/>
-			<text x="5.72" y="117.64" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>00100110 <tspan
+			<text x="5.72" y="117.64" class="st6" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>00100110 <tspan
 						x="11.88" dy="1.2em" class="st7">(3/8)</tspan></text>		</g>
 		<g id="shape128-165" v:mID="128" v:groupContext="shape" transform="translate(64.0295,-11.8866)">
 			<title>工作表.128</title>
@@ -366,7 +365,7 @@
 			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
 			<v:textRect cx="21.2598" cy="119.442" width="42.52" height="7.08661"/>
 			<rect x="0" y="115.899" width="42.5197" height="7.08661" class="st3"/>
-			<text x="2.68" y="121.24" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>10010101 (4/8)</text>		</g>
+			<text x="2.68" y="121.24" class="st6" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>10010101 (4/8)</text>		</g>
 		<g id="shape130-168" v:mID="130" v:groupContext="shape" v:layerMember="1" transform="translate(113.636,-31.0205)">
 			<title>动态连接线.130</title>
 			<path d="M0 115.9 L28.35 115.9" class="st8"/>
@@ -377,7 +376,7 @@
 			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
 			<v:textRect cx="14.8819" cy="119.442" width="29.77" height="7.08661"/>
 			<rect x="0" y="115.899" width="29.7638" height="7.08661" class="st3"/>
-			<text x="2.88" y="117.64" class="st9" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>10110011 <tspan
+			<text x="2.88" y="117.64" class="st6" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>10110011 <tspan
 						x="9.05" dy="1.2em" class="st7">(5/8)</tspan></text>		</g>
 		<g id="shape132-175" v:mID="132" v:groupContext="shape" transform="translate(141.982,-34.5638)">
 			<title>工作表.132</title>
