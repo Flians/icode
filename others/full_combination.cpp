@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <queue>
 
 void Combination(size_t m, size_t index, size_t sub_size, std::string &result, std::vector<char> &leaves);
 
@@ -32,43 +33,60 @@ void Combination(size_t m, size_t index, size_t sub_size, std::string &result, s
 void Combination2(std::vector<char> &leaves)
 {
     size_t num_leaf = leaves.size();
-    std::string nBit_str(num_leaf, '0');
-    nBit_str.append("1");
-    std::string cur = "1";
-    cur.append(num_leaf, '0');
+    bool cur[num_leaf + 1] = {0};
+    *cur = 1;
     size_t threshold = 1;
-    while (cur != nBit_str)
+    while (threshold <= num_leaf)
     {
         size_t k = 0, j = 0;
+        bool *p = cur;
         for (j = 0; j < threshold; j++)
         {
-            if (cur[j] == '1')
+            if (*(p++))
             {
                 k++;
                 std::cout << leaves[j];
             }
         }
-        std::cout << "; " << k << " -> " << cur << std::endl;
-        for (j = 0; j <= threshold; ++j)
+        std::cout << "; " << k << " -> " << threshold << std::endl;
+        // update cur
+        j = 0;
+        p = cur;
+        while (j++ <= threshold && !(*(p++) ^= true))
+            ;
+        if (j >= threshold)
+            ++threshold;
+    }
+}
+
+void Combination3(std::vector<char> &leaves)
+{
+    size_t num_leaf = leaves.size();
+    std::queue<std::pair<size_t, std::string>> que;
+    for (size_t i = 0; i < num_leaf; i++)
+    {
+        que.emplace(i, std::string(1, leaves[i]));
+    }
+    size_t k = 1;
+    while (!que.empty())
+    {
+        for (size_t i = 0, num = que.size(); i < num; ++i)
         {
-            if (cur[j] == '1')
+            std::pair<size_t, std::string> cur = que.front();
+            que.pop();
+            std::cout << cur.second << "; " << k << std::endl;
+            for (size_t j = cur.first + 1; j < num_leaf; j++)
             {
-                cur[j] -= 1;
-            }
-            else
-            {
-                cur[j] += 1;
-                break;
+                que.emplace(j, cur.second + leaves[j]);
             }
         }
-        if (j == threshold)
-            ++threshold;
+        ++k;
     }
 }
 
 int main()
 {
     std::vector<char> leaves = {'A', 'B', 'C', 'D', 'E'};
-    Combination2(leaves);
+    Combination3(leaves);
     return 0;
 }
