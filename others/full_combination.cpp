@@ -5,55 +5,51 @@
 #include <chrono>
 #include <future>
 
-void Combination(size_t m, size_t index, size_t sub_size, std::string &result, std::vector<size_t> &path, std::vector<char> &leaves, std::vector<std::vector<std::vector<std::string>>> &dp);
+void Combination(size_t m, size_t index, size_t sub_size, size_t start, std::string &result, std::vector<char> &leaves, std::vector<std::vector<std::vector<std::string>>> &dp);
 
 void Combination1(std::vector<char> &leaves)
 {
     size_t num_leaf = leaves.size();
     std::string result;
-    std::vector<size_t> path;
     std::vector<std::vector<std::vector<std::string>>> dp(num_leaf, std::vector<std::vector<std::string>>(num_leaf));
     for (size_t i = 1; i <= num_leaf; i++)
-        Combination(i, 0, i, result, path, leaves, dp);
-    std::cout << result << std::endl;
+        Combination(i, 0, i, 0, result, leaves, dp);
+    std::cout << dp.front().back().front() << std::endl;
 }
 
-void Combination(size_t m, size_t index, size_t sub_size, std::string &result, std::vector<size_t> &path, std::vector<char> &leaves, std::vector<std::vector<std::vector<std::string>>> &dp)
+void Combination(size_t m, size_t index, size_t sub_size, size_t start, std::string &result, std::vector<char> &leaves, std::vector<std::vector<std::vector<std::string>>> &dp)
 {
     size_t num_leaf = leaves.size();
     if (m == 0)
     {
-        dp[path[0]][sub_size - 1].push_back(result);
+        dp[start][sub_size - 1].push_back(result);
         std::cout << result << std::endl;
         return;
     }
     if (index + m > num_leaf)
         return;
-    if (dp[index][m].empty())
+    if (dp[index][m - 1].empty())
     {
+        if (sub_size == m)
+            start = index;
         result += leaves[index];
-        path.push_back(index);
-        Combination(m - 1, index + 1, sub_size, result, path, leaves, dp);
+        Combination(m - 1, index + 1, sub_size, start, result, leaves, dp);
         result.pop_back();
-        path.pop_back();
     }
     else
     {
+        std::string tmp;
+        auto &item = dp[start][sub_size - 1];
         for (auto &sub : dp[index][m - 1])
-            std::cout << result << sub << std::endl;
+        {
+            tmp = result + sub;
+            item.push_back(tmp);
+            std::cout << tmp << std::endl;
+        }
     }
-
     if (sub_size == num_leaf || index + 1 + m > num_leaf)
         return;
-    if (dp[index + 1][m].empty())
-    {
-        Combination(m, index + 1, sub_size, result, path, leaves, dp);
-    }
-    else
-    {
-        for (auto &sub : dp[index + 1][m - 1])
-            std::cout << result << sub << std::endl;
-    }
+    Combination(m, index + 1, sub_size, start, result, leaves, dp);
 }
 
 void Combination2(std::vector<char> &leaves)
