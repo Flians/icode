@@ -11,10 +11,10 @@ void Combination1(std::vector<char> &leaves)
 {
     size_t num_leaf = leaves.size();
     std::string result;
-    std::vector<std::vector<std::vector<std::string>>> dp(num_leaf, std::vector<std::vector<std::string>>(num_leaf));
+    std::vector<std::vector<std::vector<std::string>>> dp(num_leaf, std::vector<std::vector<std::string>>(2));
     for (size_t i = 1; i <= num_leaf; i++)
         Combination(i, 0, i, 0, result, leaves, dp);
-    std::cout << dp.front().back().front() << std::endl;
+    std::cout << dp.front().front().front() << std::endl;
 }
 
 void Combination(size_t m, size_t index, size_t sub_size, size_t start, std::string &result, std::vector<char> &leaves, std::vector<std::vector<std::vector<std::string>>> &dp)
@@ -22,13 +22,13 @@ void Combination(size_t m, size_t index, size_t sub_size, size_t start, std::str
     size_t num_leaf = leaves.size();
     if (m == 0)
     {
-        dp[start][sub_size - 1].push_back(result);
+        dp[start][0].push_back(result);
         std::cout << result << std::endl;
         return;
     }
     if (index + m > num_leaf)
         return;
-    if (dp[index][m - 1].empty())
+    if (sub_size == m || dp[index][0].empty())
     {
         if (sub_size == m)
             start = index;
@@ -39,16 +39,22 @@ void Combination(size_t m, size_t index, size_t sub_size, size_t start, std::str
     else
     {
         std::string tmp;
-        auto &item = dp[start][sub_size - 1];
-        for (auto &sub : dp[index][m - 1])
+        auto &item = dp[start][1];
+        for (auto &sub : dp[index][0])
         {
             tmp = result + sub;
             item.push_back(tmp);
             std::cout << tmp << std::endl;
         }
     }
-    if (sub_size == num_leaf || index + 1 + m > num_leaf)
+    if (index + 1 + m > num_leaf)
+    {
+        if (sub_size == m)
+            return;
+        dp[start][0].swap(dp[start][1]);
+        std::vector<std::string>().swap(dp[start][1]);
         return;
+    }
     Combination(m, index + 1, sub_size, start, result, leaves, dp);
 }
 
