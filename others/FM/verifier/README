@@ -1,0 +1,6 @@
+Usage:
+	./verifier <testcase.nets> <testcase.cells> <your result file of testcase>
+
+Output:
+	If your result file have something wrong, it will print "Error:.....".
+	Otherwise, it will print "OK!! Your output file satisfy our basic requirements.".
