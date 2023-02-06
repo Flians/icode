@@ -2,16 +2,20 @@
 #include <bits/stdc++.h>
 #include <fstream>
 #include <iostream>
-#include <map>
+#include <numeric>
 #include <regex>
-#include <set>
 #include <sstream>
+#include <time.h>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
-void read_cells_nets(const std::string &cells_path, const std::string &nets_path, std::map<std::string, uint32_t> &cell_name_id, std::vector<uint32_t> &cell_size, std::map<std::string, uint32_t> &net_name_id, std::vector<std::vector<uint32_t>> &cell_array, std::vector<std::vector<uint32_t>> &net_array) {
+#define TIME_LIMIT 200 * CLOCKS_PER_SEC
+
+void read_cells_nets(const std::string &cells_path, const std::string &nets_path, std::unordered_map<std::string, uint32_t> &cell_name_id, std::vector<uint32_t> &cell_size, std::unordered_map<std::string, uint32_t> &net_name_id, std::vector<std::vector<uint32_t>> &cell_array, std::vector<std::vector<uint32_t>> &net_array) {
   cell_name_id.clear();
   net_name_id.clear();
-
+  // read cells
   std::string line;
   std::ifstream cells_file;
   cells_file.open(cells_path);
@@ -33,7 +37,7 @@ void read_cells_nets(const std::string &cells_path, const std::string &nets_path
     std::cout << "Unable to open cell file: " << cells_path << std::endl;
     exit(-1);
   }
-
+  // read nets
   cell_array.resize(id);
   std::vector<std::vector<uint32_t>>().swap(net_array);
   std::ifstream nets_file;
@@ -76,27 +80,47 @@ void read_cells_nets(const std::string &cells_path, const std::string &nets_path
   }
 }
 
-void init_partition(const std::vector<uint32_t> &cell_size, std::vector<bool> &partition, std::pair<uint32_t, uint32_t> &area, uint32_t &maxCS) {
-  std::size_t n = cell_size.size();
-  partition.resize(n, false);
+void init_partition(const std::vector<std::vector<uint32_t>> &cell_array, const std::vector<uint32_t> &cell_size, std::vector<bool> &partition, std::pair<uint32_t, uint32_t> &area) {
+  std::size_t cn = cell_size.size();
+  partition.resize(cn, false);
   area = {0, 0};
-  maxCS = 0;
-  for (std::size_t i = 0; i < n; ++i) {
-    if (maxCS < cell_size[i])
-      maxCS = cell_size[i];
+  uint32_t index[cn];
+  std::iota(index, index + cn, 0);
+  std::random_shuffle(index, index + cn);
+  for (std::size_t i = 0; i < cn; ++i) {
+    uint32_t cid = index[i];
     if (area.first < area.second) {
-      area.first += cell_size[i];
-      partition[i] = 1;
+      area.first += cell_size[cid];
+      partition[cid] = true;
     } else {
-      area.second += cell_size[i];
-      partition[i] = 0;
+      area.second += cell_size[cid];
+      partition[cid] = false;
     }
   }
 }
 
+uint32_t cutsize(const std::vector<std::vector<uint32_t>> &net_array, const std::vector<bool> &partition) {
+  std::size_t nid = 0, nn = net_array.size(), cut_size = 0;
+  for (; nid < nn; ++nid) {
+    std::size_t an = 0, bn = 0;
+    for (uint32_t cid : net_array[nid]) {
+      if (partition[cid]) {
+        an++;
+      } else {
+        bn++;
+      }
+    }
+    if (an > 0 && bn > 0) {
+      cut_size++;
+    }
+  }
+  return cut_size;
+}
+
 uint32_t all_gain(const std::vector<std::vector<uint32_t>> &net_array, const std::vector<bool> &partition, std::vector<int> &gain) {
-  std::size_t nid = 0, cn = partition.size(), nn = net_array.size(), cutsize = 0;
+  std::size_t nid = 0, cn = partition.size(), nn = net_array.size(), cut_size = 0;
   gain.resize(cn, 0);
+  std::fill(gain.begin(), gain.end(), 0);
   for (; nid < nn; ++nid) {
     std::vector<uint32_t> ta, tb;
     for (uint32_t cid : net_array[nid]) {
@@ -108,7 +132,7 @@ uint32_t all_gain(const std::vector<std::vector<uint32_t>> &net_array, const std
     }
     std::size_t an = ta.size(), bn = tb.size();
     if (an > 0 && bn > 0) {
-      cutsize++;
+      cut_size++;
     }
     if (an == 1) {
       gain[ta[0]]++;
@@ -125,86 +149,163 @@ uint32_t all_gain(const std::vector<std::vector<uint32_t>> &net_array, const std
       }
     }
   }
-  return cutsize;
+  return cut_size;
 }
 
-void update_gain(uint32_t cid, const std::vector<std::vector<uint32_t>> &cell_array, const std::vector<std::vector<uint32_t>> &net_array, const std::vector<bool> &partition, std::vector<int> &gain) {
-  std::set<uint32_t> update_c;
-  for (uint32_t nid : cell_array[cid]) {
-    for (uint32_t cid : net_array[nid]) {
-      update_c.insert(cid);
+void update_gain(const uint32_t cid_mv, const std::size_t maxDeg, const std::vector<std::vector<uint32_t>> &cell_array, const std::vector<std::vector<uint32_t>> &net_array, const std::vector<bool> &partition, std::vector<std::pair<std::unordered_set<uint32_t>, std::unordered_set<uint32_t>>> &unlockn_ab, std::vector<std::pair<uint32_t, uint32_t>> &net_abl, std::vector<int> &gain, std::vector<std::unordered_set<uint32_t>> &unfixed) {
+  bool moveto = partition[cid_mv];
+  for (auto nid : cell_array[cid_mv]) {
+    auto &unlockc_ab = unlockn_ab[nid];
+    if (moveto) {
+      unlockc_ab.second.erase(cid_mv);
+    } else {
+      unlockc_ab.first.erase(cid_mv);
     }
-  }
-  update_c.insert(cid);
-  for (uint32_t cid : update_c) {
-    gain[cid] = 0;
-    for (uint32_t nid : cell_array[cid]) {
-      std::vector<uint32_t> ta, tb;
-      for (uint32_t cid : net_array[nid]) {
-        if (partition[cid]) {
-          ta.push_back(cid);
-        } else {
-          tb.push_back(cid);
+    std::size_t an = unlockc_ab.first.size(), bn = unlockc_ab.second.size();
+    auto &abn = net_abl[nid];
+    if (!(an == 0 && bn == 0) && !(an >= 2 && bn >= 2)) {
+      if (abn.first == 0 || abn.second == 0) {
+        for (auto cid : moveto ? unlockc_ab.second : unlockc_ab.first) {
+          unfixed[gain[cid] + maxDeg].erase(cid);
+          gain[cid] += 1 + (abn.first == 2 || abn.second == 2);
+          unfixed[gain[cid] + maxDeg].insert(cid);
+        }
+      } else if ((moveto && abn.second == 1) || (!moveto && abn.first == 1)) {
+        for (auto cid : moveto ? unlockc_ab.first : unlockc_ab.second) {
+          unfixed[gain[cid] + maxDeg].erase(cid);
+          gain[cid] -= 1 + ((moveto && abn.first == 1) || (!moveto && abn.second == 1));
+          unfixed[gain[cid] + maxDeg].insert(cid);
+        }
+      } else if ((moveto && abn.first == 1) || (!moveto && abn.second == 1)) {
+        for (auto cid : moveto ? unlockc_ab.first : unlockc_ab.second) {
+          unfixed[gain[cid] + maxDeg].erase(cid);
+          gain[cid]--;
+          unfixed[gain[cid] + maxDeg].insert(cid);
+        }
+        if ((moveto && abn.second == 2) || (!moveto && abn.first == 2)) {
+          for (auto cid : moveto ? unlockc_ab.second : unlockc_ab.first) {
+            unfixed[gain[cid] + maxDeg].erase(cid);
+            gain[cid]++;
+            unfixed[gain[cid] + maxDeg].insert(cid);
+          }
+        }
+      } else if ((moveto && abn.second == 2) || (!moveto && abn.first == 2)) {
+        for (auto cid : moveto ? unlockc_ab.second : unlockc_ab.first) {
+          unfixed[gain[cid] + maxDeg].erase(cid);
+          gain[cid]++;
+          unfixed[gain[cid] + maxDeg].insert(cid);
         }
       }
-      std::size_t an = ta.size(), bn = tb.size();
-      if (an == 0 || bn == 0) {
-        gain[cid]--;
-      } else if ((an == 1 && ta[0] == cid) || (bn == 1 && tb[0] == cid)) {
-        gain[cid]++;
-      }
+    }
+    if (moveto) {
+      abn.first++;
+      abn.second--;
+    } else {
+      abn.first--;
+      abn.second++;
     }
   }
 }
 
-uint32_t FMAlgorithm(const std::vector<uint32_t> &cell_size, const std::vector<std::vector<uint32_t>> &cell_array, const std::vector<std::vector<uint32_t>> &net_array, std::vector<bool> &partition) {
-  std::size_t cn = cell_array.size(), nn = net_array.size();
-  std::set<uint32_t> unfixed;
+uint32_t FMAlgorithm(const std::vector<uint32_t> &cell_size, const std::vector<std::vector<uint32_t>> &cell_array, const std::vector<std::vector<uint32_t>> &net_array, std::vector<bool> &best_partition) {
+  std::size_t cn = cell_array.size(), nn = net_array.size(), maxDeg = 0;
+  for (const auto &item : cell_array) {
+    maxDeg = std::max(maxDeg, item.size());
+  }
   // Find initial cut
-  uint32_t maxCS;
+  std::vector<bool> partition;
   std::pair<uint32_t, uint32_t> area;
-  init_partition(cell_size, partition, area, maxCS);
-  uint32_t tarea = area.first + area.second;
+  init_partition(cell_array, cell_size, partition, area);
+  const uint32_t tarea = area.first + area.second;
   // Compute the cell gain of each cell
   std::vector<int> gain;
   uint32_t cut_size = all_gain(net_array, partition, gain);
-  int sumg = nn;
-  while (sumg > 0) {
+  // Best result
+  uint32_t best_cut_size = 0xffffffff;
+  best_partition.resize(cn);
+  // timer
+  clock_t timer = clock();
+  int T = 200;
+  while (T-- > 0) {
+    // record
+    std::vector<std::pair<std::unordered_set<uint32_t>, std::unordered_set<uint32_t>>> unlockn_ab(nn);
+    std::vector<std::unordered_set<uint32_t>> unfixed((maxDeg << 1) + 1);
+    std::vector<std::pair<uint32_t, uint32_t>> net_abl(nn, {0, 0});
     for (std::size_t cid = 0; cid < cn; ++cid) {
-      unfixed.insert(cid);
-    }
-    // Repeat until no improvement can be found
-    while (!unfixed.empty()) {
-      // Find the cell with max gain
-      int maxg = -nn;
-      uint32_t cid_maxg;
-      for (uint32_t cid : unfixed) {
-        if (gain[cid] > maxg && std::abs(area.first - area.second + 2.0 * cell_size[cid] * (partition[cid] ? -1 : 1)) < tarea / 10.0) {
-          maxg = gain[cid];
-          cid_maxg = cid;
+      unfixed[gain[cid] + maxDeg].insert(cid);
+      for (uint32_t nid : cell_array[cid]) {
+        if (partition[cid]) {
+          unlockn_ab[nid].first.insert(cid);
+          net_abl[nid].first++;
+        } else {
+          unlockn_ab[nid].second.insert(cid);
+          net_abl[nid].second++;
         }
       }
+    }
+    // Best result of the current iteration
+    uint32_t cur_best_cut_size = 0xffffffff;
+    std::vector<bool> cur_best_partition(cn);
+    std::pair<uint32_t, uint32_t> cur_best_area{0, 0};
+    // Repeat until all cells are fixed
+    std::size_t fn = 0;
+    while (fn++ < cn) {
+      // Find the cell with max gain
+      uint32_t cid_maxg = cn, cid_maxg_il = cn;
+      for (int i = maxDeg << 1; i >= 0 && cid_maxg == cn; --i) {
+        for (uint32_t cid : unfixed[i]) {
+          if (std::abs(2.0 * cell_size[cid] * (partition[cid] ? -1 : 1) + area.first - area.second) < tarea / 10.0) {
+            cid_maxg = cid;
+            break;
+          } else if (cid_maxg_il == cn) {
+            cid_maxg_il = cid;
+          }
+        }
+      }
+      if (cid_maxg == cn) {
+        // std::cout << "There is no movement satisfying the constraint\n";
+        cid_maxg = cid_maxg_il;
+        // break;
+      }
       // Move the cell with max gain to the other set
+      uint32_t ca = cell_size[cid_maxg];
       if (partition[cid_maxg]) {
-        area.first -= cell_size[cid_maxg];
-        area.second += cell_size[cid_maxg];
+        area.first -= ca;
+        area.second += ca;
         partition[cid_maxg] = false;
       } else {
-        area.first += cell_size[cid_maxg];
-        area.second -= cell_size[cid_maxg];
+        area.first += ca;
+        area.second -= ca;
         partition[cid_maxg] = true;
       }
       // Fix the cell with max gain
-      unfixed.erase(cid_maxg);
+      int maxg = gain[cid_maxg];
+      unfixed[maxg + maxDeg].erase(cid_maxg);
+      cut_size -= maxg;
       // Update gain
-      update_gain(cid_maxg, cell_array, net_array, partition, gain);
+      update_gain(cid_maxg, maxDeg, cell_array, net_array, partition, unlockn_ab, net_abl, gain, unfixed);
+      // save best
+      if (cut_size < cur_best_cut_size && std::abs(0.0 + area.first - area.second) < tarea / 10.0) {
+        cur_best_area = area;
+        cur_best_cut_size = cut_size;
+        cur_best_partition.assign(partition.begin(), partition.end());
+      }
+      if (clock() - timer > TIME_LIMIT) {
+        T = 0;
+        break;
+      }
     }
-    // calculate the sum of gain
+    // reset gain
+    partition.assign(cur_best_partition.begin(), cur_best_partition.end());
     cut_size = all_gain(net_array, partition, gain);
-    sumg = std::accumulate(gain.begin(), gain.end(), 0);
-    std::cout << sumg << std::endl;
+    area = cur_best_area;
+    // Record best partition
+    if (cur_best_cut_size < best_cut_size) {
+      best_cut_size = cur_best_cut_size;
+      best_partition.assign(cur_best_partition.begin(), cur_best_partition.end());
+    }
   }
-  return cut_size;
+  return best_cut_size;
 }
 
 int main(int argc, char const *argv[]) {
@@ -212,30 +313,32 @@ int main(int argc, char const *argv[]) {
     std::cout << "please input the command: ./fm <.cell path> <.net path> <.out path>\n";
     exit(-1);
   }
-  std::map<std::string, uint32_t> cell_name_id, net_name_id;
+  std::unordered_map<std::string, uint32_t> cell_name_id, net_name_id;
   std::vector<std::vector<uint32_t>> cell_array, net_array;
   std::vector<uint32_t> cell_size;
-  read_cells_nets(argv[1], argv[2], cell_name_id, cell_size, net_name_id, cell_array, net_array);
+  read_cells_nets(argv[2], argv[1], cell_name_id, cell_size, net_name_id, cell_array, net_array);
   std::vector<bool> partition;
   uint32_t cut_size = FMAlgorithm(cell_size, cell_array, net_array, partition);
-  std::vector<std::string> gA, gB;
+  std::string pA, pB;
+  std::size_t cn = cell_array.size(), An = 0;
+  pA.reserve(cn);
+  pB.reserve(cn);
   for (const auto &item : cell_name_id) {
     if (partition[item.second]) {
-      gA.push_back(item.first);
+      pA.append(item.first);
+      pA.append("\n");
+      An++;
     } else {
-      gB.push_back(item.first);
+      pB.append(item.first);
+      pB.append("\n");
     }
   }
   std::ofstream fout(argv[3]);
   if (fout.is_open()) {
-    fout << "cut_size " << cut_size << "\nA " << gA.size() << std::endl;
-    for (std::string cell : gA) {
-      fout << cell << std::endl;
-    }
-    fout << "B " << gB.size() << std::endl;
-    for (std::string cell : gB) {
-      fout << cell << std::endl;
-    }
+    fout << "cut_size " << cut_size << "\nA " << An << "\n"
+         << pA << "B " << cn - An << "\n"
+         << pB;
+    fout.flush();
     fout.close();
   } else {
     std::cout << "Unable to open the output file: " << argv[3] << std::endl;
