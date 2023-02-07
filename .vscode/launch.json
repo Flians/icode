@@ -3,7 +3,8 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [{
+    "configurations": [
+        {
             "name": "Python: current file",
             "type": "python",
             "request": "launch",
@@ -11,7 +12,7 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "(gdb) Launch_lin",
+            "name": "gdb_lin",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
@@ -21,15 +22,17 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "setupCommands": [{
-                "description": "Enable pretty-printing for gdb",
-                "text": "-enable-pretty-printing",
-                "ignoreFailures": true
-            }],
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
             "preLaunchTask": "compile_linux"
         },
         {
-            "name": "(lldb) launch",
+            "name": "lldb",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
@@ -39,15 +42,17 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",
-            "setupCommands": [{
-                "description": "Enable pretty-printing for gdb",
-                "text": "-enable-pretty-printing",
-                "ignoreFailures": true
-            }],
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
             "preLaunchTask": "compile_mac"
         },
         {
-            "name": "(gdb) launch",
+            "name": "gdb_win",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
@@ -59,11 +64,13 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "miDebuggerPath": "gdb.exe",
-            "setupCommands": [{
-                "description": "Enable pretty-printing for gdb",
-                "text": "-enable-pretty-printing",
-                "ignoreFailures": true
-            }],
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
             "preLaunchTask": "compile_win"
         }
     ]
