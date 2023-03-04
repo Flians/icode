@@ -287,7 +287,7 @@ int SequencePair::EvaluateSequence(bool mode) {
   return BUCKL[H->GetMax()];
 }
 
-double SequencePair::Cost(int w, int h) {
+double SequencePair::Cost(int w, int h) const {
   if (has_legal_ == false) {
     int delta_w = (w - W_);
     int delta_h = (h - H_);
@@ -305,11 +305,11 @@ double SequencePair::Cost(int w, int h) {
   }
 }
 
-size_t SequencePair::Area() {
+size_t SequencePair::Area() const {
   return max_width_ * max_height_;
 }
 
-double SequencePair::Wirelength() {
+double SequencePair::Wirelength() const {
   double total_wl = 0;
   for (int i = 0; i < num_nets_; ++i) {
     total_wl += this->HPWL(net_list_[i]);
@@ -317,7 +317,7 @@ double SequencePair::Wirelength() {
   return total_wl;
 }
 
-double SequencePair::HPWL(Net *net) {
+double SequencePair::HPWL(Net *net) const {
   double min_x = W_, min_y = H_, max_x = 0, max_y = 0;
   if (net->GetTerminalDegree() > 0) {
     min_x = net->GetTerminal(0)->GetCenterX();
@@ -464,19 +464,14 @@ void SequencePair::WriteReport(std::ofstream &fout, std::pair<double, double> ti
   max_height_ = this->EvaluateSequence(1);
   double wl = this->Wirelength();
   // <total wirelength>
-  fout << std::fixed << wl << std::endl;
-  // <chip_area>
-  fout << this->Area() << std::endl;
-  // <chip_width> <chip_height>
-  fout << max_width_ << " " << max_height_ << std::endl;
-  // <program_runtime>
-  fout << std::fixed << time_taken.first << " " << time_taken.second << std::endl;
+  fout << "Wirelength " << std::fixed << wl << std::endl;
+  fout << "Blocks\n";
   // <macro_name> <x1> <y1> <x2> <y2>
   for (int i = 0; i < num_blocks_; ++i) {
     Block *b = block_list_[i];
     fout << b->GetName() << " "
          << b->GetX() << " " << b->GetY() << " "
-         << b->GetX() + b->GetWidth() << " " << b->GetY() + b->GetHeight() << " "
+         << b->GetX() + b->GetWidth() << " " << b->GetY() + b->GetHeight() << " " << b->isRotate()
          << std::endl;
   }
   std::cout << "WL: " << wl << " costing the time <IO, FP> : " << std::fixed << std::setprecision(5) << time_taken.first << " " << time_taken.second << " secends." << std::endl;

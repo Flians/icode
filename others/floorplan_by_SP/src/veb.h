@@ -12,10 +12,10 @@ public:
   ~VanEmdeBoas();
 
   // get and set
-  int GetMin() const { return min_; }
-  int GetMax() const { return max_; }
-  void SetMin(int m) { min_ = m; }
-  void SetMax(int m) { max_ = m; }
+  inline const int GetMin() const { return min_; }
+  inline const int GetMax() const { return max_; }
+  inline void SetMin(int m) { min_ = m; }
+  inline void SetMax(int m) { max_ = m; }
 
   // Van Emde Boas
   int GenerateIndex(int high, int low) {

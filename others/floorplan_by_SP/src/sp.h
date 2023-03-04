@@ -39,10 +39,10 @@ public:
   void Rotate90(); // 90 degree clockwise rotation
   void RandomInitialize();
   int EvaluateSequence(bool mode); // 0: compute x coordinates, 1: comput y coordinates
-  double Cost(int w, int h);
-  size_t Area();
-  double Wirelength();
-  double HPWL(Net *net);
+  double Cost(int w, int h) const;
+  size_t Area() const;
+  double Wirelength() const;
+  double HPWL(Net *net) const;
 
 private:
   // basic information

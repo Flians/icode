@@ -14,14 +14,14 @@ public:
   ~Terminal() {}
 
   // get and set
-  std::string GetName() const { return name_; }
-  size_t GetX() const { return x_; }
-  size_t GetY() const { return y_; }
-  size_t GetCenterX() const { return x_; }
-  size_t GetCenterY() const { return y_; }
-  void SetX(int x) { x_ = x; }
-  void SetY(int y) { y_ = y; }
-  void SetXY(int x, int y) {
+  inline const std::string GetName() const { return name_; }
+  inline const size_t GetX() const { return x_; }
+  inline const size_t GetY() const { return y_; }
+  inline const size_t GetCenterX() const { return x_; }
+  inline const size_t GetCenterY() const { return y_; }
+  inline void SetX(int x) { x_ = x; }
+  inline void SetY(int y) { y_ = y; }
+  inline void SetXY(int x, int y) {
     x_ = x;
     y_ = y;
   }
@@ -39,12 +39,13 @@ public:
   ~Block() {}
 
   // get and set
-  size_t GetWidth() const { return rotate_ ? height_ : width_; }
-  size_t GetHeight() const { return rotate_ ? width_ : height_; }
-  size_t GetArea() const { return width_ * height_; }
-  double GetCenterX() const { return rotate_ ? x_ + height_ / 2.0 : x_ + width_ / 2.0; }
-  double GetCenterY() const { return rotate_ ? y_ + width_ / 2.0 : y_ + height_ / 2.0; }
-  void Rotate() { rotate_ = rotate_ ? false : true; }
+  inline const size_t GetWidth() const { return rotate_ ? height_ : width_; }
+  inline const size_t GetHeight() const { return rotate_ ? width_ : height_; }
+  inline const size_t GetArea() const { return width_ * height_; }
+  inline const double GetCenterX() const { return rotate_ ? x_ + height_ / 2.0 : x_ + width_ / 2.0; }
+  inline const double GetCenterY() const { return rotate_ ? y_ + width_ / 2.0 : y_ + height_ / 2.0; }
+  inline const bool isRotate() const { return rotate_; }
+  inline void Rotate() { rotate_ = rotate_ ? false : true; }
 
 private:
   bool rotate_;
@@ -59,13 +60,13 @@ public:
   ~Net() {}
 
   // get and set
-  int GetNetDegree() const { return terminal_list_.size() + block_list_.size(); }
-  int GetTerminalDegree() const { return terminal_list_.size(); }
-  int GetBlockDegree() const { return block_list_.size(); }
-  Terminal *GetTerminal(int i) const { return terminal_list_[i]; }
-  Block *GetBlock(int i) const { return block_list_[i]; }
-  void AddTerminal(Terminal *t) { terminal_list_.push_back(t); }
-  void AddBlock(Block *b) { block_list_.push_back(b); }
+  inline const int GetNetDegree() const { return terminal_list_.size() + block_list_.size(); }
+  inline const int GetTerminalDegree() const { return terminal_list_.size(); }
+  inline const int GetBlockDegree() const { return block_list_.size(); }
+  inline Terminal *GetTerminal(int i) const { return terminal_list_[i]; }
+  inline Block *GetBlock(int i) const { return block_list_[i]; }
+  inline void AddTerminal(Terminal *t) { terminal_list_.push_back(t); }
+  inline void AddBlock(Block *b) { block_list_.push_back(b); }
 
 private:
   std::vector<Terminal *> terminal_list_;
