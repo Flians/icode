@@ -2,13 +2,12 @@
 #include "sp.h"
 #include "veb.h"
 #include <fstream>
-#include <iomanip>
 #include <iostream>
 
 int main(int argc, char *argv[]) {
   std::ifstream fin_blk, fin_net, fin_pl;
   std::ofstream fout;
-  double alpha = 0.1;
+  double dsr = 0.1;
   if (argc == 6) {
     fin_blk.open(argv[1]);
     fin_net.open(argv[2]);
@@ -29,21 +28,21 @@ int main(int argc, char *argv[]) {
                 << "The program will be terminated..." << std::endl;
       exit(1);
     }
-    alpha = std::stod(argv[5]);
+    dsr = std::stod(argv[5]);
   } else {
     std::cerr << "Usage: ./hw2 <input_hardblocks_file> <input_nets_file> <input_pinloc_file> <output_floorplan_file> <dead_space_ratio>" << std::endl;
     exit(1);
   }
 
-  SequencePair sp(fin_blk, fin_net, fin_pl, alpha);
+  std::pair<double, double> time_taken{0, 0};
 
-  clock_t start, end;
+  clock_t start = clock();
+  SequencePair sp(fin_blk, fin_net, fin_pl, dsr);
+  time_taken.first = double(clock() - start) / double(CLOCKS_PER_SEC); // for IO
+
   start = clock();
   sp.Solve();
-  end = clock();
-  double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
-  std::cout << "Time taken by fp is : " << std::fixed << std::setprecision(5)
-            << time_taken << " secends." << std::endl;
+  time_taken.second = double(clock() - start) / double(CLOCKS_PER_SEC); // for alg
 
   sp.WriteReport(fout, time_taken);
   fin_blk.close();

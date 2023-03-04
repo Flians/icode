@@ -23,7 +23,7 @@
 class SequencePair {
 public:
   // constructor and destructor
-  SequencePair(std::ifstream &fin_blk, std::ifstream &fin_net, std::ifstream &fin_pl, double alpha);
+  SequencePair(std::ifstream &fin_blk, std::ifstream &fin_net, std::ifstream &fin_pl, double dsr, double alpha = 0.5);
   ~SequencePair();
 
   // input and output
@@ -31,7 +31,7 @@ public:
   void ParseNet(std::ifstream &fin);
   void ParsePl(std::ifstream &fin);
   void ParseError(int code);
-  void WriteReport(std::ofstream &fout, double time_taken);
+  void WriteReport(std::ofstream &fout, std::pair<double, double> time_taken);
   void UpdateOutline();
 
   // solver
@@ -46,7 +46,7 @@ public:
 
 private:
   // basic information
-  double alpha_;
+  double alpha_, dsr_;
   int blockArea_;
   int W_, H_; // boundary constraint
   int num_blocks_;

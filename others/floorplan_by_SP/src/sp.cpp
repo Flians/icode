@@ -4,14 +4,16 @@
 #include <algorithm>
 #include <cassert>
 #include <cmath>
+#include <iomanip>
 #include <random>
 #include <time.h>
 
-#define TIME_LIMIT 600 * CLOCKS_PER_SEC
+#define TIME_LIMIT 1000 * CLOCKS_PER_SEC
 
-SequencePair::SequencePair(std::ifstream &fin_blk, std::ifstream &fin_net, std::ifstream &fin_pl, double alpha) {
-  blockArea_ = 0;
+SequencePair::SequencePair(std::ifstream &fin_blk, std::ifstream &fin_net, std::ifstream &fin_pl, double dsr, double alpha) {
+  dsr_ = dsr;
   alpha_ = alpha;
+  blockArea_ = 0;
   this->ParseBlk(fin_blk);
   this->ParseNet(fin_net);
   this->ParsePl(fin_pl);
@@ -457,19 +459,18 @@ void SequencePair::ParseError(int code) {
   exit(1);
 }
 
-void SequencePair::WriteReport(std::ofstream &fout, double time_taken) {
+void SequencePair::WriteReport(std::ofstream &fout, std::pair<double, double> time_taken) {
   max_width_ = this->EvaluateSequence(0);
   max_height_ = this->EvaluateSequence(1);
-  // <final cost>
-  fout << std::fixed << alpha_ * this->Area() + (1 - alpha_) * this->Wirelength() << std::endl;
+  double wl = this->Wirelength();
   // <total wirelength>
-  fout << std::fixed << this->Wirelength() << std::endl;
+  fout << std::fixed << wl << std::endl;
   // <chip_area>
   fout << this->Area() << std::endl;
   // <chip_width> <chip_height>
   fout << max_width_ << " " << max_height_ << std::endl;
   // <program_runtime>
-  fout << std::fixed << time_taken << std::endl;
+  fout << std::fixed << time_taken.first << " " << time_taken.second << std::endl;
   // <macro_name> <x1> <y1> <x2> <y2>
   for (int i = 0; i < num_blocks_; ++i) {
     Block *b = block_list_[i];
@@ -478,8 +479,9 @@ void SequencePair::WriteReport(std::ofstream &fout, double time_taken) {
          << b->GetX() + b->GetWidth() << " " << b->GetY() + b->GetHeight() << " "
          << std::endl;
   }
+  std::cout << "WL: " << wl << " costing the time <IO, FP> : " << std::fixed << std::setprecision(5) << time_taken.first << " " << time_taken.second << " secends." << std::endl;
 }
 
 void SequencePair::UpdateOutline() {
-  W_ = H_ = std::sqrt(blockArea_ * (1.0 + alpha_));
+  W_ = H_ = std::sqrt(blockArea_ * (1.0 + dsr_));
 }
