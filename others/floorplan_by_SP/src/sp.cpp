@@ -3,6 +3,7 @@
 #include "veb.h"
 #include <algorithm>
 #include <cassert>
+#include <cfloat>
 #include <cmath>
 #include <iomanip>
 #include <random>
@@ -42,7 +43,7 @@ void SequencePair::Solve() {
   std::uniform_real_distribution<double> rand_01(0.0, 1.0);
 
   // best result
-  double best_cost = MAXFLOAT;
+  double best_cost = FLT_MAX;
   std::vector<bool> best_R(num_blocks_, false);
   std::vector<size_t> best_X(num_blocks_), best_Y(num_blocks_);
 
@@ -314,7 +315,7 @@ double SequencePair::Wirelength() const {
 }
 
 double SequencePair::HPWL(Net *net) const {
-  double min_x = MAXFLOAT, min_y = MAXFLOAT, max_x = 0, max_y = 0;
+  double min_x = FLT_MAX, min_y = FLT_MAX, max_x = 0, max_y = 0;
   if (net->GetTerminalDegree() > 0) {
     min_x = net->GetTerminal(0)->GetCenterX();
     min_y = net->GetTerminal(0)->GetCenterY();
