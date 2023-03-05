@@ -38,22 +38,26 @@ void SequencePair::Solve() {
   std::random_device rd;
   std::mt19937 mt(rd());
   std::uniform_int_distribution<int> rand_op(0, 2);
-  std::uniform_int_distribution<int> rand_blk(0, num_blocks_ - 1 - 1);
+  std::uniform_int_distribution<int> rand_blk(0, num_blocks_ - 1);
   std::uniform_real_distribution<double> rand_01(0.0, 1.0);
 
+  // best result
+  double best_cost = MAXFLOAT;
+  std::vector<bool> best_R(num_blocks_, false);
+  std::vector<size_t> best_X(num_blocks_), best_Y(num_blocks_);
+
   // simulated annealing
-  int cnt = 0;
-  double temparature = 99999999.0, delta;
-  double R = 0.999;
-  int NUM_STEPS = 10;
-  int prev_w = max_width_, prev_h = max_height_, strike_cnt = 0;
+  double temparature = 100, R = 0.9999, threshold = dsr_, loss = 0.99;
+  double cur_cost;
+  int cnt = 0, NUM_STEPS = 10;
+  int prev_w = max_width_, prev_h = max_height_, strike_cnt = 0, lost = 0;
   // timer
   const clock_t timer = clock();
   while (1) {
-    if (temparature < 1) {
+    if (temparature < 0.1) {
       if (has_legal_)
         break;
-      temparature = 999.0;
+      temparature = 99;
     }
     for (int i = 0; i < NUM_STEPS; ++i) {
       int op = rand_op(mt);
@@ -65,7 +69,6 @@ void SequencePair::Solve() {
         int temp = X_[a];
         X_[a] = X_[b];
         X_[b] = temp;
-
       } else if (op == 1) {
         // two module names in Y
         a = rand_blk(mt);
@@ -74,7 +77,7 @@ void SequencePair::Solve() {
         Y_[a] = Y_[b];
         Y_[b] = temp;
       } else if (op == 2) {
-        // the width and the height of a module
+        // rotate
         a = rand_blk(mt);
         block_list_[a]->Rotate();
       } else {
@@ -84,50 +87,40 @@ void SequencePair::Solve() {
       int w = this->EvaluateSequence(0);
       int h = this->EvaluateSequence(1);
 
-      if (has_legal_ == false) {
-        if (w <= W_ && h <= H_) {
-          has_legal_ = true;
-          temparature = 99999.0;
-        } else if (h <= W_ && w <= H_) {
-          has_legal_ = true;
-          this->Rotate90();
-          int temp = w;
-          w = h;
-          h = temp;
-          temparature = 99999.0;
-        }
+      if (h <= W_ && w <= H_) {
+        this->Rotate90();
+        std::swap(w, h);
       }
 
       bool flag = false;
-      delta = this->Cost(w, h);
-
-      // downhile move
-      if (delta <= 0) {
-        if (has_legal_ && (w > W_ || h > H_))
-          flag = false;
-        else
-          flag = true;
-      }
-      // uphill move
-      else {
-        if (has_legal_)
-          flag = false;
-        else if (rand_01(mt) < exp(-delta / temparature))
-          flag = true;
-      }
-
-      if (has_legal_ == false && w <= W_ && h <= H_) {
-        has_legal_ = true;
+      cur_cost = this->Cost(w, h);
+      if (cur_cost <= best_cost || (!has_legal_ && w <= W_ && h <= H_)) {
+        if (w <= W_ && h <= H_) {
+          if (!has_legal_) {
+            has_legal_ = true;
+            temparature = 99;
+          }
+          max_width_ = w;
+          max_height_ = h;
+          best_X.assign(X_.begin(), X_.end());
+          best_Y.assign(Y_.begin(), Y_.end());
+          best_R.assign(R_.begin(), R_.end());
+        }
+        best_cost = cur_cost;
         flag = true;
+      } else if (rand_01(mt) < exp(-(cur_cost - best_cost) / temparature)) {
+        // std::cout << pro << " " << cur_cost << " " << best_cost << " " << exp(-(cur_cost - best_cost) / temparature) << std::endl;
+        flag = true;
+      } else if (lost > 100 && (h - H_) / (double)H_ < threshold && (w - W_) / (double)W_ < threshold) {
+        flag = true;
+        threshold *= loss;
+        if (!has_legal_)
+          best_cost = cur_cost;
       }
+      lost = flag ? 0 : lost + 1;
 
-      // keep the move
-      if (flag) {
-        max_width_ = w;
-        max_height_ = h;
-      }
       // undo the move
-      else {
+      if (!flag) {
         if (op == 0) {
           int temp = X_[a];
           X_[a] = X_[b];
@@ -138,33 +131,45 @@ void SequencePair::Solve() {
           Y_[b] = temp;
         } else if (op == 2) {
           block_list_[a]->Rotate();
+          R_[a] = block_list_[a]->isRotate();
         }
       }
     }
-    max_width_ = this->EvaluateSequence(0);
-    max_height_ = this->EvaluateSequence(1);
     if (cnt % 1000 == 0) {
-      if (prev_w == max_width_ && prev_h == max_height_) {
+      int w = this->EvaluateSequence(0);
+      int h = this->EvaluateSequence(1);
+      if (prev_w == w && prev_h == h) {
         strike_cnt++;
       } else {
-        prev_w = max_width_;
-        prev_h = max_height_;
+        prev_w = w;
+        prev_h = h;
         strike_cnt = 0;
       }
-
       std::cout << std::fixed
                 << has_legal_ << ") Temparature = " << temparature
-                << "\t( " << max_width_ << " , " << max_height_ << " )"
-                << "\tarea = " << this->Area()
+                << "\tcost = " << cur_cost
+                << "\t( " << w << " , " << h << " )"
+                << "\tarea = " << w * h
                 << "\twirelength = " << this->Wirelength() << std::endl;
       cnt = 0;
     }
     cnt++;
-
-    if (strike_cnt > 5 || clock() - timer > TIME_LIMIT)
+    if (strike_cnt > 5) {
+      strike_cnt = 0;
+      temparature = has_legal_ ? 0.1 : 99;
+    }
+    if (clock() - timer > TIME_LIMIT)
       break;
 
     temparature = R * temparature;
+  }
+  X_.assign(best_X.begin(), best_X.end());
+  Y_.assign(best_Y.begin(), best_Y.end());
+  R_.assign(best_R.begin(), best_R.end());
+  for (int i = 0; i < num_blocks_; ++i) {
+    if (block_list_[i]->isRotate() != R_[i]) {
+      block_list_[i]->Rotate();
+    }
   }
 }
 
@@ -175,18 +180,24 @@ void SequencePair::Rotate90() {
   X_.assign(Y_.begin(), Y_.end());
   reverse(temp.begin(), temp.end());
   Y_.assign(temp.begin(), temp.end());
-  for (int i = 0; i < num_blocks_; ++i)
+  for (int i = 0; i < num_blocks_; ++i) {
     block_list_[i]->Rotate();
+    R_[i] = block_list_[i]->isRotate();
+  }
 }
 
 void SequencePair::RandomInitialize() {
   int w, h;
-  std::vector<size_t> best_X, best_Y;
+  std::vector<bool> best_R(num_blocks_, false);
+  std::vector<size_t> best_X(num_blocks_), best_Y(num_blocks_);
   has_legal_ = false;
+  X_.resize(num_blocks_);
+  Y_.resize(num_blocks_);
+  R_.resize(num_blocks_, false);
   // 1st: simply 1 to n, does not care about boundary constraint
   for (int i = 0; i < num_blocks_; ++i) {
-    X_.push_back(i);
-    Y_.push_back(i);
+    X_[i] = i;
+    Y_[i] = i;
   }
   w = this->EvaluateSequence(0);
   h = this->EvaluateSequence(1);
@@ -195,24 +206,21 @@ void SequencePair::RandomInitialize() {
   } else if (h <= W_ && w <= H_) {
     has_legal_ = true;
     this->Rotate90();
-    int temp = w;
-    w = h;
-    h = temp;
+    std::swap(w, h);
   }
   max_width_ = w;
   max_height_ = h;
   best_X.assign(X_.begin(), X_.end());
   best_Y.assign(Y_.begin(), Y_.end());
+  best_R.assign(R_.begin(), R_.end());
 
   // random
   std::random_device rd;
 
   // 2nd ~ 100th: shuffle, does care about boundary constraint
   for (int i = 2; i <= 100; ++i) {
-    // shuffle(X_.begin(), X_.end(), default_random_engine(rd()));
-    // shuffle(Y_.begin(), Y_.end(), default_random_engine(rd()));
-    random_shuffle(X_.begin(), X_.end());
-    random_shuffle(Y_.begin(), Y_.end());
+    shuffle(X_.begin(), X_.end(), std::default_random_engine(rd()));
+    shuffle(Y_.begin(), Y_.end(), std::default_random_engine(rd()));
     w = this->EvaluateSequence(0);
     h = this->EvaluateSequence(1);
     bool force_flag = false;
@@ -222,9 +230,7 @@ void SequencePair::RandomInitialize() {
         force_flag = true;
       } else if (h <= W_ && w <= H_) {
         this->Rotate90();
-        int temp = w;
-        w = h;
-        h = temp;
+        std::swap(w, h);
         has_legal_ = true;
         force_flag = true;
       }
@@ -236,10 +242,17 @@ void SequencePair::RandomInitialize() {
       max_height_ = h;
       best_X.assign(X_.begin(), X_.end());
       best_Y.assign(Y_.begin(), Y_.end());
+      best_R.assign(R_.begin(), R_.end());
     }
   }
   X_.assign(best_X.begin(), best_X.end());
   Y_.assign(best_Y.begin(), best_Y.end());
+  R_.assign(best_R.begin(), best_R.end());
+  for (int i = 0; i < num_blocks_; ++i) {
+    if (block_list_[i]->isRotate() != R_[i]) {
+      block_list_[i]->Rotate();
+    }
+  }
 }
 
 int SequencePair::EvaluateSequence(bool mode) {
@@ -288,25 +301,8 @@ int SequencePair::EvaluateSequence(bool mode) {
 }
 
 double SequencePair::Cost(int w, int h) const {
-  if (has_legal_ == false) {
-    int delta_w = (w - W_);
-    int delta_h = (h - H_);
-    int max_w = (max_width_ - W_);
-    int max_h = (max_height_ - H_);
-    if (delta_w > 0 && delta_h > 0)
-      return w * h - max_width_ * max_height_;
-    if (delta_w > 0)
-      return delta_w - max_w;
-    if (delta_h > 0)
-      return delta_h - max_h;
-    return -9999999;
-  } else {
-    return w * h - max_width_ * max_height_;
-  }
-}
-
-size_t SequencePair::Area() const {
-  return max_width_ * max_height_;
+  double wl = Wirelength(), area = w * h;
+  return ((w > W_ ? w - W_ : 0) * H_ + (h > H_ ? h - H_ : 0) * W_) * 100 + alpha_ * area + (1 - alpha_) * wl;
 }
 
 double SequencePair::Wirelength() const {
@@ -318,7 +314,7 @@ double SequencePair::Wirelength() const {
 }
 
 double SequencePair::HPWL(Net *net) const {
-  double min_x = W_, min_y = H_, max_x = 0, max_y = 0;
+  double min_x = MAXFLOAT, min_y = MAXFLOAT, max_x = 0, max_y = 0;
   if (net->GetTerminalDegree() > 0) {
     min_x = net->GetTerminal(0)->GetCenterX();
     min_y = net->GetTerminal(0)->GetCenterY();
@@ -464,14 +460,13 @@ void SequencePair::WriteReport(std::ofstream &fout, std::pair<double, double> ti
   max_height_ = this->EvaluateSequence(1);
   double wl = this->Wirelength();
   // <total wirelength>
-  fout << "Wirelength " << std::fixed << wl << std::endl;
+  fout << "Wirelength " << std::fixed << std::setprecision(0) << wl << std::endl;
   fout << "Blocks\n";
   // <macro_name> <x1> <y1> <x2> <y2>
   for (int i = 0; i < num_blocks_; ++i) {
     Block *b = block_list_[i];
     fout << b->GetName() << " "
-         << b->GetX() << " " << b->GetY() << " "
-         << b->GetX() + b->GetWidth() << " " << b->GetY() + b->GetHeight() << " " << b->isRotate()
+         << b->GetX() << " " << b->GetY() << " " << b->isRotate()
          << std::endl;
   }
   std::cout << "WL: " << wl << " costing the time <IO, FP> : " << std::fixed << std::setprecision(5) << time_taken.first << " " << time_taken.second << " secends." << std::endl;

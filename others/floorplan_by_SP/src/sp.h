@@ -23,7 +23,7 @@
 class SequencePair {
 public:
   // constructor and destructor
-  SequencePair(std::ifstream &fin_blk, std::ifstream &fin_net, std::ifstream &fin_pl, double dsr, double alpha = 0.5);
+  SequencePair(std::ifstream &fin_blk, std::ifstream &fin_net, std::ifstream &fin_pl, double dsr, double alpha = 0.3);
   ~SequencePair();
 
   // input and output
@@ -40,7 +40,6 @@ public:
   void RandomInitialize();
   int EvaluateSequence(bool mode); // 0: compute x coordinates, 1: comput y coordinates
   double Cost(int w, int h) const;
-  size_t Area() const;
   double Wirelength() const;
   double HPWL(Net *net) const;
 
@@ -61,6 +60,7 @@ private:
 
   // sequence pair
   bool has_legal_;
+  std::vector<bool> R_;
   std::vector<size_t> X_, Y_;
   int max_width_, max_height_;
 };

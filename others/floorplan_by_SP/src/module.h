@@ -3,6 +3,7 @@
 #define MODULE_H
 
 #include <iostream>
+#include <math.h>
 #include <string>
 #include <vector>
 
@@ -42,8 +43,8 @@ public:
   inline const size_t GetWidth() const { return rotate_ ? height_ : width_; }
   inline const size_t GetHeight() const { return rotate_ ? width_ : height_; }
   inline const size_t GetArea() const { return width_ * height_; }
-  inline const double GetCenterX() const { return rotate_ ? x_ + height_ / 2.0 : x_ + width_ / 2.0; }
-  inline const double GetCenterY() const { return rotate_ ? y_ + width_ / 2.0 : y_ + height_ / 2.0; }
+  inline const double GetCenterX() const { return floor(rotate_ ? x_ + height_ / 2.0 : x_ + width_ / 2.0); }
+  inline const double GetCenterY() const { return floor(rotate_ ? y_ + width_ / 2.0 : y_ + height_ / 2.0); }
   inline const bool isRotate() const { return rotate_; }
   inline void Rotate() { rotate_ = rotate_ ? false : true; }
 
