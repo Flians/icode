@@ -48,7 +48,7 @@ void SequencePair::Solve() {
   std::vector<size_t> best_X(num_blocks_), best_Y(num_blocks_);
 
   // simulated annealing
-  double temparature = 100, R = 0.9999, threshold = dsr_, loss = 0.99;
+  double temparature = 100, R = 0.9999, threshold = dsr_, loss = 0.99, penalty = 200;
   double cur_cost;
   int cnt = 0, NUM_STEPS = 10;
   int prev_w = max_width_, prev_h = max_height_, strike_cnt = 0, lost = 0;
@@ -94,7 +94,7 @@ void SequencePair::Solve() {
       }
 
       bool flag = false;
-      cur_cost = this->Cost(w, h);
+      cur_cost = this->Cost(w, h, penalty);
       if (cur_cost <= best_cost || (!has_legal_ && w <= W_ && h <= H_)) {
         if (w <= W_ && h <= H_) {
           if (!has_legal_) {
@@ -108,6 +108,8 @@ void SequencePair::Solve() {
           best_R.assign(R_.begin(), R_.end());
         }
         best_cost = cur_cost;
+        if (has_legal_)
+          penalty *= 1.2;
         flag = true;
       } else if (rand_01(mt) < exp(-(cur_cost - best_cost) / temparature)) {
         // std::cout << pro << " " << cur_cost << " " << best_cost << " " << exp(-(cur_cost - best_cost) / temparature) << std::endl;
@@ -157,7 +159,7 @@ void SequencePair::Solve() {
     cnt++;
     if (strike_cnt > 5) {
       strike_cnt = 0;
-      temparature = has_legal_ ? 0.1 : 99;
+      temparature = prev_w <= W_ && prev_h <= H_ ? 0.1 : 99;
     }
     if (clock() - timer > TIME_LIMIT)
       break;
@@ -301,9 +303,9 @@ int SequencePair::EvaluateSequence(bool mode) {
   return BUCKL[H->GetMax()];
 }
 
-double SequencePair::Cost(int w, int h) const {
+double SequencePair::Cost(int w, int h, double penalty) const {
   double wl = Wirelength(), area = w * h;
-  return ((w > W_ ? w - W_ : 0) * H_ + (h > H_ ? h - H_ : 0) * W_) * 100 + alpha_ * area + (1 - alpha_) * wl;
+  return ((w > W_ ? w - W_ : 0) * H_ + (h > H_ ? h - H_ : 0) * W_) * penalty + alpha_ * area + (1 - alpha_) * wl;
 }
 
 double SequencePair::Wirelength() const {
@@ -360,7 +362,6 @@ double SequencePair::HPWL(Net *net) const {
 void SequencePair::ParseBlk(std::ifstream &fin) {
   std::string s, colon, name, sw, sh;
   int w, h;
-  // fin >> W_ >> H_;
   // NumHardRectilinearBlocks : <number of blocks>
   fin >> s >> colon >> num_blocks_;
   // if (s != "NumHardRectilinearBlocks" || colon != ":") this->ParseError(1);
@@ -414,10 +415,9 @@ void SequencePair::ParseNet(std::ifstream &fin) {
   // if (s != "NumPins" || colon != ":") this->ParseError(5);
   for (int i = 0; i < num_nets_; ++i) {
     // NetDegree : <number of pins on the net>
-    fin >> s >> colon;
+    fin >> s >> colon >> net_degree;
     // if (s != "NetDegree" || colon != ":") this->ParseError(6);
     Net *n = new Net;
-    fin >> net_degree;
     // <terminal name>
     for (int j = 0; j < net_degree; ++j) {
       fin >> name;
