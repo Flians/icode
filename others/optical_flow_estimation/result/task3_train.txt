@@ -1,0 +1,206 @@
+Parsing Arguments
+  [0.023s] batch_size: 32
+  [0.023s] crop_size: [192, 256]
+  [0.023s] fp16: False
+  [0.023s] fp16_scale: 1024.0
+  [0.023s] gradient_clip: None
+  [0.023s] inference: False
+  [0.023s] inference_batch_size: 1
+  [0.023s] inference_dataset: MpiSintelClean
+  [0.023s] inference_dataset_replicates: 1
+  [0.023s] inference_dataset_root: data/validation
+  [0.023s] inference_n_batches: -1
+  [0.023s] inference_size: [-1, -1]
+  [0.023s] inference_visualize: False
+  [0.023s] log_frequency: 1
+  [0.023s] loss: EPELoss
+  [0.023s] loss_div_flow: 0.05
+  [0.023s] model: FlowNetER
+  [0.023s] model_div_flow: 20
+  [0.023s] name: run
+  [0.023s] no_cuda: False
+  [0.023s] number_gpus: 1
+  [0.023s] number_workers: 8
+  [0.023s] optimizer: Adam
+  [0.023s] optimizer_amsgrad: False
+  [0.023s] optimizer_betas: (0.9, 0.999)
+  [0.023s] optimizer_eps: 1e-08
+  [0.023s] optimizer_lr: 0.0001
+  [0.023s] optimizer_weight_decay: 0
+  [0.023s] render_validation: False
+  [0.023s] replicates: 1
+  [0.023s] resume: 
+  [0.023s] rgb_max: 255.0
+  [0.023s] save: ./work
+  [0.023s] save_flow: False
+  [0.023s] schedule_lr_fraction: 10
+  [0.023s] schedule_lr_frequency: 0
+  [0.023s] seed: 1
+  [0.023s] skip_training: False
+  [0.023s] skip_validation: False
+  [0.023s] start_epoch: 1
+  [0.023s] total_epochs: 51
+  [0.023s] train_n_batches: -1
+  [0.023s] training_dataset: MpiSintelClean
+  [0.024s] training_dataset_replicates: 1
+  [0.024s] training_dataset_root: data/training
+  [0.024s] validation_dataset: MpiSintelClean
+  [0.024s] validation_dataset_replicates: 1
+  [0.024s] validation_dataset_root: data/validation
+  [0.024s] validation_frequency: 5
+  [0.024s] validation_n_batches: -1
+  [0.031s] Operation finished
+
+Source Code
+Initializing Datasets
+  [0.018s] Training Dataset: MpiSintelClean
+  [0.026s] Training Input: [3, 2, 192, 256]
+  [0.034s] Training Targets: [2, 192, 256]
+  [0.039s] Validation Dataset: MpiSintelClean
+  [0.049s] Validation Input: [3, 2, 192, 512]
+  [0.059s] Validation Targets: [2, 192, 512]
+  [0.067s] Inference Dataset: MpiSintelClean
+  [0.077s] Inference Input: [3, 2, 192, 512]
+  [0.086s] Inference Targets: [2, 192, 512]
+  [0.086s] Operation finished
+
+Building FlowNetER model
+div_flow 20
+### Print Model Flops ###
+conv: 143.53M
+linear: 0.00M
+bn: 0.00M
+relu: 0.54M
+pool: 0.00M
+  + Number of FLOPs: 144.07M
+conv 0.25M
+linear: 0.00M
+total_params 0.25M
+### end of Flops Calc ###
+  [0.025s] Effective Batch Size: 32
+  [0.025s] Number of parameters: 450738
+  [0.025s] Initializing CUDA
+  [1.489s] Parallelizing
+  [1.489s] Random initialization
+  [1.489s] Initializing save directory: ./work
+  [1.493s] Operation finished
+
+Initializing Adam Optimizer
+  [0.000s] amsgrad = False (<class 'bool'>)
+  [0.000s] weight_decay = 0 (<class 'int'>)
+  [0.000s] eps = 1e-08 (<class 'float'>)
+  [0.000s] betas = (0.9, 0.999) (<class 'tuple'>)
+  [0.000s] lr = 0.0001 (<class 'float'>)
+  [0.000s] Operation finished
+
+Epoch 1/52 : loss: 0.3263
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 100000000.0000 |--> 7.0253
+Epoch 2/52 : loss: 0.3198
+Epoch 3/52 : loss: 0.3205
+Epoch 4/52 : loss: 0.3261
+Epoch 5/52 : loss: 0.3271
+Epoch 6/52 : loss: 0.3245
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+best valid loss unchange: 7.0253 
+Epoch 7/52 : loss: 0.3133
+Epoch 8/52 : loss: 0.3265
+Epoch 9/52 : loss: 0.3123
+Epoch 10/52 : loss: 0.3132
+Epoch 11/52 : loss: 0.3018
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+best valid loss unchange: 7.0253 
+Epoch 12/52 : loss: 0.3083
+Epoch 13/52 : loss: 0.3083
+Epoch 14/52 : loss: 0.3098
+Epoch 15/52 : loss: 0.3010
+Epoch 16/52 : loss: 0.2896
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 7.0253 |--> 6.8642
+Epoch 17/52 : loss: 0.2938
+Epoch 18/52 : loss: 0.3043
+Epoch 19/52 : loss: 0.2893
+Epoch 20/52 : loss: 0.2957
+Epoch 21/52 : loss: 0.2915
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 6.8642 |--> 6.6308
+Epoch 22/52 : loss: 0.2857
+Epoch 23/52 : loss: 0.2972
+Epoch 24/52 : loss: 0.2836
+Epoch 25/52 : loss: 0.2889
+Epoch 26/52 : loss: 0.2926
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 6.6308 |--> 6.6155
+Epoch 27/52 : loss: 0.2898
+Epoch 28/52 : loss: 0.2888
+Epoch 29/52 : loss: 0.2842
+Epoch 30/52 : loss: 0.2808
+Epoch 31/52 : loss: 0.2829
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 6.6155 |--> 6.1104
+Epoch 32/52 : loss: 0.2769
+Epoch 33/52 : loss: 0.2791
+Epoch 34/52 : loss: 0.2827
+Epoch 35/52 : loss: 0.2796
+Epoch 36/52 : loss: 0.2772
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+best valid loss unchange: 6.1104 
+Epoch 37/52 : loss: 0.2731
+Epoch 38/52 : loss: 0.2634
+Epoch 39/52 : loss: 0.2676
+Epoch 40/52 : loss: 0.2687
+Epoch 41/52 : loss: 0.2830
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+best valid loss unchange: 6.1104 
+Epoch 42/52 : loss: 0.2790
+Epoch 43/52 : loss: 0.2614
+Epoch 44/52 : loss: 0.2599
+Epoch 45/52 : loss: 0.2723
+Epoch 46/52 : loss: 0.2664
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 6.1104 |--> 5.9213
+Epoch 47/52 : loss: 0.2725
+Epoch 48/52 : loss: 0.2701
+Epoch 49/52 : loss: 0.2652
+Epoch 50/52 : loss: 0.2754
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+best valid loss unchange: 5.9213 
+Epoch 51/52 : loss: 0.2641
+Eval on validation set
+Eval-iters: 0/147
+Eval-iters: 73/147
+Eval-iters: 146/147
+Obtain better valid loss : 5.9213 |--> 5.8947

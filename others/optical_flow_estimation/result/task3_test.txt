@@ -1,0 +1,98 @@
+Parsing Arguments
+  [0.023s] batch_size: 32
+  [0.023s] crop_size: [192, 256]
+  [0.023s] fp16: False
+  [0.023s] fp16_scale: 1024.0
+  [0.023s] gradient_clip: None
+  [0.023s] inference: True
+  [0.023s] inference_batch_size: 1
+  [0.023s] inference_dataset: MpiSintelClean
+  [0.023s] inference_dataset_replicates: 1
+  [0.023s] inference_dataset_root: data/validation
+  [0.023s] inference_n_batches: -1
+  [0.023s] inference_size: [-1, -1]
+  [0.023s] inference_visualize: True
+  [0.023s] log_frequency: 1
+  [0.023s] loss: EPELoss
+  [0.023s] loss_div_flow: 0.05
+  [0.023s] model: FlowNetER
+  [0.023s] model_div_flow: 20
+  [0.023s] name: run
+  [0.023s] no_cuda: False
+  [0.023s] number_gpus: 1
+  [0.023s] number_workers: 8
+  [0.023s] optimizer: Adam
+  [0.023s] optimizer_amsgrad: False
+  [0.023s] optimizer_betas: (0.9, 0.999)
+  [0.023s] optimizer_eps: 1e-08
+  [0.023s] optimizer_lr: 0.001
+  [0.023s] optimizer_weight_decay: 0
+  [0.023s] render_validation: False
+  [0.023s] replicates: 1
+  [0.023s] resume: work/FlowNetER_model_best.pth.tar
+  [0.023s] rgb_max: 255.0
+  [0.023s] save: ./work
+  [0.023s] save_flow: True
+  [0.023s] schedule_lr_fraction: 10
+  [0.023s] schedule_lr_frequency: 0
+  [0.023s] seed: 1
+  [0.023s] skip_training: False
+  [0.023s] skip_validation: False
+  [0.023s] start_epoch: 1
+  [0.023s] total_epochs: 51
+  [0.023s] train_n_batches: -1
+  [0.023s] training_dataset: MpiSintelClean
+  [0.023s] training_dataset_replicates: 1
+  [0.023s] training_dataset_root: data/training
+  [0.023s] validation_dataset: MpiSintelClean
+  [0.023s] validation_dataset_replicates: 1
+  [0.023s] validation_dataset_root: data/validation
+  [0.023s] validation_frequency: 5
+  [0.023s] validation_n_batches: -1
+  [0.032s] Operation finished
+
+Source Code
+Initializing Datasets
+  [0.017s] Training Dataset: MpiSintelClean
+  [0.025s] Training Input: [3, 2, 192, 256]
+  [0.033s] Training Targets: [2, 192, 256]
+  [0.038s] Validation Dataset: MpiSintelClean
+  [0.048s] Validation Input: [3, 2, 192, 512]
+  [0.057s] Validation Targets: [2, 192, 512]
+  [0.062s] Inference Dataset: MpiSintelClean
+  [0.071s] Inference Input: [3, 2, 192, 512]
+  [0.081s] Inference Targets: [2, 192, 512]
+  [0.081s] Operation finished
+
+Building FlowNetER model
+div_flow 20
+### Print Model Flops ###
+conv: 143.53M
+linear: 0.00M
+bn: 0.00M
+relu: 0.54M
+pool: 0.00M
+  + Number of FLOPs: 144.07M
+conv 0.25M
+linear: 0.00M
+total_params 0.25M
+### end of Flops Calc ###
+  [0.025s] Effective Batch Size: 32
+  [0.025s] Number of parameters: 450738
+  [0.025s] Initializing CUDA
+  [1.456s] Parallelizing
+  [1.457s] Loading checkpoint 'work/FlowNetER_model_best.pth.tar'
+  [1.461s] Loaded checkpoint 'work/FlowNetER_model_best.pth.tar' (at epoch 51)
+  [1.461s] Initializing save directory: ./work
+  [1.463s] Operation finished
+
+Initializing Adam Optimizer
+  [0.000s] amsgrad = False (<class 'bool'>)
+  [0.000s] weight_decay = 0 (<class 'int'>)
+  [0.000s] eps = 1e-08 (<class 'float'>)
+  [0.000s] betas = (0.9, 0.999) (<class 'tuple'>)
+  [0.000s] lr = 0.001 (<class 'float'>)
+  [0.000s] Operation finished
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 147/147 [00:05<00:00, 28.47it/s]
+Inference Averages ['EPE']: 5.895

@@ -1,0 +1,54 @@
+# ENGG5104 – Image Processing and Computer Vision – Spring 2023
+## Assignment 4 — Optical Flow Estimation
+- ID: 1155186658
+- Name: Rongliang Fu
+
+## Task 1
+To make sure the computational cost should be under 2300M FLOPs, the network structure is as follows:
+- conv7-64
+- LeakyReLU
+- conv5-128
+- LeakyReLU
+- conv5-256
+- LeakyReLU
+- conv3-512
+- conv3-512
+- conv3-512
+
+Finally FLOPs is 2172.32M, parameters is 4.59M
+
+## Task 2: result/task2_train.txt, result/task2_test.txt, result/FlowNetE_model_best.pth.tar
+command: 
+```
+./run_E.sh
+./test_E.sh
+```
+EPE: train:5.9442, test: 5.944
+
+
+## Task 3: result/task3_train.txt, result/task3_test.txt, result/FlowNetER_model_best.pth.tar
+Finally FLOPs is 144.07M, parameters is 0.25M
+command: 
+```
+./run_ER.sh
+./test_ER.sh
+```
+EPE: train:5.8947, test: 5.895
+
+## Task 4: result/task4_train.txt, result/task4_test.txt, result/FlowNetERM_model_best.pth.tar
+Finally FLOPs is 146.42M, parameters is 0.26M
+command: 
+```
+./run_E.sh
+./test_E.sh
+```
+EPE: train:5.8820, test: 5.882
+
+## Task 5: result/task5_train.txt, result/task5_test.txt, result/FlowNetOurs_model_best.pth.tar
+Finally FLOPs is 146.42M, parameters is 0.26M
+command: 
+```
+./run_E.sh
+./test_E.sh
+```
+EPE: train:5.8728, test: 5.873
