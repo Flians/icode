@@ -1,0 +1,31 @@
+# Global Routing
+
+## build
+```
+mkdir build && cd build
+cmake .. && make -j4
+cp route ../bin/
+```
+
+## run
+```
+time ./bin/route ./testcase/ibm02.modified.txt ./output/ibm02.out
+./verifier/verify ./testcase/ibm02.modified.txt ./output/ibm02.out
+```
+
+## result
+| Testcase | overflow | wirelength | runtime  |
+| -------- | -------- | ---------- | -------- |
+| ibm01    | 0        | 59667      | 2.013 s  |
+| ibm02    | 0        | 157674     | 5.499 s  |
+| ibm03    | 0        | 142498     | 4.041 s  |
+| ibm04    | 133      | 162924     | 69.568 s |
+
+## flow
+- parse the input file
+- initial routing
+- carry out rip-up and reroute until there is no overflow or iteration time is up to 100 
+- output file
+
+## tricks
+add weights for each edges
