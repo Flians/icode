@@ -1,0 +1,11 @@
+input i1 i2 i3 i4 i5
+output o1 o2 o3
+AND i1 i2 n1
+AND i3 i4 n2
+OR n1 n2 n3
+AND i1 i3 n4
+AND i2 i4 n5
+OR n4 n5 n6 
+XOR n5 n6 o1
+OR n5 i5 o2
+OR n6 i5 o3

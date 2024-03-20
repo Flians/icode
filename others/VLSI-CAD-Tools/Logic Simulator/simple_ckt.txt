@@ -1,0 +1,5 @@
+input 1 2 3 4
+output 7
+AND 1 2 5
+AND 3 4 6
+OR 5 6 7
